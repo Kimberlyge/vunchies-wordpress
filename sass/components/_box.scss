@@ -1,0 +1,42 @@
+/**
+ * Box
+ */
+
+.Box {
+
+	padding: $space;
+
+	p {
+		line-height: 20px;
+	}
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+	a {
+		border-bottom: 1px solid;
+		font-style: italic;
+	}
+
+	&--white {
+		background-color: $white;
+	}
+
+	&--border {
+		border: 2px solid;
+	}
+
+	&--small {
+		display: inline-block;
+	}
+
+}
+
+.Box--border {
+	border: 2px solid;
+}
+
+.Box--small {
+	display: inline-block;
+}

@@ -1,0 +1,32 @@
+/**
+ * Page item
+ */
+
+.PageItem {
+	position: relative;
+	width: 100%;
+
+	&--centered {
+		height: calc(100vh - 167px);
+
+		text-align: center;
+		white-space: nowrap;
+
+		@media (min-width: 656px) {
+			height: calc(100vh - 207px);
+		}
+
+		&:before {
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+			margin-right: -0.25em;
+		}
+
+		.PageItem-item {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}

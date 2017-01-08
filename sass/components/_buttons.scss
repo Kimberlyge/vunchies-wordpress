@@ -1,0 +1,26 @@
+.Button {
+	display: inline-block;
+	color: $black;
+	padding: .4em 1em .4em;
+	letter-spacing: .1em;
+	text-decoration: none;
+}
+.NonBtn {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}
+.Button--outline {
+	background-image: none;
+	background-color: $white;
+	color: $black !important;
+	border: 3px solid $black;
+	box-shadow: 6px 6px 0 0 $black;
+}
+button {
+	color: $black;
+}

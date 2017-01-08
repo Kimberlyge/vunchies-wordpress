@@ -1,0 +1,11 @@
+// Custom Scrollbar
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: rgba($black, 0.05);
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgba($black, 0.08);
+}
+::-webkit-scrollbar-corner {
+	display: none;
+}

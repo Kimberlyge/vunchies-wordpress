@@ -1,0 +1,23 @@
+/**
+ * Flex Mixins
+ */
+
+@mixin flexCol {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flexRow {
+	display: flex;
+	flex-direction: row;
+}
+@mixin flexRowWrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+@mixin flexColWrap {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}

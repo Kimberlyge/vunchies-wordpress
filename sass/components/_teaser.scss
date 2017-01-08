@@ -1,0 +1,123 @@
+/**
+ * Teaser
+ **/
+
+.Teaser {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding: 0 rem(5) 1em;
+
+	a:hover,
+	a:active {
+		.Teaser-media {
+			img {
+				// filter: brightness(96%);
+				opacity: 0.8;
+			}
+		}
+		.Teaser-body {
+			position: relative;
+		}
+	}
+}
+
+.Teaser-wrap {
+	flex: rem(145);
+	margin: rem(5);
+	@media (min-width: $layout-m) {
+		flex: rem(180);
+	}
+}
+
+.Teaser-media {
+	@include ratio(1456,2177);
+	margin: 0;
+	overflow: hidden;
+
+	img {
+		@include ratio-inner;
+		transition: opacity 150ms $easing;
+		backface-visibility: hidden;
+		object-fit: cover;
+	}
+}
+
+.Teaser-body {
+	overflow: hidden;
+	padding: 23px 15px 15px;
+	margin: 0;
+	background-color: $white;
+
+	img {
+		width: 14px;
+		float: left;
+	}
+	p {
+		font-size: 13px;
+		margin: 0;
+	}
+}
+
+.Teaser-title {
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 10px;
+	flex: 1 100%;
+	font-size: $font-15;
+
+	@media (min-width: $layout-ml) {
+		font-size: $font-17;
+	}
+}
+
+.Teaser-categories {
+	display: block;
+	padding: 0;
+	line-height: 13px;
+
+	li {
+		display: inline-block;
+		font-size: 9px;
+		margin-right: rem(6);
+
+		@media (min-width: 980px) {
+			font-size: $font-12;
+			// margin-right: rem(6);
+		}
+	}
+}
+
+.Teaser-tags {
+	display: block;
+	margin-top: 10px;
+	width: 100%;
+
+	li {
+		display: inline-block;
+		margin: 0 rem(2);
+		height: 30px;
+	}
+
+	i {
+		position: relative;
+	}
+
+	span {
+		font-size: rem(10);
+		position: absolute;
+		bottom: rem(-20);
+		left: -1em;
+		right: -1em;
+		text-align: center;
+		opacity: 0;
+		transition: opacity 0.2s $easing;
+	}
+
+	i:hover {
+
+		span {
+			opacity: 1;
+		}
+	}
+}

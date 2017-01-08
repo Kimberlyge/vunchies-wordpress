@@ -1,0 +1,61 @@
+/**
+ * Image Grid
+ */
+
+.ImageGrid {
+	width: 100%;
+	display: flex;
+	margin: rem(30) auto;
+
+	@media (max-width: $layout-sm) {
+		display: block;
+		max-width: 100%;
+	}
+
+	@media (min-width: 640px) and (max-width: 980px) {
+		margin: rem(20) auto;
+	}
+}
+
+.ImageGrid-item {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.ImageGrid-item + .ImageGrid-item {
+	// margin-top: rem(30);
+	@media (min-width: 980px) {
+		margin-left: rem(30);
+	}
+
+	@media (min-width: 640px) and (max-width: 980px) {
+		// margin-top: 0;
+		margin-left: rem(20);
+	}
+}
+
+.ImageGrid--first {
+	max-width: 1000px;
+}
+
+.ImageGrid--second {
+	&.is-reverse {
+		.ImageGrid-item:last-of-type {
+			order: -1;
+		}
+	}
+
+	&.is-portrait {
+		max-height: rem(540);
+
+		.ImageGrid-item:last-of-type {
+			flex: 65%;
+		}
+		.ImageGrid-item:first-of-type {
+			flex: 35%;
+		}
+	}
+}

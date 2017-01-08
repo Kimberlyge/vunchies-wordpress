@@ -1,0 +1,30 @@
+/**
+ * Navigation Social
+ */
+
+.NavSocial {
+	position: absolute;
+
+	width: 48px;
+
+	top: 0;
+	right: 0;
+
+	padding-top: rem(15);
+	padding-right: rem(15);
+
+	@media (min-width: 656px) {
+		width: 73px;
+		left: 0;
+		right: inherit;
+
+		padding-top: rem(20);
+		padding-left: rem(20);
+	}
+}
+
+.NavSocial-item:first-of-type {
+	@media (min-width: 656px) {
+		margin-right: rem(5);
+	}
+}

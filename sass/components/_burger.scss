@@ -1,0 +1,24 @@
+.Burger {
+	position: fixed;
+	height: rem(34);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: rem(15);
+	z-index: 11; // on top of .Aside
+	text-transform: uppercase;
+	font-size: $font-14;
+	letter-spacing: 0.1em;
+	border: 0;
+	cursor: pointer;
+
+	@media (min-width: 656px) {
+		display: none;
+	}
+
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+

@@ -1,0 +1,55 @@
+// Typography
+$base-font-size: 16px;
+$base-font-size-unitless: 16;
+$base-line-height-unitless: (26/16);
+
+// Colors
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$darkgrey: rgb(76, 76, 76);
+$gray: #D5D5D5;
+$lightgray: #fafafa;
+$yellow: #ffc440;
+
+// Color definitions
+$primary-color: $black;
+$bg-color: $lightgray;
+$grey: hsl(0, 0%, 62%);
+$darkgrey: hsl(0, 0%, 30%);
+$text-color: $black;
+
+// Layout
+$space: 20px;
+$max-width: 46rem;
+
+// Susy
+// gutters are defined in a ratio to the column width
+$susy: (
+	box-sizing: border-box,
+	columns: 12,
+	gutters: (12/88),
+	container: 1060px
+);
+
+// debug: (
+// image: show,
+// color: hsla(0, 100%, 71%, 0.42),
+// output: overlay,
+// toggle: top right,
+// )
+
+// Good looking easings for animation
+$easing:  cubic-bezier(0.165, 0.840, 0.400, 1.000);
+$easing2: cubic-bezier(0.300, 0.000, 0.000, 1.300);
+$easing3: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$easing4: cubic-bezier(0.250, 1.400, 0.180, 1.000);
+$easing5: cubic-bezier(0.200, 0.300, 0.250, 0.900);
+
+// Breakpoints
+$layout-s: 414px;
+$layout-sm: 600px;
+$layout-m: 740px;
+$layout-mm: 970px;
+$layout-ml: 1024px;
+$layout-l: 1280px;
+$layout-xl: 1500px;

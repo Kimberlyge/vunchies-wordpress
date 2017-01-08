@@ -1,0 +1,15 @@
+/**
+ * Default list styles
+ */
+
+.list {
+	&--centered {
+		text-align: center;
+	}
+}
+
+.list-item {
+	display: inline-block;
+	margin: 0 rem(5);
+
+}

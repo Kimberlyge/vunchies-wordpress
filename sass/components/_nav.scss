@@ -1,0 +1,198 @@
+/**
+ * Navigation
+ */
+
+.Nav--main,
+.NavFilter {
+	position: relative;
+	padding-bottom: 0;
+
+	@media (max-width: 656px) {
+		padding-top: 0;
+	}
+
+
+	span {
+		display: none;
+
+		@media (min-width: 656px) {
+			display: inline-block;
+		}
+	}
+}
+
+.Nav-item {
+	display: block;
+	font-size: $font-14;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	letter-spacing: 0.1em;
+
+	padding: 0.5em 0;
+	margin: 0.5em 0;
+
+	&:hover,
+	&:active,
+	&.is-active {
+		color: $yellow;
+	}
+
+	@media (min-width: 656px) {
+		display: inline-block;
+		margin: 0 rem(5);
+		padding: 0;
+
+	}
+
+	&:first-of-typev{
+		margin-top: 1.3em;
+	}
+
+}
+
+
+/* Main Navigation */
+
+.Nav--main > a {
+	position: relative;
+	z-index: 20;
+}
+
+
+/* NavItems with SubNavigations */
+
+.NavItemTravel,
+.NavItemRecipes {
+	display: inline-block;
+
+	&.is-active > a {
+		color: $yellow;
+	}
+}
+
+.NavItemTravel-title,
+.NavItemRecipes-title {
+	position: relative;
+	z-index: 12;
+	@extend %font-bold;
+}
+
+/* Sub Navigation */
+
+.NavSub {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	left: 0;
+	top: 0;
+	min-height: 2em; //needs a height to keep it open while moving the cursor
+
+	padding-top: rem(38);
+
+	&.is-active {
+		display: block;
+	}
+
+	@media (max-width: 656px) {
+		display: none !important;
+	}
+}
+
+.NavSub-item {
+	display: block;
+	cursor: pointer;
+	font-size: 12px;
+	text-transform: inherit;
+
+	&:hover {
+		color: $yellow;
+	}
+}
+
+.NavSub-content {
+	@include flexRow;
+	background-color: $white;
+	border: 2px solid $black;
+	padding: rem($space);
+}
+
+.NavSub-wrap {
+	@include flexCol;
+	justify-content: flex-start;
+	width: 100%;
+
+	h3 {
+		font-size: 12px;
+		margin: 2px 0;
+	}
+}
+
+
+/* Filter Navigation */
+
+.NavFilter {
+	@include flexRow;
+	background-color: $white;
+	border: 2px solid $yellow;
+	align-items: flex-end;
+	padding: rem(10) rem(10) rem(10) rem($space);
+
+	@media (max-width: 656px) {
+		display: none;
+	}
+
+	a i {
+			margin-left: rem(4);
+			width: rem(16);
+			height: rem(16);
+			vertical-align: middle;
+			margin-top: rem(1);
+	}
+
+	> i {
+		margin-right: rem(15);
+		width: rem(16);
+		height: rem(16);
+	}
+
+	a {
+		padding: 0;
+		background: none;
+		font-size: 12px;
+		text-transform: lowercase;
+	}
+}
+
+.NavFilter--sticky {
+	display: none;
+	width: 25%;
+	&.is-sticky {
+		@include flexCol;
+		align-items: flex-start;
+		max-width: rem(200);
+
+		position: fixed;
+		top: 0;
+		z-index: 90;
+	}
+}
+
+.NavFilter--inline {
+	@include flexCol;
+	align-items: flex-start;
+	max-width: rem(200);
+	&.is-sticky {
+		visibility: hidden;
+	}
+}
+
+.NavFilter--left {
+	height: rem(300);
+	padding: rem(10);
+	a {
+		margin: 0;
+	}
+}

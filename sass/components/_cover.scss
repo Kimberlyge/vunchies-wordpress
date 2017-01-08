@@ -1,0 +1,81 @@
+/**
+ * Cover
+ */
+
+.Cover {
+	position: relative;
+	height: 60vh;
+	overflow: hidden;
+
+	> * {
+		position: absolute;
+	}
+
+	@media (min-width: 640px) and (max-width: 980px) {
+		height: 40vh;
+	}
+
+	.Cover-body {
+		z-index: 10;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		padding: rem(40);
+		margin: auto;
+		background-color: $white;
+		text-align: center;
+
+		h2 {
+			@extend %font-medium;
+			letter-spacing: 0.1em;
+			font-size: $font-20;
+			margin-bottom: 0.2em;
+
+			@media (min-width: $layout-m) {
+				font-size: $font-35;
+			}
+			@media (min-width: $layout-ml) {
+				font-size: $font-40;
+			}
+		}
+		p {
+			@extend %font-light;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 0;
+		}
+	}
+	&:after {
+		content: '';
+		background-color: rgba($white, 0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		transition: background-color 350ms $easing;
+	}
+}
+
+.Cover--big {
+	@media (min-width: $layout-ml) {
+		height: 80vh;
+	}
+}
+.Cover--small {
+	@media (max-width: $layout-m) {
+		height: 35vh;
+	}
+}
+
+.Cover-media {
+	width: 100%;
+	height: 100%;
+
+	img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}

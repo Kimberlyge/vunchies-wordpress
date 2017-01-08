@@ -1,0 +1,38 @@
+html {
+	min-height: 100%;
+}
+
+.App {
+	overflow: hidden;
+}
+
+.App-main {
+	> .liquid-container,
+	> .liquid-container > .liquid-child {
+		min-height: 100%;
+	}
+}
+
+.Section {
+	padding: 2em 0;
+}
+
+.is-hidden {
+	display: none;
+}
+
+.centered {
+	text-align: center;
+}
+
+.mobileOnly {
+	@media (min-width: 656px) {
+		display: none !important;
+	}
+}
+
+.desktopOnly {
+	@media (max-width: 656px) {
+		display: none !important;
+	}
+}

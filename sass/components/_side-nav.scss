@@ -1,0 +1,69 @@
+/**
+ * Side Nav
+ */
+
+.SideNav {
+}
+.SideNav-button {
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	width: 3em;
+	height: 100%;
+	background-color: rgb(238, 238, 238); // rgb(238, 238, 238)
+	overflow: hidden;
+	span {
+		position: fixed;
+		top: 50%;
+		display: block;
+		transform: rotate(-90deg) translateX(-40%);
+		transform-origin: 1.3rem 50%;
+	}
+	&:focus {
+		outline: none;
+	}
+	@media (min-width: 1200px) {
+		display: none;
+	}
+}
+
+.SideNav-content {
+	padding: rem(50);
+	text-align: center;
+	transition: transform 400ms $easing;
+	background-color: rgb(238, 238, 238);
+
+	// Smaller
+	@media (max-width: 1200px) {
+		display: flex;
+		position: fixed;
+		z-index: 8;
+		top: 0;
+		left: 0;
+		max-width: rem(300);
+		height: 100%;
+		overflow-y: auto;
+		transform: translateX(-150%);
+		h2,
+		.Divider {
+			display: none;
+		}
+		nav {
+			margin: auto;
+		}
+	}
+
+	.Nav-item {
+		line-height: 1.2;
+		margin-bottom: rem(12);
+	}
+}
+.SideNav.is-shown {
+	.SideNav-content {
+		transform: translateX(0%);
+	}
+}

@@ -1,0 +1,76 @@
+/**
+ * Header
+ */
+
+.Header {
+	max-width: 100%;
+	z-index: 10;
+	margin-top: 0;
+	text-align: center;
+
+	@media (min-width: 655px) {
+		max-width: rem(1000);
+		padding: 0 rem(10);
+		margin: rem(20) auto;
+	}
+}
+.Header-inner {
+
+	.Logo {
+		display: none;
+	}
+
+	@media (max-width: 655px) {
+		position: fixed;
+		z-index: 5;
+
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+
+		transform: translateX(-100%);
+		transition: transform 0.35s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+		padding-top: rem($space*2);
+
+		background-color: $white;
+
+		.Logo {
+			display: block;
+		}
+
+		.Nav > a {
+			padding: rem(10) 0;
+		}
+
+
+	}
+}
+.Header-title {
+	display: block;
+	margin: rem(40) 0;
+
+	h1 {
+		margin-bottom: 0.1em;
+		font-size: $font-35;
+		@media (min-width: $layout-m) {
+			font-size: $font-40;
+		}
+		@media (min-width: $layout-ml) {
+			font-size: 50px;
+		}
+	}
+	h3 {
+		@extend %font-light;
+		font-size: $font-14;
+		text-transform: lowercase;
+	}
+}
+
+/* Mobile */
+.on-mobile {
+	.Header-inner {
+		transform: translateX(0%);
+	}
+}
