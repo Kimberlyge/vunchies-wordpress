@@ -27,8 +27,7 @@ get_header(); ?>
 					</div>
 					<div class="DetailHead-media Grid-cell Grid-cell--2">
 						<?php $image = get_field('cover');?>
-
-						<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+						<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 
 						<!-- <img class="lazyload js-pin-it" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['alt']; ?>" data-sizes="auto" data-srcset="
 							<?php echo $image['sizes']['medium']; ?> 320w,
@@ -80,7 +79,7 @@ get_header(); ?>
 
 										<?php $image = get_sub_field('image');?>
 
-										<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 
 							<!-- 			<img class="lazyload js-pin-it" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{grid.image.title}}" data-sizes="auto" data-srcset="
 											{{grid.image.sizes.medium}} 320w,
@@ -114,7 +113,7 @@ get_header(); ?>
 
 										<?php $image = get_sub_field('image');?>
 
-										<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 
 							<!-- 			<img class="lazyload js-pin-it" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{grid.image.title}}" data-sizes="auto" data-srcset="
 											{{grid.image.sizes.medium}} 320w,
@@ -139,7 +138,7 @@ get_header(); ?>
 
 										<?php $image = get_sub_field('image');?>
 
-										<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 
 							<!-- 			<img class="lazyload js-pin-it" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{grid.image.title}}" data-sizes="auto" data-srcset="
 											{{grid.image.sizes.medium}} 320w,
@@ -150,7 +149,7 @@ get_header(); ?>
 
 										<?php $image = get_sub_field('image_2');?>
 
-										<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 
 							<!-- 			<img class="lazyload js-pin-it" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{grid.image.title}}" data-sizes="auto" data-srcset="
 											{{grid.image.sizes.medium}} 320w,

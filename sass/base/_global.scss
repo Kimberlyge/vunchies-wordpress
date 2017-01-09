@@ -3,7 +3,8 @@
  */
 
 html {
-	@extend %font-regular;
+	@extend %font-copy;
+
 	// @include negative-text;
 	line-height: $base-line-height-unitless;
 	background-color: $bg-color;
@@ -112,5 +113,6 @@ img {
 
 ul,
 ol {
+	padding: 0;
 	list-style-type: none;
 }

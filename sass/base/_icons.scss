@@ -33,6 +33,35 @@ $icon-size: 20px;
 	margin-bottom: rem(25);
 }
 
+/* ICOMOON */
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-arrow-right {
+  width: 0.53515625em;
+}
+
+.icon-clock-arrow {
+  width: 0.9736328125em;
+}
+
+/* ICOMOON */
+
 .icon--arrow {
 	max-width: rem(15);
 }

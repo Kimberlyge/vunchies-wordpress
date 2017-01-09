@@ -15,6 +15,8 @@ if ( ! function_exists( 'vunchies_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+
 function vunchies_setup() {
 	/*
 	 * Make theme available for translation.
@@ -101,17 +103,31 @@ function vunchies_widgets_init() {
 }
 add_action( 'widgets_init', 'vunchies_widgets_init' );
 
+
+//* Load Google Fonts
+add_action( 'wp_enqueue_scripts', 'bg_load_google_fonts' );
+function bg_load_google_fonts() {
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display:400,400i|Roboto:400,50', array(), CHILD_THEME_VERSION );
+}
+
 /**
  * Enqueue scripts and styles.
  */
+
+/* add SVG functionality*/
+function cc_mime_types($mimes) { $mimes['svg'] = 'image/svg+xml'; return $mimes; } add_filter('upload_mimes', 'cc_mime_types');
+
 function vunchies_scripts() {
 	wp_enqueue_style( 'vunchies-style', get_stylesheet_uri() );
 
 
 	// mine
 
+	wp_enqueue_script( 'vunchies-sticky', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
+
 	// wp_enqueue_script( 'vunchies-sticky', get_template_directory_uri() . '/js/sticky.js', array(), '20151215', true );
 
+	// wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/icomoon/svgxuse.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

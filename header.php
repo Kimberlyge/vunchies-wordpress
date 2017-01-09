@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
+<!-- Icomoon - need to get the full version or a new solution -->
 <link rel="stylesheet" href="https://i.icomoon.io/public/temp/b777c972e3/UntitledProject/style-svg.css">
 <script defer src="https://i.icomoon.io/public/temp/b777c972e3/UntitledProject/svgxuse.js"></script>
 
@@ -43,8 +44,6 @@
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h3><?php echo $description;?></h3>
 		</a>
-
-
 
 		<div class="Header-inner">
 			<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -102,6 +101,5 @@
 	</header>
 
 <div id="page" class="site">
-	<!-- <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vunchies' ); ?></a> -->
 
 	<div id="content" class="site-content">

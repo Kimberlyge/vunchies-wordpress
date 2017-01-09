@@ -2,6 +2,23 @@
  * Comments
  */
 
+.Comments {
+	margin-top: 50px;
+
+	.form-submit {
+		input {
+			background: black;
+			color: white;
+			border: 0;
+			text-transform: uppercase;
+			padding: 10px 15px;
+			letter-spacing: 1px;
+			font-size: 12px;
+		}
+	}
+}
+
+
 .comment-respond,
 .comment-list {
 	max-width: 500px;

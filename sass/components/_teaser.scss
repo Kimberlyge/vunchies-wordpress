@@ -94,13 +94,10 @@
 	width: 100%;
 
 	li {
+		position: relative;
 		display: inline-block;
 		margin: 0 rem(2);
 		height: 30px;
-	}
-
-	i {
-		position: relative;
 	}
 
 	span {
@@ -114,7 +111,7 @@
 		transition: opacity 0.2s $easing;
 	}
 
-	i:hover {
+	li:hover {
 
 		span {
 			opacity: 1;

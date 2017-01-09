@@ -12,26 +12,28 @@
 
 	var NavTravelList = document.getElementById( 'js-travellist' );
 
-	NavTravelList.onmouseenter = function(event) {
-
-		var target = event.currentTarget;
-
-		target.classList.add('is-active');
-
-
-		/* Hide */
-
-		target.onmouseleave = function(event) {
-
-			event.preventDefault();
+	if (NavTravelList) {
+		NavTravelList.onmouseenter = function(event) {
 
 			var target = event.currentTarget;
 
-			target.classList.remove('is-active');
+			target.classList.add('is-active');
+
+
+			/* Hide */
+
+			target.onmouseleave = function(event) {
+
+				event.preventDefault();
+
+				var target = event.currentTarget;
+
+				target.classList.remove('is-active');
+
+			};
 
 		};
-
-	};
+	}
 
 	/**
 	 * Recipes
@@ -40,8 +42,6 @@
 	var NavRecipes = document.getElementById( 'js-navToggleRecipes' );
 
 	NavRecipes.onmouseenter = function(event) {
-
-		console.log('NavRecipes on click');
 
 		var target = event.currentTarget;
 		var subNav = document.querySelector('.js-nav-recipes');
@@ -54,7 +54,6 @@
 
 		target.onmouseleave = function(event) {
 
-			console.log('NavRecipes hidden');
 			event.preventDefault();
 
 			var target = event.currentTarget;
@@ -76,8 +75,6 @@
 
 	NavTravel.onmouseenter = function(event) {
 
-		console.log('NavTravel on click');
-
 		var target = event.currentTarget;
 		var subNav = document.querySelector('.js-nav-travel');
 
@@ -89,7 +86,6 @@
 
 		target.onmouseleave = function(event) {
 
-			console.log('NavRecipes hidden');
 			event.preventDefault();
 
 			var target = event.currentTarget;

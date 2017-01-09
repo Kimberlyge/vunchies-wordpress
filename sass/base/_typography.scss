@@ -23,27 +23,30 @@ $font-70: rem(60);
 // }
 
 %font-light {
-	font-family: 'Apercu', sans-serif; font-weight: 300;
+	font-family: 'Open Sans', sans-serif; font-weight: 300;
 }
-%font-regular {
-	font-family: 'Apercu', sans-serif; font-weight: 400;
+
+%font-copy {
+	font-family: 'Playfair Display', serif; font-weight: 400;
 }
-%font-medium {
-	font-family: 'Apercu', sans-serif; font-weight: 500;
+
+// not in use yet
+%font-copy-italic {
+	font-family: 'Playfair Display', sans-serif; font-weight: 400; font-style: italic;
 }
+
 %font-bold {
-	font-family: 'Apercu', sans-serif; font-weight: 600;
+	font-family: 'Open Sans', sans-serif; font-weight: 400;
 }
+
 %font-black {
-	font-family: 'Apercu', sans-serif; font-weight: 700;
+	font-family: 'Open Sans', sans-serif; font-weight: 600;
 }
-%font-black-rotalic {
-	font-family: 'GT Haptik Rotalic', sans-serif;
-}
+
 
 // Headers
 @mixin h1 {
-	@extend %font-regular;
+	@extend %font-copy;
 	line-height: 1.1;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
@@ -59,7 +62,7 @@ $font-70: rem(60);
 	}
 }
 @mixin h2 {
-	@extend %font-regular;
+	@extend %font-copy;
 	font-size: $font-25;
 	line-height: 1.1;
 	letter-spacing: 0.05em;
@@ -78,7 +81,8 @@ $font-70: rem(60);
 
 @mixin text {
 	font-size: $font-14;
-	@media (min-width: $layout-m) {
+
+	@media (min-width: $layout-ml) {
 		font-size: $base-font-size;
 	}
 }

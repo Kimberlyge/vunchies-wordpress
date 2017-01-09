@@ -63,7 +63,7 @@
 			</div>
 			<div class="Cover-media">
 				<?php $image = get_field('travel_cover');?>
-				<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+				<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 			</div>
 			<!-- Add TravelList here if you want it to become sticky inside the Cover -->
 		</div>
@@ -110,7 +110,7 @@
 								<div class="TravelDetail-cover Grid-cell Grid-cell--2 <?php if( the_sub_field('is_reverse') ):?>is-reverse<?php endif;?>">
 									<?php $image = get_sub_field('cover');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 							</div>
 						<?php endif;
@@ -133,7 +133,7 @@
 								</div>
 								<div class="Grid-cell DetailGrid-item DetailGrid-item--media">
 									<?php $image = get_sub_field('image');?>
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 							</div>
 						<?php endif;
@@ -145,7 +145,7 @@
 								<div class="Grid-cell ImageGrid-item">
 									<?php $image = get_sub_field('image');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 							</div>
 						<?php endif;
@@ -155,12 +155,12 @@
 								<div class="Grid-cell ImageGrid-item">
 									<?php $image = get_sub_field('image');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 								<div class="Grid-cell ImageGrid-item ImageGrid-item--media">
 									<?php $image = get_sub_field('image_2');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 							</div>
 						<?php endif;
@@ -170,17 +170,17 @@
 								<div class="Grid-cell ImageGrid-item">
 									<?php $image = get_sub_field('image');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 								<div class="Grid-cell ImageGrid-item ImageGrid-item--media">
 									<?php $image = get_sub_field('image_2');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 								<div class="Grid-cell ImageGrid-item ImageGrid-item--media">
 									<?php $image = get_sub_field('image_3');?>
 
-									<img src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+									<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 								</div>
 							</div>
 						<?php endif;
@@ -193,44 +193,5 @@
 
 	endif; wp_reset_query();?>
 
-<?php
 
-
-	if ( 'post' === get_post_type() ) : ?>
-	<div class="entry-meta">
-		<?php vunchies_posted_on(); ?>
-	</div><!-- .entry-meta -->
-	<?php
-	endif; ?>
-
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'vunchies' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vunchies' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				edit_post_link(
-					sprintf(
-						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'vunchies' ),
-						the_title( '<span class="screen-reader-text">"', '"</span>', false )
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
 </article><!-- #post-## -->

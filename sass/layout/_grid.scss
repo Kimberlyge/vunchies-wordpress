@@ -16,6 +16,7 @@
 }
 
 .Grid-cell {
+	position: relative;
 	flex: 1 100%;
 
 	&.is-first {

@@ -2,6 +2,7 @@
  * Utilities
  */
 
+@import "normalize";
 @import "../assets/images/icons-output/icons.data.svg.css";
 @import 'utilities/clearfix';
 @import 'utilities/negative-text';
@@ -60,10 +61,6 @@
 @import 'components/comments';
 
 
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
 
 /*--------------------------------------------------------------
 # Infinite scroll

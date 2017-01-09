@@ -13,7 +13,7 @@
 	<figure class="Teaser-media">
 		<?php $image = get_field('cover');?>
 
-		<img src="<?php echo $image['sizes']['large']; ?>" alt="">
+		<img class="" src="<?php echo $image['sizes']['large']; ?>" alt="<?php the_title();?>">
 		<!-- <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="lazyload" alt="{{item.title}}" data-srcset="{{item.acf.cover.sizes.medium}} 320w, {{item.acf.cover.sizes.medium_large}} 1000w"> -->
 	</figure>
 	<div class="Teaser-body">
@@ -29,11 +29,10 @@
 		</ul>
 		<ul class="Teaser-tags">
 			<?php
-		    $tags = get_tags();
+		    $tags = get_the_tags();
 
 		    foreach($tags as $tag) {
-		        echo "<svg class='icon icon-$tag->name'><use xlink:href='#icon-$tag->name'></use><span>$tag->name</span></svg>";
-		        // echo "<i class='icon-$tag->name' data-grunticon-embed><span>$tag->name</span></i>";
+		        echo "<li><svg class='icon icon-$tag->name'><use xlink:href='#icon-$tag->name'></use><span>$tag->name</span></svg></i>";
 		   }
 		   ?>
 		</ul>
