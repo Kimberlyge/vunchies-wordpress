@@ -3,7 +3,8 @@
  */
 
 html {
-	@extend %font-copy;
+	@extend %font-sans-serif;
+	font-weight: 300;
 
 	// @include negative-text;
 	line-height: $base-line-height-unitless;
@@ -87,7 +88,7 @@ p {
 
 strong,
 b {
-	@extend %font-bold;
+	@extend %font-opensans-600;
 }
 
 // Links

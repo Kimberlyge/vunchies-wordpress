@@ -22,31 +22,40 @@ $font-70: rem(60);
 // 	font-style: normal;
 // }
 
-%font-light {
-	font-family: 'Open Sans', sans-serif; font-weight: 300;
-}
 
-%font-copy {
+%font-playfair {
 	font-family: 'Playfair Display', serif; font-weight: 400;
 }
 
 // not in use yet
-%font-copy-italic {
+%font-playfair-italic {
 	font-family: 'Playfair Display', sans-serif; font-weight: 400; font-style: italic;
 }
 
-%font-bold {
+%font-sans-serif {
+	font-family: 'Source Sans Pro', sans-serif; font-weight: 400;
+}
+
+// %font-roboto-500 {
+// 	font-family: 'Roboto', sans-serif; font-weight: 500;
+// }
+
+%font-opensans-300 {
+	font-family: 'Open Sans', sans-serif; font-weight: 300;
+}
+
+%font-opensans-400 {
 	font-family: 'Open Sans', sans-serif; font-weight: 400;
 }
 
-%font-black {
+%font-opensans-600 {
 	font-family: 'Open Sans', sans-serif; font-weight: 600;
 }
 
 
 // Headers
 @mixin h1 {
-	@extend %font-copy;
+	// @extend %font-opensans-600;
 	line-height: 1.1;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
@@ -62,18 +71,18 @@ $font-70: rem(60);
 	}
 }
 @mixin h2 {
-	@extend %font-copy;
+	@extend %font-opensans-400;
 	font-size: $font-25;
 	line-height: 1.1;
 	letter-spacing: 0.05em;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	@media (min-width: $layout-m) {
 		font-size: rem(26);
 	}
 }
 @mixin h3 {
 	// basically the same as a normal <p><strong combo
-	@extend %font-bold;
+	@extend %font-opensans-600;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	font-size: 1rem;

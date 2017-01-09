@@ -107,7 +107,7 @@ add_action( 'widgets_init', 'vunchies_widgets_init' );
 //* Load Google Fonts
 add_action( 'wp_enqueue_scripts', 'bg_load_google_fonts' );
 function bg_load_google_fonts() {
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:400,600|Playfair+Display:400,400i|Roboto:400,50', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Playfair+Display:400,400i|Source+Sans+Pro:300,400,600', array(), CHILD_THEME_VERSION );
 }
 
 /**
@@ -123,7 +123,9 @@ function vunchies_scripts() {
 
 	// mine
 
-	wp_enqueue_script( 'vunchies-sticky', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
+	wp_enqueue_script( 'vunchies-pinit', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'vunchies-scrolltop', get_template_directory_uri() . '/js/scroll-top.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'vunchies-sticky', get_template_directory_uri() . '/js/sticky.js', array(), '20151215', true );
 

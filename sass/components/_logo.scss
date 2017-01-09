@@ -7,13 +7,13 @@
 	}
 
 	h1 {
-		font-family: 'Roboto', sans-serif;
+		@extend %font-sans-serif;
 		font-weight: 500;
 		margin-bottom: 0.1em;
 	}
 
 	h3 {
-		font-family: 'Roboto', sans-serif;
+		@extend %font-sans-serif;
 		font-weight: 400;
 		margin-bottom: 0;
 	}

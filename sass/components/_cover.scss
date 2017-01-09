@@ -27,7 +27,7 @@
 		text-align: center;
 
 		h2 {
-			@extend %font-medium;
+			// @extend %font-copy;
 			letter-spacing: 0.1em;
 			font-size: $font-20;
 			margin-bottom: 0.2em;
@@ -39,8 +39,9 @@
 				font-size: $font-40;
 			}
 		}
+
 		p {
-			@extend %font-light;
+			@extend %font-opensans-300;
 			text-transform: uppercase;
 			letter-spacing: 0.1em;
 			margin-bottom: 0;

@@ -17,7 +17,7 @@
 	// }
 
 	select {
-		@extend %font-copy;
+		@extend %font-opensans-400;
 		@include negative-text;
 		// Font size must the 16px or larger to prevent iOS page zoom on focus
 		font-size: 1em;

@@ -13,6 +13,10 @@
 
 	</div><!-- #content -->
 
+	<button class="Button Button-scrollTop js-button-scrolltop">
+		<svg class="icon icon-arrow-top"><use xlink:href="#icon-arrow-top"></use></svg>
+	</button>
+
 	<footer id="colophon" class="Footer" role="contentinfo">
 		<span>© Vunchies - 2016</span>
 		<span>

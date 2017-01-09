@@ -9,10 +9,10 @@
 	}
 }
 .Title--small {
-	@extend %font-bold;
+	@extend %font-opensans-600;
 	font-size: 1em;
 }
 .Title--big {
-	@extend %font-bold;
+	@extend %font-opensans-600;
 	text-transform: uppercase;
 }

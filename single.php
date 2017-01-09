@@ -44,12 +44,10 @@ get_header(); ?>
 							</ul>
 							<div class="DetailInfoFooter">
 								<div class="DetailInfoFooter-time">
-									<div class="icon icon-clock-arrow">
-										<svg class="icon icon-clock-arrow"><use xlink:href="#icon-clock-arrow"></use></svg>
-									</div>
+									<svg class="DetailInfoFooter-icon icon icon-clock-arrow"><use xlink:href="#icon-clock-arrow"></use></svg>
 									<?php the_field('info');?>
 								</div>
-								<a href="javascript:window.print()">Print</a>
+								<a class="DetailInfoFooter-print" href="javascript:window.print()">Print</a>
 							</div>
 						</div>
 					</div>

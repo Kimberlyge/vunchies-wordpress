@@ -22,6 +22,7 @@
 }
 
 .Nav-item {
+	@extend %font-opensans-400;
 	display: block;
 	font-size: $font-14;
 	letter-spacing: 0.05em;
@@ -46,7 +47,7 @@
 
 	}
 
-	&:first-of-typev{
+	&:first-of-type {
 		margin-top: 1.3em;
 	}
 
@@ -57,7 +58,7 @@
 
 .Nav--main > a {
 	position: relative;
-	z-index: 20;
+	z-index: 21;
 }
 
 
@@ -76,7 +77,7 @@
 .NavItemRecipes-title {
 	position: relative;
 	z-index: 12;
-	@extend %font-bold;
+	@extend %font-opensans-600;
 }
 
 /* Sub Navigation */
@@ -90,7 +91,7 @@
 	top: 0;
 	min-height: 2em; //needs a height to keep it open while moving the cursor
 
-	padding-top: rem(38);
+	padding-top: 60px;
 
 	&.is-active {
 		display: block;

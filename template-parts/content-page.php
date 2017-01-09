@@ -195,3 +195,4 @@
 
 
 </article><!-- #post-## -->
+<?php get_footer();

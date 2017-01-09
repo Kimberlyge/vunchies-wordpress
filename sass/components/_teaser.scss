@@ -74,12 +74,14 @@
 .Teaser-categories {
 	display: block;
 	padding: 0;
+	margin-bottom: 0;
 	line-height: 13px;
 
 	li {
 		display: inline-block;
-		font-size: 9px;
 		margin-right: rem(6);
+		font-size: 9px;
+		font-style: italic;
 
 		@media (min-width: 980px) {
 			font-size: $font-12;
@@ -90,23 +92,27 @@
 
 .Teaser-tags {
 	display: block;
-	margin-top: 10px;
 	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 0;
 
 	li {
 		position: relative;
 		display: inline-block;
 		margin: 0 rem(2);
 		height: 30px;
+		width: 24px;
 	}
 
 	span {
-		font-size: rem(10);
 		position: absolute;
-		bottom: rem(-20);
+		bottom: rem(-10);
 		left: -1em;
 		right: -1em;
+
+		font-size: rem(9);
 		text-align: center;
+
 		opacity: 0;
 		transition: opacity 0.2s $easing;
 	}

@@ -5,6 +5,7 @@
 	letter-spacing: .1em;
 	text-decoration: none;
 }
+
 .NonBtn {
 	background-color: transparent;
 	border: 0;
@@ -14,6 +15,7 @@
 		outline: none;
 	}
 }
+
 .Button--outline {
 	background-image: none;
 	background-color: $white;
@@ -21,6 +23,7 @@
 	border: 3px solid $black;
 	box-shadow: 6px 6px 0 0 $black;
 }
+
 button {
 	color: $black;
 }

@@ -1,0 +1,64 @@
+/**
+ * Travel list
+ */
+
+.TravelList {
+	position: fixed;
+	z-index: 20;
+
+	bottom: 20px;
+	left: 20px;
+	padding: 0;
+	margin: 0;
+
+	background: #FFFFFF;
+
+	// &.is-sticky {
+	// 	position: fixed;
+	// 	top: 0;
+	// }
+
+	&.is-active {
+		.TravelList-head {
+			background-color: #000000;
+			color: #FFFFFF;
+
+			cursor: default;
+		}
+
+		.TravelList-item {
+			display: block;
+		}
+	}
+}
+
+.TravelList-wrap {
+    border: 2px solid;
+    width: auto;
+    display: inline-block;
+}
+
+.TravelList-head {
+	padding: 3px 10px 5px;
+	font-weight: 400;
+	cursor: pointer;
+
+	transition: all 0.15s ease;
+}
+
+.TravelList-item {
+	display: none;
+	border-bottom: 2px solid;
+}
+
+.TravelList-link {
+	display: block;
+	font-size: 15px;
+	padding: 5px 10px;
+
+	&:hover,
+	&:active,
+	&.is-active {
+		color: $yellow;
+	}
+}
