@@ -42,10 +42,6 @@
 	@media (min-width: $layout-s) {
 		padding: rem(10) 0;
 	}
-
-	p {
-		@extend %font-opensans-300;
-	}
 }
 
 .DetailHead-media {
@@ -115,12 +111,15 @@
 }
 
 .DetailInfoFooter-time {
-	display: inline-block;
-	float: left;
-
 	p {
+		display: inline-block;
+		float: left;
 		margin-left: 5px;
 		color: $white;
+	}
+
+	svg {
+		display: inline-block;
 	}
 }
 

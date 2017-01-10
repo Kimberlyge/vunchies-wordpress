@@ -88,7 +88,7 @@ p {
 
 strong,
 b {
-	@extend %font-opensans-600;
+	@extend %font-sans-serif-bold;
 }
 
 // Links
@@ -116,4 +116,12 @@ ul,
 ol {
 	padding: 0;
 	list-style-type: none;
+}
+
+
+img {
+	// opacity: 0;
+	&.is-loaded {
+		// opacity: 1;
+	}
 }

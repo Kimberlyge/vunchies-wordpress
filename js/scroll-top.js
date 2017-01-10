@@ -12,10 +12,9 @@
 	    stop = 600,
 	    scrollTop;
 
-	console.log(buttonScroll);
 
 	window.onscroll = function (e) {
-		console.log('scrolling');
+
 		scrollTop = hasOffset ? window.pageYOffset : docBody.scrollTop;
 
 		// if user scrolls to 60px from the top of the TravelList div
@@ -24,11 +23,11 @@
 		} else {
 			buttonScroll.classList.remove('is-visible');
 		}
+
 	}
 
 	buttonScroll.onclick = function(event) {
 
-		console.log('click button scroll');
 		window.scrollTo(0, hasOffset);
 
 	};

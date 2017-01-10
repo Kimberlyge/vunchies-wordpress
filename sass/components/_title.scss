@@ -8,11 +8,13 @@
 		font-size: $font-30;
 	}
 }
+
 .Title--small {
-	@extend %font-opensans-600;
+	@extend %font-sans-serif-bold;
 	font-size: 1em;
 }
+
 .Title--big {
-	@extend %font-opensans-600;
+	@extend %font-sans-serif-bold;
 	text-transform: uppercase;
 }

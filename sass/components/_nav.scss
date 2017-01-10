@@ -22,7 +22,7 @@
 }
 
 .Nav-item {
-	@extend %font-opensans-400;
+	// @extend %font-opensans-400;
 	display: block;
 	font-size: $font-14;
 	letter-spacing: 0.05em;
@@ -77,7 +77,7 @@
 .NavItemRecipes-title {
 	position: relative;
 	z-index: 12;
-	@extend %font-opensans-600;
+	@extend %font-sans-serif-bold;
 }
 
 /* Sub Navigation */

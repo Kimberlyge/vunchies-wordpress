@@ -53,7 +53,7 @@
 	text-align: center;
 	a {
 		font-size: $font-20;
-		@extend %font-opensans-600;
+		@extend %font-sans-serif-bold;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		display: block;

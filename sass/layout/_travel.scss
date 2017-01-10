@@ -38,7 +38,6 @@
 }
 
 .TravelCopy-title {
-	@extend %font-opensans-300;
 	letter-spacing: 0.1em;
 	font-size: $font-20;
 	margin-bottom: 20px;
@@ -89,10 +88,6 @@
 	@media (min-width: 640px) {
 		padding: rem(20) rem(0);
 		order: initial;
-	}
-
-	p {
-		@extend %font-opensans-300;
 	}
 
 	> .Box {
