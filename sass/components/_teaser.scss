@@ -2,7 +2,8 @@
  * Teaser
  **/
 
-.Teaser {
+.Teaser,
+.infinite-wrap {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
@@ -23,6 +24,7 @@
 }
 
 .Teaser-wrap {
+	opacity: 0;
 	flex: rem(145);
 	margin: rem(5);
 	@media (min-width: $layout-m) {
@@ -39,7 +41,7 @@
 
 	img {
 		@include ratio-inner;
-		transition: opacity 150ms $easing;
+		transition: opacity 200ms $easing;
 		backface-visibility: hidden;
 		object-fit: cover;
 	}

@@ -6,38 +6,6 @@
  */
 ( function() {
 
-
-	jQuery(document).ready( function($) {
-
-		TweenMax.set('.Teaser-wrap', {opacity:0});
-
-		$.ajax({
-			url: "http://vunchies.com/wp-json/wp/v2/posts",
-			success: function( data ) {
-				// console.log('data is there, yay');
-
-				TweenMax.staggerFromTo('.Teaser-wrap', 0.5, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
-				// var imgs = document.getElementsByTagName('img');
-
-				// if (imgs) {
-
-				// 	for(var i=0; i < imgs.length; i++) {
-
-				// 		// TweenMax.set(imgs[i], {autoAlpha:1});
-				// 		// TweenMax.staggerTo(imgs[i], 0.5, {opacity:1, ease:Back.easeIn}, 0.2);
-				// 		TweenMax.to(imgs[i], 0.5, {opacity:1, ease:Power0.easeIn});
-
-				//     	imgs[i].classList.add('is-loaded');
-
-				// 	}
-
-				// }
-
-			}
-		});
-
-	});
-
 	/**
 	 * Travel Detail List
 	 */
@@ -128,7 +96,7 @@
 
 		};
 
-	}
+	};
 
 	// var button, menu, links, i, len;
 

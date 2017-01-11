@@ -29,7 +29,7 @@
 
 			   		while ( have_rows('city') ) : the_row();?>
 
-			   			<div class="Grid-cell">
+			   			<div class="Grid-cell TravelOverview-item">
 							<a href="<?php echo esc_url( get_permalink() ), the_sub_field('city_slug')?>">
 								<div class="Cover Cover--small">
 									<div class="Cover-body">
@@ -55,7 +55,6 @@
 
 	// TEMPLATE FOR TRAVEL DETAIL
 	elseif ( $parent->have_posts() ) : ?>
-
 		<div class="Cover Cover--big" js="js-travelcover">
 			<div class="Cover-body">
 				<h2><?php the_title(); ?></h2>
@@ -190,7 +189,6 @@
 			endif;
 
 		endwhile;
-
 	endif; wp_reset_query();?>
 
 

@@ -32,6 +32,14 @@ add_action( 'after_setup_theme', 'vunchies_jetpack_setup' );
 function vunchies_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
+
+		echo "
+            <script type=\"text/javascript\">
+				TweenMax.staggerFromTo('.Teaser-wrap', 0.3, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
+
+            </script>
+        ";
+
 		if ( is_search() ) :
 			get_template_part( 'template-parts/content', 'search' );
 		else :

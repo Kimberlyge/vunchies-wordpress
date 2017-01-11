@@ -124,6 +124,7 @@ function vunchies_scripts() {
 	// mine
 
 	wp_enqueue_script( 'vunchies-pinit', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
+	wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-scrolltop', get_template_directory_uri() . '/js/scroll-top.js', array(), '20151215', true );
 
