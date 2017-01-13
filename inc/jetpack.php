@@ -16,9 +16,9 @@
 function vunchies_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
+		'container' => 'RecipeOverview',
 		'render'    => 'vunchies_infinite_scroll_render',
-		'footer'    => 'page',
+		'footer'    => 'page'
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -33,9 +33,16 @@ function vunchies_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 
+		the_title();
+
 		echo "
             <script type=\"text/javascript\">
-				TweenMax.staggerFromTo('.Teaser-wrap', 0.3, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
+            var infiniteWrap = document.querySelectorAll('.infinite-wrap');
+
+            for (var i = 0; i < infiniteWrap.length; i++) {
+                console.log('infitinewrapyo');
+            }
+				TweenMax.staggerFromTo('.infinite-wrap .Teaser-wrap', 0.3, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
 
             </script>
         ";

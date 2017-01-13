@@ -2,6 +2,16 @@
  * Comments
  */
 
+
+.reply-title {
+	&:after {
+		display: block;
+		content: '';
+		width: 50px;
+		height: 2px;
+		background-color: black;
+	}
+}
 .Comments {
 	margin-top: 50px;
 
@@ -18,9 +28,9 @@
 	}
 }
 
-
 .comment-respond,
-.comment-list {
+.comment-list,
+.Comments-title {
 	max-width: 500px;
 	margin: 0 auto;
 }
@@ -36,7 +46,6 @@
 	margin-right: 10px;
 }
 
-
 .comment-form-comment label {
 	display: block;
 	margin-bottom: 10px;
@@ -44,30 +53,123 @@
 
 .comment-form-comment textarea {
 	width: 100%;
-	margin-bottom: 20px;
+	border: 1px solid black;
+	padding: 8px;
 }
 
 .form-submit {
-	margin: 0px 0 40px;
+	margin: 0px 0 20px;
+}
+
+.comment-form-author,
+.comment-form-url,
+.comment-form-email {
+	margin-top: 10px;
+
+	label {
+		display: inline-block;
+		width: 70px;
+	}
+
+	input {
+		border: 1px solid black;
+		padding: 8px;
+	}
+}
+
+.comment-subscription-form {
+	margin-bottom: 0;
+}
+
+.subscribe-label {
+	margin-left: 5px;
+	vertical-align: super;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	position: relative;
+	-webkit-appearance: none !important;
+	width: 15px !important;
+	height: 15px;
+	border: 1px solid black;
+	margin-bottom: 0;
+	display: inline-block;
+
+	&:checked {
+		&:after {
+			content: '✔';
+			display: inline-block;
+			font-size: 12px;
+			position: absolute;
+			top: -1px;
+			left: 2px;
+		}
+	}
+}
+
+.js-post-id {
+	visibility: hidden;
+}
+
+/* Comments */
+
+.Comments-title {
+	font-size: 16px;
+	text-align: center;
+
+	&:before {
+		display: inline;
+		content: '"';
+	}
+	&:after {
+		display: inline;
+		content: '"';
+	}
 }
 
 .comment-list {
 	padding: 0;
+	margin-bottom: 40px;
 }
 
 .comment {
 	list-style: none;
 	padding: 20px;
 	margin: 0;
-	border: 1px solid;
-
+	border: 0;
 	margin-bottom: 15px;
 }
 
 .comment-author {
-	margin-bottom: 10px;
+	display: inline-block;
+
+	span {
+		display: none;
+	}
 }
 
-.js-post-id {
-	visibility: hidden;
+.comment-meta {
+	padding-bottom: 5px;
+    border-bottom: 2px solid;
+}
+
+.comment-metadata {
+	display: inline-block;
+    font-size: 11px;
+    float: right;
+}
+
+.comment-content {
+	margin-top: 15px;
+}
+
+.comment-body {
+	.reply {
+		font-style: italic;
+		display: inline-block;
+	    border-bottom: 1px solid;
+	    font-size: 11px;
+	    width: 25px;
+	    line-height: 15px;
+	}
 }

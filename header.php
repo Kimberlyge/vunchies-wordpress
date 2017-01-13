@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/f09208d023/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/f09208d023/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/ac5f04ce9a/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/ac5f04ce9a/UntitledProject/svgxuse.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -57,19 +57,28 @@
 						<div class="NavSub-content">
 							<div class="NavSub-wrap">
 								<h3>Course</h3>
-								<a href="#" class="NavSub-item">Baked Goods</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/sidedish" class="NavSub-item">Sidedishes</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/snacks" class="NavSub-item">Snacks</a>
 							</div>
 							<div class="NavSub-wrap">
 								<h3>Sweet</h3>
-								<a href="#" class="NavSub-item">Baked Goods</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/baked-goods" class="NavSub-item">Baked Goods</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/cake" class="NavSub-item">Cake</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/cookie" class="NavSub-item">Cookie</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/ice-cream" class="NavSub-item">Ice Cream</a>
 							</div>
 							<div class="NavSub-wrap">
 								<h3>Season</h3>
-								<a href="#" class="NavSub-item">Baked Goods</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/spring" class="NavSub-item">Spring</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/summer" class="NavSub-item">Summer</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/fall" class="NavSub-item">Fall</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/winter" class="NavSub-item">Winter</a>
 							</div>
 							<div class="NavSub-wrap">
 								<h3>Cuisine</h3>
-								<a href="#" class="NavSub-item">Baked Goods</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/thai" class="NavSub-item">Thai</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/vietnamese" class="NavSub-item">Vietnamese</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/middle-eastern" class="NavSub-item">Middle Eastern</a>
 							</div>
 						</div>
 					</div>

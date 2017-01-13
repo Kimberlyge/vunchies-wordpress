@@ -119,9 +119,10 @@ ol {
 }
 
 
-img {
-	// opacity: 0;
-	&.is-loaded {
-		// opacity: 1;
+textarea,
+input {
+	&:focus {
+		outline: 0;
+
 	}
 }

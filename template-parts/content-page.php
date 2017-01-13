@@ -53,6 +53,13 @@
 		</div>
 	<?php
 
+
+	// TEMPLATE FOR TRAVEL OVERVIEW
+	elseif ( is_page(2) ) :?>
+		<p><?php the_content(); ?></p>
+
+	<?php
+
 	// TEMPLATE FOR TRAVEL DETAIL
 	elseif ( $parent->have_posts() ) : ?>
 		<div class="Cover Cover--big" js="js-travelcover">

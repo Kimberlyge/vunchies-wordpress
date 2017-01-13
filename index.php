@@ -21,6 +21,7 @@ get_header(); ?>
 			<?php
 			if ( have_posts() ) :
 				/* Start the Loop */
+
 				while ( have_posts() ) : the_post();
 
 					/*
@@ -32,8 +33,18 @@ get_header(); ?>
 
 				endwhile;
 
+				wp_link_pages();
+				?>
+				<div class="Pagination">
 
+					<div class="Pagination-item Pagination-item--next"><span>«</span><?php previous_posts_link( 'Newer posts' ); ?></div>
+					<span>/</span>
+					<div class="Pagination-item Pagination-item--previous"><?php next_posts_link( 'Older posts' ); ?><span>»</span></div>
+
+				</div>
+				<?php
 			endif; ?>
+
 		</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

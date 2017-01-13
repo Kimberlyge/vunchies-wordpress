@@ -13,7 +13,7 @@
 			success: function( data ) {
 				// console.log('data is there, yay');
 
-				TweenMax.staggerFromTo('.Teaser-wrap', 0.3, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
+				TweenMax.staggerFromTo('.Teaser-wrap', 0.2, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
 			}
 		});
 
@@ -31,13 +31,5 @@
 			}
 		});
 	});
-
-	if (document.querySelector('infinite-wrap')) {
-		console.log('infinite wrap');
-	}
-
-	if (document.querySelector('infinite-loader')) {
-		console.log('infinite loader');
-	}
 
 } )();
