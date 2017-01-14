@@ -182,12 +182,14 @@ get_header(); ?>
 			endif;?>
 
 			<div class="js-button-footer-nav Button-footerNav">
-				<?php next_post_link('%link','<button class="Button">
+				<?php next_post_link('%link','<button class="Button Button-footerNav-next">
 										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
 									</button>'); ?>
-				<?php previous_post_link('%link','<button class="Button">
+				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev">
 										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
 									</button>'); ?>
+				<!-- <span class="Button-footerNav-copyNext"><?php next_post_link('%link'); ?></span>
+				<span class="Button-footerNav-copyPrev"><?php previous_post_link('%link'); ?></span> -->
 			</div><?php
 
 		endwhile; // End of the loop.
