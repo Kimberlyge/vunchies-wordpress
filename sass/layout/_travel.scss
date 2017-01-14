@@ -39,9 +39,10 @@
 }
 
 .TravelCopy-title {
+	margin-bottom: 20px;
 	letter-spacing: 0.1em;
 	font-size: $font-20;
-	margin-bottom: 20px;
+	text-transform: uppercase;
 
 	@media (min-width: $layout-s) {
 		font-size: rem(30);

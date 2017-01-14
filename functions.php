@@ -128,6 +128,8 @@ function vunchies_scripts() {
 
 	wp_enqueue_script( 'vunchies-scrolltop', get_template_directory_uri() . '/js/scroll-top.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'vunchies-comments', get_template_directory_uri() . '/js/comments.js', array(), '20151215', true );
+
 	// wp_enqueue_script( 'vunchies-sticky', get_template_directory_uri() . '/js/sticky.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/icomoon/svgxuse.js', array(), '20151215', true );

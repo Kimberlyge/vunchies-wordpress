@@ -14,7 +14,7 @@
 			TweenMax.to(buttonScroll, 0.25, { x:-70, ease:Power0.easeIn});
 
 		} else {
-			TweenMax.to(buttonScroll, 0.25, { x:0, ease:Power0.easeOut});
+			TweenMax.to(buttonScroll, 0.25, { x:0, ease:Power0.easeIn});
 		}
 
 	};

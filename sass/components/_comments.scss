@@ -16,6 +16,8 @@
 	margin-top: 50px;
 
 	.form-submit {
+		margin: 20px 0;
+
 		input {
 			background: black;
 			color: white;
@@ -24,6 +26,7 @@
 			padding: 10px 15px;
 			letter-spacing: 1px;
 			font-size: 12px;
+			margin-bottom: 10px;
 		}
 	}
 }
@@ -57,14 +60,11 @@
 	padding: 8px;
 }
 
-.form-submit {
-	margin: 0px 0 20px;
-}
-
 .comment-form-author,
 .comment-form-url,
 .comment-form-email {
 	margin-top: 10px;
+	margin-bottom: 0;
 
 	label {
 		display: inline-block;
@@ -114,37 +114,85 @@ input[type="checkbox"], input[type="radio"] {
 /* Comments */
 
 .Comments-title {
-	font-size: 16px;
-	text-align: center;
+	padding: 25px 0 70px;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+
+    position: relative;
 
 	&:before {
-		display: inline;
-		content: '"';
+		position: absolute;
+
+		content: "\201C";
+		font-size: 70px;
+		top: -10px;
+		left: 0;
 	}
+
 	&:after {
-		display: inline;
-		content: '"';
+		position: absolute;
+
+		content: "\201E";
+		font-size: 70px;
+
+		right: 0;
+		bottom: 50px;
 	}
 }
 
 .comment-list {
 	padding: 0;
 	margin-bottom: 40px;
+
+	.children {
+		margin-bottom: 0;
+	}
+
+	li + li {
+		margin-top: 15px;
+	}
 }
 
 .comment {
 	list-style: none;
-	padding: 20px;
+	padding: 20px 20px 22px;
 	margin: 0;
 	border: 0;
-	margin-bottom: 15px;
+	background-color: #FFFFFF;
+
 }
 
 .comment-author {
 	display: inline-block;
+	font-style: italic;
+	letter-spacing: 0.05em;
 
 	span {
 		display: none;
+	}
+	.fn > a {
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: $yellow;
+		}
+
+		svg {
+			width: 13px;
+			height: 10px;
+			vertical-align: baseline;
+			margin-left: 2px;
+		}
+	}
+}
+
+.comment-author-kimberly > .comment-body > .comment-meta {
+	color: $yellow;
+
+	a {
+		color: $yellow;
 	}
 }
 

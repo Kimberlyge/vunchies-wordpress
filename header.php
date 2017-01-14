@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/ac5f04ce9a/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/ac5f04ce9a/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/036a27f4f8/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/036a27f4f8/UntitledProject/svgxuse.js"></script>
 
 <?php wp_head(); ?>
 </head>

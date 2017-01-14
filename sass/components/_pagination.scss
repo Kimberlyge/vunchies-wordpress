@@ -7,22 +7,33 @@
 	text-align: center;
 	font-size: 12px;
 	margin-top: 20px;
-}
-
-.Pagination-item {
-    display: inline-block;
-    margin: 0 5px;
 
 	a {
 		padding-bottom: 2px;
-		border-bottom: 1px solid;
+		// border-bottom: 1px solid;
 		line-height: 15px;
 		font-style: italic;
 
 		&:hover {
 			color: $yellow;
 		}
+
+		&:first-of-type {
+			&:after {
+				content: '/';
+				padding: 10px;
+				color: #000000 !important;
+			}
+		}
+
 	}
+}
+
+.Pagination-item {
+    display: inline-block;
+    margin: 0 5px;
+
+
 	span {
 		margin: 0 5px;
 	}
