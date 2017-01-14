@@ -26,10 +26,10 @@
 <body class="hfeed">
 	<div class="NavSocial">
 		<a class='NavSocial-item' href="https://pinterest.com/kimberlyges/" target="_blank">
-			<span data-grunticon-embed class="icon icon-pinterest"></span>
+			<svg class="icon icon-pinterest"><use xlink:href="#icon-pinterest"></use></svg>
 		</a>
 		<a class='NavSocial-item' href="https://www.instagram.com/kimberlykashew/" target="_blank">
-			<span data-grunticon-embed class="icon icon-instagram"></span>
+			<svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
 		</a>
 	</div>
 	<header class="Header">

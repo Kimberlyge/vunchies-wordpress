@@ -179,7 +179,16 @@ get_header(); ?>
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
-			endif;
+			endif;?>
+
+			<div class="js-button-footer-nav Button-footerNav">
+				<?php next_post_link('%link','<button class="Button">
+										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+									</button>'); ?>
+				<?php previous_post_link('%link','<button class="Button">
+										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+									</button>'); ?>
+			</div><?php
 
 		endwhile; // End of the loop.
 		?>

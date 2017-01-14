@@ -13,8 +13,8 @@
 
 	</div><!-- #content -->
 
-	<button class="Button Button-scrollTop js-button-scrolltop">
-		<svg class="icon icon-arrow-top"><use xlink:href="#icon-arrow-top"></use></svg>
+	<button class="Button Button-scrollTop js-button-footer-scrollUp">
+		<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
 	</button>
 
 	<footer id="colophon" class="Footer" role="contentinfo">

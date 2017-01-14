@@ -36,19 +36,7 @@ get_header(); ?>
 				wp_link_pages();
 				?>
 				<div class="Pagination">
-					<?php if (previous_posts_link()) :?>
-						<div class="Pagination-item Pagination-item--next">
-							<span>«</span>
-							<p><?php previous_posts_link('Newer posts'); ?></p>
-						</div>
-						<span>/</span>
-					<?php endif; ?>
-					<?php if (next_posts_link()) :?>
-						<div class="Pagination-item Pagination-item--next">
-							<p><?php next_posts_link('Older posts'); ?></p>
-							<span>»</span>
-						</div>
-					<?php endif; ?>
+					<p><?php posts_nav_link(' ','&laquo;&laquo; Newer posts','Older posts&raquo;&raquo;'); ?></p>
 
 				</div>
 				<?php
