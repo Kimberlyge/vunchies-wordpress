@@ -188,6 +188,7 @@ get_header(); ?>
 				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev">
 										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
 									</button>'); ?>
+
 			</div><?php
 
 		endwhile; // End of the loop.

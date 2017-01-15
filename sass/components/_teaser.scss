@@ -27,13 +27,11 @@
 	flex: rem(145);
 	margin: rem(5);
 	@media (min-width: $layout-m) {
-		flex: rem(180);
+		flex: rem(200);
 	}
 }
 
 .Teaser-media {
-	// visibility: hidden;
-
 	@include ratio(1456,2177);
 	margin: 0;
 	overflow: hidden;

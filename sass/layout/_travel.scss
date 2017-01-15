@@ -11,6 +11,7 @@
 			background-color: rgba($#FFFFFF, 0.2);
 		}
 	}
+
 	.Grid-cell {
 		flex: rem(250);
 		@media (min-width: 928px) {
@@ -104,7 +105,7 @@
 		width: 100%;
 		object-fit: cover;
 		height: 100%;
-		padding: 0 1.25rem 30px;
+		// padding: 0 1.25rem 30px;
 	}
 
 	&.is-reverse {

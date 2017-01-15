@@ -88,7 +88,6 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dinner" class="Nav-item">Dinner</a>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dessert" class="Nav-item">Dessert</a>
 
-
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
 					<a href="<?php echo get_page_link(90); ?>" class="Nav-item NavItemRecipes-title">Travel</a>
 					<div class="NavSub js-nav-travel">
@@ -105,6 +104,9 @@
 						</div>
 					</div>
 				</div>
+
+				<a href="<?php echo get_page_link(613); ?>" class="Nav-item">About</a>
+
 			</nav>
 		</div>
 	</header>

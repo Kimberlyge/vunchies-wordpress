@@ -2,26 +2,14 @@
  * Animations
  */
 
-// Fade in images
-.Teaser-media img,
-.DetailHead-media img,
-.DetailGrid-item img,
-.ImageGrid img,
-.Cover-media img {
-	transition: opacity 1s $easing;
-	// opacity: 0;
+.js-animate {
+	opacity: 0;
+}
 
-	// .pinterest-icon {
-	// 	opacity: 0;
-	// }
+.js-animate-city-title {
+	opacity: 0;
+}
 
-	&.lazyloaded {
-		transition: opacity 1s $easing;
-		opacity: 1;
-		// &:hover {
-		// 	.pinterest-anchor {
-		// 		opacity: 1;
-		// 	}
-		// }
-	}
+.js-animate-city-country p {
+	opacity: 0;
 }

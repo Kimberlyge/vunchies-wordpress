@@ -12,10 +12,10 @@
 		scrollTop = hasOffset ? window.pageYOffset : docBody.scrollTop;
 
 		if (scrollTop >= stop) {
-			if (buttonFooterNav) TweenMax.to(buttonFooterNav, 0.125, { x:120, ease:Power0.easeIn});
+			if (buttonFooterNav) TweenMax.to(buttonFooterNav, 0.15, { x:120, ease:Power0.easeIn});
 			TweenMax.to(buttonScroll, 0.25, { x:-70, ease:Power0.easeIn});
 		} else {
-			if (buttonFooterNav) TweenMax.to(buttonFooterNav, 0.125, { x:-120, ease:Power0.easeIn});
+			if (buttonFooterNav) TweenMax.to(buttonFooterNav, 0.2, { x:-120, ease:Power0.easeIn});
 			TweenMax.to(buttonScroll, 0.25, { x:0, ease:Power0.easeIn});
 		}
 

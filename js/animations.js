@@ -20,15 +20,16 @@
 		});
 
 		$.ajax({
-			url: "http://vunchies.com/wp-json/wp/v2/pages/90",
+			url: "http://vunchies.com/wp-json/wp/v2/pages",
 			success: function( data ) {
-				// console.log('traveloverview is there, yay');
 
-				// var content = document.getElementById( 'TravelOverview-item' );
+				TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.5);
 
-				// if(content) TweenMax.fromTo(content, 0.3, {x:window.innerWidth},{x:0, ease:Power0.easeInOut});
+				/* Travel Detail */
 
-				TweenMax.staggerFromTo('.TravelOverview-item', 0.5, {opacity:0, y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
+				TweenMax.fromTo('.js-animate-city-title', 0.25, {y:-15}, {opacity:1, y:0, ease:Power0.easeIn});
+				TweenMax.fromTo('.js-animate-city-country p', 0.25, {y:15}, {opacity:1, y:0, ease:Power0.easeIn});
+				TweenMax.fromTo('.js-travellist', 0.3, {x:-140}, {x:0, delay:0.5, ease:Power0.easeIn});
 
 			}
 		});
