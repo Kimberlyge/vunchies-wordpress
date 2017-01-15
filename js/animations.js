@@ -11,9 +11,11 @@
 		$.ajax({
 			url: "http://vunchies.com/wp-json/wp/v2/posts",
 			success: function( data ) {
-				// console.log('data is there, yay');
+				console.log('data is there, yay');
 
-				TweenMax.staggerFromTo('.Teaser-wrap', 0.2, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
+				TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.11);
+
+				TweenMax.staggerFromTo('.js-animate-detail', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
 			}
 		});
 

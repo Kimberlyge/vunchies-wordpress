@@ -35,18 +35,6 @@ function vunchies_infinite_scroll_render() {
 
 		the_title();
 
-		echo "
-            <script type=\"text/javascript\">
-            var infiniteWrap = document.querySelectorAll('.infinite-wrap');
-
-            for (var i = 0; i < infiniteWrap.length; i++) {
-                console.log('infitinewrapyo');
-            }
-				TweenMax.staggerFromTo('.infinite-wrap .Teaser-wrap', 0.3, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
-
-            </script>
-        ";
-
 		if ( is_search() ) :
 			get_template_part( 'template-parts/content', 'search' );
 		else :

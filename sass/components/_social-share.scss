@@ -1,0 +1,119 @@
+/**
+ * Social sharing buttons
+ */
+
+a.share-email,
+a.share-facebook,
+a.share-twitter,
+a.share-pinterest,
+a.share-jetpack-whatsapp {
+	text-indent: -9999px;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	margin: 0 4px !important;
+	padding: 0 !important;
+    border: 0!important;
+    box-shadow: none!important;
+    background-color: white!important;
+}
+
+a.share-jetpack-whatsapp {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/whatsapp-logo.svg') !important;
+	width: 17px;
+	height: 17px;
+}
+
+a.share-facebook {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/facebook.svg') !important;
+	width: 18px;
+	height: 18px;
+}
+
+a.share-twitter {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/twitter-logo.svg') !important;
+	width: 18px;
+	height: 18px;
+}
+
+a.share-email {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/icon-2-mail-envelope-open.svg') !important;
+	width: 16px;
+	height: 16px;
+}
+a.share-pinterest {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg') !important;
+	width: 16px;
+	height: 16px;
+}
+
+#sharing_email {
+	border: 2px solid black !important;
+    box-shadow: none !important;
+    margin-top: 11px !important;
+    margin: auto !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    top: 0!important;
+    height: 252px !important;
+    outline: 1px solid black !important;
+	box-shadow: 7px 7px 0px #000000 !important;
+
+	left: 0!important;
+    top: 0 !important;
+    right: 0!important;
+    margin: auto!important;
+
+    @media (max-width: $layout-s) {
+    	width: 60% !important;
+	}
+
+    label {
+    	font-size: 12px !important;
+    	letter-spacing: 0.04em !important;
+    	font-weight: 600 !important;
+    }
+
+    input {
+    	padding: 8px 10px !important;
+    	border: 1px solid !important;
+    }
+	.sharing_send {
+	    background: black !important;
+	    color: white !important;
+	    border: 0 !important;
+	    text-transform: uppercase !important;
+	    padding: 10px 15px !important;
+	    letter-spacing: 1px !important;
+	    font-size: 12px !important;
+	    margin-bottom: 10px !important;
+	}
+
+	&:after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: black;
+	}
+}
+#sharing_email .sharing_send.email-form-submit {
+		color: white!important;
+		border-radius: 0 !important;
+}
+#sharing_email .sharing_cancel {
+	text-shadow: none;
+    font-style: italic;
+    display: inline-block;
+    border-bottom: 1px solid;
+    font-size: 11px;
+    padding: 0 !important;;
+    width: 29px;
+    line-height: 15px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.jetpack-likes-widget-wrapper {
+	display: none;
+}

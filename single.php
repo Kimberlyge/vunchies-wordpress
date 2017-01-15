@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<div class="Detail">
 				<div class="DetailHead Grid-cell Grid-cell--full">
-					<div class="DetailHead-body centered Grid-cell Grid-cell--2">
+					<div class="DetailHead-body js-animate-detail centered Grid-cell Grid-cell--2">
 						<div class="DetailHead-copy">
 							<h2 class="DetailHead-title">
 								<?php the_title();?>
@@ -25,7 +25,7 @@ get_header(); ?>
 							<p><?php the_content();?></p>
 						</div>
 					</div>
-					<div class="DetailHead-media Grid-cell Grid-cell--2">
+					<div class="DetailHead-media js-animate-detail Grid-cell Grid-cell--2">
 						<?php $image = get_field('cover');?>
 						<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 
@@ -36,7 +36,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="DetailGrid DetailGrid--inline">
-					<div class="DetailGrid-item DetailGrid-item--text">
+					<div class="DetailGrid-item js-animate-detail DetailGrid-item--text">
 						<div class="DetailInfo">
 							<h3 class="DetailText-title">Ingredients</h3>
 							<ul>
@@ -44,7 +44,7 @@ get_header(); ?>
 							</ul>
 							<div class="DetailInfoFooter">
 								<div class="DetailInfoFooter-time">
-									<svg class="DetailInfoFooter-icon icon icon-clock-arrow"><use xlink:href="#icon-clock-arrow"></use></svg>
+									<svg class="DetailInfoFooter-icon icon icon-stop-watch-2"><use xlink:href="#icon-stop-watch-2"></use></svg>
 									<?php the_field('info');?>
 								</div>
 								<a class="DetailInfoFooter-print" href="javascript:window.print()">Print</a>
@@ -65,7 +65,7 @@ get_header(); ?>
 
 				        	if( get_sub_field('first_grid') ):?>
 								<div class="Grid Grid--row DetailGrid DetailGrid--first <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_portrait') ):?>is-portrait<?php endif;?><?php if( get_sub_field('is_landscape') ):?>is-landscape<?php endif;?>">
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--text">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--text js-animate-detail">
 										<!-- {{#if grid.title}} -->
 										<?php if( get_sub_field('title') ):?>
 											<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -73,7 +73,7 @@ get_header(); ?>
 										<!-- {{/if}} -->
 										<?php the_sub_field('text');?>
 									</div>
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--media">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--media js-animate-detail">
 
 										<?php $image = get_sub_field('image');?>
 
@@ -91,7 +91,7 @@ get_header(); ?>
 
 				        	if( get_sub_field('second_grid') ):?>
 								<div class="Grid Grid--row DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--text">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--text js-animate-detail">
 										<!-- {{#if grid.title}} -->
 										<?php if( get_sub_field('title') ):?>
 											<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -99,7 +99,7 @@ get_header(); ?>
 										<!-- {{/if}} -->
 										<?php the_sub_field('text');?>
 									</div>
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--text">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--text js-animate-detail">
 										<!-- {{#if grid.title}} -->
 										<?php if( get_sub_field('title_2') ):?>
 											<h3 class="DetailText-title"><?php the_sub_field('title_2');?>:</h3>
@@ -107,7 +107,7 @@ get_header(); ?>
 										<!-- {{/if}} -->
 										<?php the_sub_field('text_2');?>
 									</div>
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--media">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--media js-animate-detail">
 
 										<?php $image = get_sub_field('image');?>
 
@@ -124,7 +124,7 @@ get_header(); ?>
 
 				        	if( get_sub_field('third_grid') ):?>
 								<div class="Grid Grid--row DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--text">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--text js-animate-detail">
 										<!-- {{#if grid.title}} -->
 										<?php if( get_sub_field('title') ):?>
 											<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -132,7 +132,7 @@ get_header(); ?>
 										<!-- {{/if}} -->
 										<?php the_sub_field('text');?>
 									</div>
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--media">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--media js-animate-detail">
 
 										<?php $image = get_sub_field('image');?>
 
@@ -143,7 +143,7 @@ get_header(); ?>
 											{{grid.image.sizes.large}} 640w"/>
 							 -->
 									</div>
-									<div class="Grid-cell DetailGrid-item DetailGrid-item--media">
+									<div class="Grid-cell DetailGrid-item DetailGrid-item--media js-animate-detail">
 
 										<?php $image = get_sub_field('image_2');?>
 
@@ -188,8 +188,6 @@ get_header(); ?>
 				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev">
 										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
 									</button>'); ?>
-				<!-- <span class="Button-footerNav-copyNext"><?php next_post_link('%link'); ?></span>
-				<span class="Button-footerNav-copyPrev"><?php previous_post_link('%link'); ?></span> -->
 			</div><?php
 
 		endwhile; // End of the loop.

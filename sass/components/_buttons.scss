@@ -4,6 +4,12 @@
 	padding: .4em 1em .4em;
 	letter-spacing: .1em;
 	text-decoration: none;
+
+	&:focus {
+		outline: 0;
+		box-shadow: 0;
+	}
+
 }
 
 .NonBtn {

@@ -121,6 +121,8 @@ ol {
 
 textarea,
 input {
+	-webkit-appearance: none;
+	border-radius: 0;
 	&:focus {
 		outline: 0;
 

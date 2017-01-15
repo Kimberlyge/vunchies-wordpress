@@ -44,8 +44,11 @@
 			padding: rem(10) 0;
 		}
 
-
+		&.is-mobile {
+			transform: translateX(0%);
+		}
 	}
+
 }
 .Header-title {
 	display: block;
@@ -65,12 +68,5 @@
 		@extend %font-sans-serif;
 		font-size: $font-14;
 		text-transform: lowercase;
-	}
-}
-
-/* Mobile */
-.on-mobile {
-	.Header-inner {
-		transform: translateX(0%);
 	}
 }

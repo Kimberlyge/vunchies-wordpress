@@ -23,8 +23,15 @@
 	}
 }
 
-.NavSocial-item:first-of-type {
+.NavSocial-item {
+	display: inline-block;
+	float: right;
 	@media (min-width: 656px) {
-		margin-right: rem(5);
+		margin-right: rem(10);
+		float: left;
+	}
+
+	&:last-of-type {
+		margin-right: 10px;
 	}
 }

@@ -2,7 +2,6 @@
  * Comments
  */
 
-
 .reply-title {
 	&:after {
 		display: block;
@@ -12,8 +11,15 @@
 		background-color: black;
 	}
 }
+
+.comment-reply-title {
+	margin-top: 50px;
+}
+
 .Comments {
 	margin-top: 50px;
+	width: 90%;
+	margin: auto;
 
 	.form-submit {
 		margin: 20px 0;
@@ -55,9 +61,17 @@
 }
 
 .comment-form-comment textarea {
-	width: 100%;
 	border: 1px solid black;
 	padding: 8px;
+
+	@media (min-width: $layout-sm) {
+		width: 100%;
+	}
+
+	&.error {
+		background: $yellow;
+		border: 1px solid $yellow !important;
+	}
 }
 
 .comment-form-author,
@@ -74,8 +88,21 @@
 	input {
 		border: 1px solid black;
 		padding: 8px;
+		transition: all 0.2s ease;
+
+		&.error {
+			background: $yellow;
+			border: 1px solid $yellow !important;
+		}
+
+		& + strong {
+			display: none !important;
+		}
 	}
 }
+
+
+/* Checkboxes */
 
 .comment-subscription-form {
 	margin-bottom: 0;
@@ -83,7 +110,8 @@
 
 .subscribe-label {
 	margin-left: 5px;
-	vertical-align: super;
+	vertical-align: text-bottom;
+	cursor: pointer;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -111,10 +139,11 @@ input[type="checkbox"], input[type="radio"] {
 	visibility: hidden;
 }
 
+
 /* Comments */
 
 .Comments-title {
-	padding: 25px 0 70px;
+	padding: 65px 0 70px;
     font-size: 22px;
     text-align: center;
     font-family: 'Playfair Display', serif;
@@ -127,7 +156,7 @@ input[type="checkbox"], input[type="radio"] {
 
 		content: "\201C";
 		font-size: 70px;
-		top: -10px;
+		top: 20px;
 		left: 0;
 	}
 
