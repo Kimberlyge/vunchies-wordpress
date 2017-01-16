@@ -14,10 +14,15 @@
     transition: all 350ms $easing;
 
     .icon {
-    	margin: 10px;
+    	margin: 20px;
     }
 
     &:hover {
         opacity: 1;
+    }
+
+    img {
+        width: 20px;
+        height: 25px;
     }
 }

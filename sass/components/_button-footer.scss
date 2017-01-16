@@ -35,6 +35,7 @@
 }
 
 .Button-footerNav {
+	width: 100%;
 	left: -100px;
 }
 
@@ -50,4 +51,20 @@
 	svg {
 		transform: rotate(-90deg);
 	}
+}
+
+.Button-footerNav-title {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.4s easeInOut;
+
+	position: absolute;
+    left: 90px;
+    bottom: 7px;
+    right: 0;
+
+    &.is-active {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.3s easeInOut;
 }

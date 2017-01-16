@@ -24,7 +24,7 @@
 
 		    	target.classList.add('js-pin-it-active');
 
-		    	target.insertAdjacentHTML('beforebegin', '<a href="http://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&media=' + encodeURIComponent(event.target.currentSrc) + '&description=' + encodeURIComponent(event.target.alt) + '" target="_blank" class="pinterest-anchor js-pin-icon"><svg class="icon icon-pinterest icon-pinterest--big"><use xlink:href="#icon-pinterest"></use></svg></a>');
+		    	target.insertAdjacentHTML('beforebegin', '<a href="http://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href) + '&media=' + encodeURIComponent(event.target.currentSrc) + '&description=' + encodeURIComponent(event.target.alt) + '" target="_blank" class="pinterest-anchor js-pin-icon"><img class="icon icon-pinterest" src="http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg" alt=""></a>');
 
 		    	target.onmouseleave = function(event) {
 				};

@@ -66,7 +66,8 @@
 	// TEMPLATE FOR CONTACT
 	elseif ( is_page(620) ) :?>
 		<div class="About">
-			<?php [contact-form-7 id="518" title="Contact"] ?>
+			<p><?php the_content(); ?></p>
+
 		</div>
 	<?php
 

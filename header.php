@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/2fe581e40a/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/2fe581e40a/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/178b6fc90e/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/178b6fc90e/UntitledProject/svgxuse.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -26,7 +26,7 @@
 <body class="hfeed">
 	<div class="NavSocial">
 		<a class='NavSocial-item' href="https://pinterest.com/kimberlyges/" target="_blank">
-			<svg class="icon icon-pinterest"><use xlink:href="#icon-pinterest"></use></svg>
+			<img class="icon icon-pinterest" src="http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg" alt="">
 		</a>
 		<a class='NavSocial-item' href="https://www.instagram.com/kimberlykashew/" target="_blank">
 			<svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>

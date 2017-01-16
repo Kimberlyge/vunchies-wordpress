@@ -182,12 +182,22 @@ get_header(); ?>
 			endif;?>
 
 			<div class="js-button-footer-nav Button-footerNav">
-				<?php next_post_link('%link','<button class="Button Button-footerNav-next">
+				<?php next_post_link('%link','<button class="Button Button-footerNav-next js-button-footerNav-next">
 										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
 									</button>'); ?>
-				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev">
+				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev js-button-footerNav-prev">
 										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
-									</button>'); ?>
+									</button>');
+
+				$next_post = get_next_post();
+				if (!empty( $next_post )): ?>
+				  <a class="Button-footerNav-title Button-footerNav-title--next js-button-footerNav-title-next" href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo $next_post->post_title; ?></a>
+				<?php endif;
+
+				$previous_post = get_previous_post();
+				if (!empty( $previous_post )): ?>
+				  <a class="Button-footerNav-title Button-footerNav-title--prev js-button-footerNav-title-prev" href="<?php echo get_permalink( $previous_post->ID ); ?>"><?php echo $previous_post->post_title; ?></a>
+				<?php endif; ?>
 
 			</div><?php
 

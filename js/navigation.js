@@ -31,6 +31,50 @@
 
 	};
 
+
+	/**
+	 * Detail Nav
+	 */
+
+	var buttonFooterNext = document.querySelector( '.js-button-footerNav-next' );
+	var buttonFooterPrev = document.querySelector( '.js-button-footerNav-prev' );
+	var buttonFooterTitlePrev = document.querySelector( '.js-button-footerNav-title-prev' );
+	var buttonFooterTitleNext = document.querySelector( '.js-button-footerNav-title-next' );
+
+	buttonFooterNext.onmouseenter = function(event) {
+
+		var target = event.currentTarget;
+
+		buttonFooterTitleNext.classList.add('is-active');
+
+
+		/* Hide */
+
+		target.onmouseleave = function(event) {
+
+			buttonFooterTitleNext.classList.remove('is-active');
+
+		};
+
+	};
+
+	buttonFooterPrev.onmouseenter = function(event) {
+
+		var target = event.currentTarget;
+
+		buttonFooterTitlePrev.classList.add('is-active');
+
+
+		/* Hide */
+
+		target.onmouseleave = function(event) {
+
+			buttonFooterTitlePrev.classList.remove('is-active');
+
+		};
+
+	};
+
 	/**
 	 * Travel Detail List
 	 */
