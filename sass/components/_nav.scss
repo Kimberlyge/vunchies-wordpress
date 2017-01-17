@@ -2,8 +2,7 @@
  * Navigation
  */
 
-.Nav--main,
-.NavFilter {
+.Nav--main {
 	position: relative;
 	padding-bottom: 0;
 
@@ -53,6 +52,11 @@
 
 }
 
+.Nav-devider {
+	border-left: 1px solid black;
+	padding-left: 16px;
+}
+
 
 /* Main Navigation */
 
@@ -64,12 +68,52 @@
 
 /* NavItems with SubNavigations */
 
+.NavItemFilter-icons {
+	position: relative;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 22;
+}
+
+.NavItemFilter-icon,
+.NavItemFilter-icon-active {
+	position: absolute;
+	width: 15px;
+	height: 20px;
+	vertical-align: bottom;
+
+	transition: opacity 0.2s ease;
+}
+
+.NavItemFilter-icon-active {
+	opacity: 0;
+}
+
+
+.NavItemFilter {
+	display: inline-block;
+	margin-right: 15px;
+
+	&:hover {
+		.NavItemFilter-icon {
+			opacity: 0;
+		}
+
+		.NavItemFilter-icon-active {
+			opacity: 1;
+		}
+	}
+}
+
 .NavItemTravel,
 .NavItemRecipes {
 	display: inline-block;
 
-	&.is-active > a {
-		color: $yellow;
+	&.is-active {
+		> a {
+			color: $yellow;
+		}
 	}
 }
 
@@ -78,6 +122,11 @@
 	position: relative;
 	z-index: 21;
 	@extend %font-sans-serif-bold;
+}
+
+.NavItemFilter-title {
+	position: relative;
+	z-index: 22;
 }
 
 /* Sub Navigation */
@@ -113,6 +162,35 @@
 	}
 }
 
+.NavSubFilter-item {
+	position: relative;
+	text-align: left;
+
+	&.is-active {
+		&:after {
+			content: '✔';
+			display: inline-block;
+			font-size: 12px;
+			position: absolute;
+			top: -1px;
+			left: 2px;
+		}
+	}
+}
+.NavSub-checkbox {
+	position: relative;
+	-webkit-appearance: none !important;
+	display: inline-block;
+	width: 9px;
+    height: 9px;
+    margin-bottom: 0;
+    margin-right: 10px;
+    padding: 0;
+
+    // border-radius: 50%;
+	border: 1px solid black;
+}
+
 .NavSub-content {
 	@include flexRow;
 	background-color: $white;
@@ -132,68 +210,68 @@
 }
 
 
-/* Filter Navigation */
+// /* Filter Navigation */
 
-.NavFilter {
-	@include flexRow;
-	background-color: $white;
-	border: 2px solid $yellow;
-	align-items: flex-end;
-	padding: rem(10) rem(10) rem(10) rem($space);
+// .NavFilter {
+// 	@include flexRow;
+// 	background-color: $white;
+// 	border: 2px solid $yellow;
+// 	align-items: flex-end;
+// 	padding: rem(10) rem(10) rem(10) rem($space);
 
-	@media (max-width: 656px) {
-		display: none;
-	}
+// 	@media (max-width: 656px) {
+// 		display: none;
+// 	}
 
-	a i {
-			margin-left: rem(4);
-			width: rem(16);
-			height: rem(16);
-			vertical-align: middle;
-			margin-top: rem(1);
-	}
+// 	a i {
+// 			margin-left: rem(4);
+// 			width: rem(16);
+// 			height: rem(16);
+// 			vertical-align: middle;
+// 			margin-top: rem(1);
+// 	}
 
-	> i {
-		margin-right: rem(15);
-		width: rem(16);
-		height: rem(16);
-	}
+// 	> i {
+// 		margin-right: rem(15);
+// 		width: rem(16);
+// 		height: rem(16);
+// 	}
 
-	a {
-		padding: 0;
-		background: none;
-		font-size: 12px;
-		text-transform: lowercase;
-	}
-}
+// 	a {
+// 		padding: 0;
+// 		background: none;
+// 		font-size: 12px;
+// 		text-transform: lowercase;
+// 	}
+// }
 
-.NavFilter--sticky {
-	display: none;
-	width: 25%;
-	&.is-sticky {
-		@include flexCol;
-		align-items: flex-start;
-		max-width: rem(200);
+// .NavFilter--sticky {
+// 	display: none;
+// 	width: 25%;
+// 	&.is-sticky {
+// 		@include flexCol;
+// 		align-items: flex-start;
+// 		max-width: rem(200);
 
-		position: fixed;
-		top: 0;
-		z-index: 90;
-	}
-}
+// 		position: fixed;
+// 		top: 0;
+// 		z-index: 90;
+// 	}
+// }
 
-.NavFilter--inline {
-	@include flexCol;
-	align-items: flex-start;
-	max-width: rem(200);
-	&.is-sticky {
-		visibility: hidden;
-	}
-}
+// .NavFilter--inline {
+// 	@include flexCol;
+// 	align-items: flex-start;
+// 	max-width: rem(200);
+// 	&.is-sticky {
+// 		visibility: hidden;
+// 	}
+// }
 
-.NavFilter--left {
-	height: rem(300);
-	padding: rem(10);
-	a {
-		margin: 0;
-	}
-}
+// .NavFilter--left {
+// 	height: rem(300);
+// 	padding: rem(10);
+// 	a {
+// 		margin: 0;
+// 	}
+// }

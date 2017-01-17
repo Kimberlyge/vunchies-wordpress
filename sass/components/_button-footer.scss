@@ -64,7 +64,8 @@
     right: 0;
 
     &.is-active {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.3s easeInOut;
+		visibility: visible;
+		opacity: 1;
+		transition: opacity 0.3s easeInOut;
+	}
 }

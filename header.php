@@ -51,6 +51,36 @@
 				<h3><?php echo $description;?></h3>
 			</a>
 			<nav class="Nav Nav--main">
+				<div class="NavItemFilter" id="js-navItemFilter">
+					<div class="NavItemFilter-icons">
+						<img class="NavItemFilter-icon js-navItemFilter-icon" src="http://vunchies.com/wp-content/uploads/2017/01/filter.svg" alt="Filter Icon">
+						<img class="NavItemFilter-icon-active js-navItemFilter-icon-active" src="http://vunchies.com/wp-content/uploads/2017/01/filter-active.svg" alt="Filter Icon">
+					</div>
+					<div class="NavSub NavSubFilter js-nav-filter">
+						<div class="NavSub-content">
+							<div class="NavSub-wrap">
+								<h3>Vegetable</h3>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+							<div class="NavSub-wrap">
+								<h3></h3>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+							<div class="NavSub-wrap">
+								<h3>Vegetable</h3>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+							<div class="NavSub-wrap">
+								<h3>Vegetable</h3>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="NavItemRecipes" id="js-navToggleRecipes">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="Nav-item NavItemRecipes-title">All Recipes</a>
 					<div class="NavSub js-nav-recipes">
@@ -105,7 +135,7 @@
 					</div>
 				</div>
 
-				<a href="<?php echo get_page_link(613); ?>" class="Nav-item">About</a>
+				<a href="<?php echo get_page_link(613); ?>" class="Nav-item Nav-devider">About</a>
 
 			</nav>
 		</div>

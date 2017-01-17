@@ -41,39 +41,44 @@
 	var buttonFooterTitlePrev = document.querySelector( '.js-button-footerNav-title-prev' );
 	var buttonFooterTitleNext = document.querySelector( '.js-button-footerNav-title-next' );
 
-	buttonFooterNext.onmouseenter = function(event) {
+	if (buttonFooterNext) {
+		buttonFooterNext.onmouseenter = function(event) {
 
-		var target = event.currentTarget;
+			var target = event.currentTarget;
 
-		buttonFooterTitleNext.classList.add('is-active');
-
-
-		/* Hide */
-
-		target.onmouseleave = function(event) {
-
-			buttonFooterTitleNext.classList.remove('is-active');
-
-		};
-
-	};
-
-	buttonFooterPrev.onmouseenter = function(event) {
-
-		var target = event.currentTarget;
-
-		buttonFooterTitlePrev.classList.add('is-active');
+			buttonFooterTitleNext.classList.add('is-active');
 
 
-		/* Hide */
+			/* Hide */
 
-		target.onmouseleave = function(event) {
+			target.onmouseleave = function(event) {
 
-			buttonFooterTitlePrev.classList.remove('is-active');
+				buttonFooterTitleNext.classList.remove('is-active');
+
+			};
 
 		};
+	}
 
-	};
+	if (buttonFooterPrev) {
+		buttonFooterPrev.onmouseenter = function(event) {
+
+			var target = event.currentTarget;
+
+			buttonFooterTitlePrev.classList.add('is-active');
+
+
+			/* Hide */
+
+			target.onmouseleave = function(event) {
+
+				buttonFooterTitlePrev.classList.remove('is-active');
+
+			};
+
+		};
+	}
+
 
 	/**
 	 * Travel Detail List
@@ -167,97 +172,82 @@
 
 	};
 
-	// var button, menu, links, i, len;
 
-	// button = container.getElementsByTagName( 'button' )[0];
-	// if ( 'undefined' === typeof button ) {
-	// 	return;
-	// }
+	/**
+	 * Filter
+	 */
 
-	// menu = container.getElementsByTagName( 'ul' )[0];
+	var NavFilter = document.getElementById( 'js-navItemFilter' );
+	var NavFilterSubItem = document.querySelectorAll( '.NavSubFilter-item' );
+	var _filterItemActive = false;
 
-	// // Hide menu toggle button if menu is empty and return early.
-	// if ( 'undefined' === typeof menu ) {
-	// 	button.style.display = 'none';
-	// 	return;
-	// }
+	NavFilter.onmouseenter = function(event) {
 
-	// menu.setAttribute( 'aria-expanded', 'false' );
-	// if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-	// 	menu.className += ' nav-menu';
-	// }
+		console.log('filter mouseenter');
+		var target = event.currentTarget;
+		var subNav = document.querySelector('.js-nav-filter');
 
-	// button.onclick = function() {
-	// 	if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-	// 		container.className = container.className.replace( ' toggled', '' );
-	// 		button.setAttribute( 'aria-expanded', 'false' );
-	// 		menu.setAttribute( 'aria-expanded', 'false' );
-	// 	} else {
-	// 		container.className += ' toggled';
-	// 		button.setAttribute( 'aria-expanded', 'true' );
-	// 		menu.setAttribute( 'aria-expanded', 'true' );
-	// 	}
-	// };
+		target.classList.add('is-active');
+		subNav.classList.add('is-active');
 
-	// // Get all the link elements within the menu.
-	// links = menu.getElementsByTagName( 'a' );
+		/* Hide */
 
-	// // Each time a menu link is focused or blurred, toggle focus.
-	// for ( i = 0, len = links.length; i < len; i++ ) {
-	// 	links[i].addEventListener( 'focus', toggleFocus, true );
-	// 	links[i].addEventListener( 'blur', toggleFocus, true );
-	// }
+		target.onmouseleave = function(event) {
 
-	// /**
-	//  * Sets or removes .focus class on an element.
-	//  */
-	// function toggleFocus() {
-	// 	var self = this;
+			event.preventDefault();
 
-	// 	// Move up through the ancestors of the current link until we hit .nav-menu.
-	// 	while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+			var target = event.currentTarget;
+			var subNav = document.querySelector('.NavSub.is-active');
 
-	// 		// On li elements toggle the class .focus.
-	// 		if ( 'li' === self.tagName.toLowerCase() ) {
-	// 			if ( -1 !== self.className.indexOf( 'focus' ) ) {
-	// 				self.className = self.className.replace( ' focus', '' );
-	// 			} else {
-	// 				self.className += ' focus';
-	// 			}
-	// 		}
+			subNav.classList.remove('is-active');
+			target.classList.remove('is-active');
 
-	// 		self = self.parentElement;
-	// 	}
-	// }
+		};
 
-	// /**
-	//  * Toggles `focus` class to allow submenu access on tablets.
-	//  */
-	// ( function( container ) {
-	// 	var touchStartFn, i,
-	// 		parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+	};
 
-	// 	if ( 'ontouchstart' in window ) {
-	// 		touchStartFn = function( e ) {
-	// 			var menuItem = this.parentNode, i;
 
-	// 			if ( ! menuItem.classList.contains( 'focus' ) ) {
-	// 				e.preventDefault();
-	// 				for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-	// 					if ( menuItem === menuItem.parentNode.children[i] ) {
-	// 						continue;
-	// 					}
-	// 					menuItem.parentNode.children[i].classList.remove( 'focus' );
-	// 				}
-	// 				menuItem.classList.add( 'focus' );
-	// 			} else {
-	// 				menuItem.classList.remove( 'focus' );
-	// 			}
-	// 		};
+	for(var i=0; i < NavFilterSubItem.length; i++) {
+		NavFilterSubItem[i].addEventListener("click", function(event) {
 
-	// 		for ( i = 0; i < parentLink.length; ++i ) {
-	// 			parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
-	// 		}
-	// 	}
-	// }( container ) );
+			event.preventDefault();
+
+			var target = event.currentTarget;
+			var tagName = target.dataset.title;
+			var url = window.location.href;
+
+
+			if (this._filterItemActive) {
+				target.classList.remove('is-active');
+
+				this._filterItemActive = false;
+
+				return;
+			}
+
+
+			target.classList.add('is-active');
+
+			this._filterItemActive = true;
+
+			// If we are already on our index page
+			if (url === 'http://vunchies.com/') {
+
+				console.log('home');
+				window.location.href = url + 'tag/' + tagName;
+
+				return;
+			}
+
+			// If there were already some filters set to active
+			if (url.substring(url.length-1) == "/") {
+				url = url.substring(0, url.length-1);
+			}
+			console.log(url);
+
+			window.location.href = url + '+' + tagName;
+
+		});
+	};
+
 } )();
