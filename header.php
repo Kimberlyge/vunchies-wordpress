@@ -119,7 +119,7 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dessert" class="Nav-item">Dessert</a>
 
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
-					<a href="<?php echo get_page_link(90); ?>" class="Nav-item NavItemRecipes-title">Travel</a>
+					<a href="<?php echo get_page_link(90); ?>" class="Nav-item NavItemTravel-title">Travel</a>
 					<div class="NavSub js-nav-travel">
 						<div class="NavSub-content">
 							<div class="NavSub-wrap">

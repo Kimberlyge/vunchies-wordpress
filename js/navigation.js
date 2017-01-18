@@ -114,6 +114,12 @@
 	 */
 
 	var NavRecipes = document.getElementById( 'js-navToggleRecipes' );
+	var NavRecipeTitle = document.querySelector('.NavItemRecipes-title');
+	console.log(window.location.href);
+
+	if (window.location.href === "http://www.vunchies.com" || "http://vunchies.com") {
+		NavRecipeTitle.classList.add('is-active');
+	}
 
 	NavRecipes.onmouseenter = function(event) {
 
@@ -144,6 +150,13 @@
 	/**
 	 * Travel
 	 */
+
+	// Add active state to CSS
+	var NavTravelTitle = document.querySelector('.NavItemTravel-title');
+
+	if (window.location.href.indexOf("travel") > -1) {
+		NavTravelTitle.classList.add('is-active');
+	}
 
 	var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
 
@@ -206,6 +219,14 @@
 
 	};
 
+	// If a Tag is defined, set a visual active state to the filter icon and remove it from 'All Recipes'
+	if (window.location.href.indexOf('tag/') > -1) {
+		console.log('has tags');
+		NavRecipeTitle.classList.remove('is-active');
+		NavFilter.classList.add('is-active');
+
+	}
+
 
 	for(var i=0; i < NavFilterSubItem.length; i++) {
 
@@ -230,6 +251,7 @@
 				// Remove the active class from the CSS
 				target.classList.remove('is-active');
 				this._filterItemActive = false;
+
 
 				// Remove tagName from the url
 				if (url.indexOf('+' + tagName) > -1) {

@@ -33,10 +33,13 @@
 	padding: 0.5em 0;
 	margin: 0.5em 0;
 
+	border-bottom: 2px solid transparent;
+
 	&:hover,
 	&:active,
 	&.is-active {
 		color: $yellow;
+		border-color: $yellow;
 	}
 
 	@media (min-width: 656px) {
@@ -95,7 +98,8 @@
 	display: inline-block;
 	margin-right: 15px;
 
-	&:hover {
+	&:hover,
+	&.is-active {
 		.NavItemFilter-icon {
 			opacity: 0;
 		}
