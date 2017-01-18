@@ -208,7 +208,15 @@
 
 
 	for(var i=0; i < NavFilterSubItem.length; i++) {
-		NavFilterSubItem[i].addEventListener("click", function(event) {
+
+		var items = NavFilterSubItem[i];
+		var tagName = items.getAttribute('data-title');
+
+		if (window.location.href.indexOf(tagName) > -1) {
+			items.classList.add('is-active');
+		}
+
+		NavFilterSubItem[i].addEventListener("click", function (event) {
 
 			event.preventDefault();
 
@@ -216,38 +224,58 @@
 			var tagName = target.dataset.title;
 			var url = window.location.href;
 
+			// Check if the tagname is already active
+			if (url.indexOf(tagName) > -1) {
 
-			if (this._filterItemActive) {
+				// Remove the active class from the CSS
 				target.classList.remove('is-active');
-
 				this._filterItemActive = false;
 
-				return;
+				// Remove tagName from the url
+				if (url.indexOf('+' + tagName) > -1) {
+
+					this.newUrl = url.replace("+" + tagName, "");
+					window.location.href = this.newUrl;
+					return;
+
+				}
+
+				if (url.indexOf('/' + tagName) > -1) {
+
+					if (url.indexOf(tagName + "+") > -1) {
+						this.newUrl = url.replace(tagName + "+" , "");
+						window.location.href = this.newUrl;
+						return;
+					}
+
+					this.newUrl = url.replace("/tag/" + tagName, "");
+					window.location.href = this.newUrl;
+					return;
+				}
+
 			}
 
-
+			// Add active state to CSS
 			target.classList.add('is-active');
-
 			this._filterItemActive = true;
 
-			// If we are already on our index page
-			if (url === 'http://vunchies.com/') {
+			// Check if there has already been a tag defined
+			if (url.indexOf('tag/') > -1) {
 
-				console.log('home');
-				window.location.href = url + 'tag/' + tagName;
+				// Remove last dash and add the new Tag
+				if (url.substring(url.length-1) == "/") {
+					url = url.substring(0, url.length-1);
+				}
 
+				window.location.href = url + '+' + tagName;
 				return;
+
 			}
 
-			// If there were already some filters set to active
-			if (url.substring(url.length-1) == "/") {
-				url = url.substring(0, url.length-1);
-			}
-			console.log(url);
-
-			window.location.href = url + '+' + tagName;
+			window.location.href = "http://vunchies.com/tag/" + tagName;
+			return;
 
 		});
-	};
+	}
 
 } )();
