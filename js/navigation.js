@@ -156,9 +156,15 @@
 
 	if (window.location.href.indexOf("travel") > -1) {
 		NavTravelTitle.classList.add('is-active');
+		NavRecipeTitle.classList.remove('is-active');
 	}
 
 	var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
+
+	NavTravel.ontouchstart = function(event) {
+		console.log('touched');
+		return;
+	};
 
 	NavTravel.onmouseenter = function(event) {
 

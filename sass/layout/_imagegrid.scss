@@ -3,17 +3,13 @@
  */
 
 .ImageGrid {
-	width: 100%;
-	display: flex;
-	margin: rem(30) auto;
+	display: inline-block;
 
-	@media (max-width: $layout-sm) {
-		display: block;
-		max-width: 100%;
-	}
-
-	@media (min-width: 640px) and (max-width: 980px) {
-		margin: rem(20) auto;
+	&.is-reverse {
+		display: flex;
+		> div:last-of-type {
+			order: -1;
+		}
 	}
 }
 
@@ -42,20 +38,7 @@
 }
 
 .ImageGrid--second {
-	&.is-reverse {
-		.ImageGrid-item:last-of-type {
-			order: -1;
-		}
-	}
-
 	&.is-portrait {
 		max-height: rem(540);
-
-		.ImageGrid-item:last-of-type {
-			flex: 65%;
-		}
-		.ImageGrid-item:first-of-type {
-			flex: 35%;
-		}
 	}
 }

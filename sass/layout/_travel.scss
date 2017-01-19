@@ -5,17 +5,9 @@
 /* Travel Overview */
 
 .TravelOverview {
-
 	a:hover {
 		.Cover::after {
-			background-color: rgba($#FFFFFF, 0.2);
-		}
-	}
-
-	.Grid-cell {
-		flex: rem(250);
-		@media (min-width: 928px) {
-			flex: rem(400);
+			background-color: rgba($white, 0.2);
 		}
 	}
 }
@@ -69,29 +61,35 @@
 /* Intro */
 
 .TravelDetail {
-	@include flexRowWrap;
+
 	padding-bottom: rem(3);
 	margin-top: 3px;
+	overflow: hidden;
 
 	@media (min-width: 640px) {
 		margin-top: 0;
+
+		display: flex;
+
+		> div {
+			display: flex;
+		}
+
 	}
 
-	&--reverse {
-		flex-direction: row-reverse;
+	&.is-reverse {
+		display: flex;
+
+		> div:last-of-type {
+			order: -1;
+		}
 	}
+
 }
 
 .TravelDetail-body {
-	padding: 0;
+	padding: rem(30) rem(0);
 	margin: auto;
-
-	order: 1;
-
-	@media (min-width: 640px) {
-		padding: rem(20) rem(0);
-		order: initial;
-	}
 
 	> .Box {
 		padding: 0px 20px;
@@ -105,11 +103,13 @@
 		width: 100%;
 		object-fit: cover;
 		height: 100%;
-		// padding: 0 1.25rem 30px;
 	}
 
 	&.is-reverse {
-		order: -1;
+		display: flex;
+		> div:last-of-type {
+			order: -1;
+		}
 	}
 
 }

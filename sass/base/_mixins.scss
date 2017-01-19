@@ -1,39 +1,39 @@
 /**
- * Strips units from a number
+ * Define Media Queries
  */
 
-@function strip-unit($num) {
-	@return $num / ($num * 0 + 1);
+@mixin mq-s {
+   @media (max-width: 480px) {
+       @content;
+   }
 }
 
-/**
- * Convert value to REM
- */
-
-@function rem($target, $context: $base-font-size) {
-	@return (strip-unit($target) / strip-unit($context)) * 1rem;
+@mixin mq-sm {
+   @media (min-width: 600px) {
+       @content;
+   }
 }
 
-/**
- * Convert value to EM
- */
-
-@function em($target, $context: $base-font-size) {
-	@return (strip-unit($target) / strip-unit($context)) * 1em;
+@mixin mq-m {
+   @media (min-width: 740px) {
+       @content;
+   }
 }
 
-/**
-* Convert points to px
-* by making up for the difference in DPI.
-* you could also do $target& * 1.33333 and get the same result
-*/
-@function ptpx($target) {
-	@return (strip-unit($target) / 72) * 96;
+@mixin mq-ml {
+   @media (min-width: 1024px) {
+       @content;
+   }
 }
 
-/**
-* Convert points to REM
-*/
-@function ptrem($target) {
-	@return rem(ptpx($target));
+@mixin mq-l {
+   @media (min-width: 1280px) {
+       @content;
+   }
+}
+
+@mixin mq-xl {
+   @media (min-width: 1500px) {
+       @content;
+   }
 }

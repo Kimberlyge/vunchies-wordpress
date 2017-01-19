@@ -3,93 +3,19 @@
  */
 
 .DetailGrid {
-	width: 100%;
-	display: flex;
 	margin: rem(15) auto;
 
-
-	&--inline {
-		display: inline-block;
-		width: 30%;
-	}
-
-	&--travel {
-		margin: rem(20) auto;
-	}
-
-	&.is-first {
-		width: 70%;
-
-		.DetailGrid-item--text {
-			@media (min-width: 640px) {
-				padding-left: rem(0);
-			}
-		}
-
-		@media (min-width: 980px) {
-			width: 70%;
-		}
-
-	}
-
-	&--third.is-first,
-	&--second.is-first {
-		@media (min-width: 640px) and (max-width: 980px) {
-			flex-wrap: wrap;
-
-			.DetailGrid-item {
-				flex: 25%;
-				margin-top: rem(15);
-			}
-			.DetailGrid-item:first-of-type {
-				flex: 100%;
-				margin-top: 0;
-			}
-		}
-	}
-
-	@media (max-width: 640px) {
-		display: block;
-		width: 100% !important;
-		margin: 0;
-	}
-}
-
-.DetailGrid--first {
+	// &--inline {
+	// 	display: inline-block;
+	// 	width: 30%;
+	// }
 
 	&.is-reverse {
-		.DetailGrid-item:last-of-type {
+		display: flex;
+		> div:last-of-type {
 			order: -1;
 		}
 	}
-
-	&.is-portrait {
-		.DetailGrid-item--text {
-			flex: 65%;
-		}
-		.DetailGrid-item--media {
-			flex: 35%;
-		}
-	}
-
-	&.is-landscape {
-		.DetailGrid-item--text {
-			flex: 35%;
-		}
-		.DetailGrid-item--media {
-			flex: 65%;
-		}
-
-		@media (min-width: 640px) and (max-width: 980px) {
-			.DetailGrid-item--text {
-				flex: 50%;
-			}
-			.DetailGrid-item--media {
-				flex: 50%;
-			}
-		}
-	}
-
 }
 
 .DetailGrid--second {
@@ -101,6 +27,7 @@
 	}
 
 	&.is-center {
+		display: flex;
 		.DetailGrid-item--text:nth-of-type(2) {
 			order: 1;
 
@@ -206,11 +133,7 @@
 
 .DetailGrid-item--media {
 	position: relative;
-	margin: 0 auto rem(20);
-
-	@media (min-width: 640px) {
-		margin: 0 auto;
-	}
+	margin: 0 auto;
 
 	img {
 		width: 100%;

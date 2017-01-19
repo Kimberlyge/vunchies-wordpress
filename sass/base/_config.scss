@@ -24,12 +24,12 @@ $max-width: 46rem;
 
 // Susy
 // gutters are defined in a ratio to the column width
-$susy: (
-	box-sizing: border-box,
-	columns: 12,
-	gutters: (12/88),
-	container: 1060px
-);
+// $susy: (
+// 	box-sizing: border-box,
+// 	columns: 12,
+// 	gutters: (12/88),
+// 	container: 1060px
+// );
 
 // debug: (
 // image: show,
@@ -49,7 +49,6 @@ $easing5: cubic-bezier(0.200, 0.300, 0.250, 0.900);
 $layout-s: 414px;
 $layout-sm: 600px;
 $layout-m: 740px;
-$layout-mm: 970px;
 $layout-ml: 1024px;
 $layout-l: 1280px;
 $layout-xl: 1500px;

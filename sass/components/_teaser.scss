@@ -3,17 +3,16 @@
  **/
 
 .Teaser {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
+	overflow: hidden;
 	padding: 0 rem(5) 1em;
 
 	a:hover,
 	a:active {
 		.Teaser-media {
 			img {
-				// filter: brightness(96%);
-				opacity: 0.8;
+				transition: opacity 300ms ease-in-out;
+
+				opacity: 0.9;
 			}
 		}
 		.Teaser-body {
@@ -23,25 +22,29 @@
 }
 
 .Teaser-wrap {
+	// display: inline-block;
+	// float: left;
 	opacity: 0;
-	flex: rem(145);
-	margin: rem(5);
-	@media (min-width: $layout-m) {
-		flex: rem(200);
-	}
+	// margin: 0.5%;
+	// width: 48%;
+
+	// @media (min-width: $layout-m) {
+	// 	width: 32%;
+	// }
+
+	// @media (min-width: $layout-l) {
+	// 	width: 24%;
+	// }
+
+	// &:after {
+	// 	clear: both;
+	// }
 }
 
 .Teaser-media {
 	@include ratio(1456,2177);
 	margin: 0;
 	overflow: hidden;
-
-	img {
-		@include ratio-inner;
-		transition: opacity 200ms $easing;
-		backface-visibility: hidden;
-		object-fit: cover;
-	}
 }
 
 .Teaser-body {

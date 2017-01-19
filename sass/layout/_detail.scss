@@ -4,10 +4,6 @@
 
 .Detail	{
 	background: $white;
-
-	@media (min-width: 656px) {
-		@include flexRowWrap;
-	}
 }
 
 .js-animate-detail {
@@ -17,7 +13,6 @@
 /* Intro */
 
 .DetailHead {
-	@include flexRowWrap;
 	padding-bottom: 30px;
 }
 
@@ -33,10 +28,6 @@
 .DetailHead-title {
 	text-transform: uppercase;
 	margin-bottom: 0.5em;
-}
-
-.DetailHead--reverse {
-	flex-direction: row-reverse;
 }
 
 .DetailHead-body {
