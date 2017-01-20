@@ -83,7 +83,7 @@
 				</div>
 				<div class="NavItemRecipes" id="js-navToggleRecipes">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="Nav-item NavItemRecipes-title">All Recipes</a>
-					<div class="NavSub js-nav-recipes">
+					<div class="NavSub NavSub--recipes js-nav-recipes">
 						<div class="NavSub-content">
 							<div class="NavSub-wrap">
 								<h3>Course</h3>
@@ -120,7 +120,7 @@
 
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
 					<a href="<?php echo get_page_link(90); ?>" class="Nav-item NavItemTravel-title">Travel</a>
-					<div class="NavSub js-nav-travel">
+					<div class="NavSub NavSub--travel js-nav-travel">
 						<div class="NavSub-content">
 							<div class="NavSub-wrap">
 								<h3>Europe</h3>
@@ -135,7 +135,9 @@
 					</div>
 				</div>
 
-				<a href="<?php echo get_page_link(613); ?>" class="Nav-item Nav-devider">About</a>
+				<span class="Divider">|</span>
+
+				<a href="<?php echo get_page_link(613); ?>" class="Nav-item NavItemAbout">About</a>
 
 			</nav>
 		</div>

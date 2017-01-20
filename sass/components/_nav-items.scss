@@ -1,0 +1,94 @@
+/**
+ * Specific Nav items
+ */
+
+
+/* Filter */
+
+.NavItemFilter-icons {
+	position: relative;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 22;
+    margin: auto;
+
+    @media (min-width: 656px) {
+    	margin-right: 10px;
+	}
+}
+
+.NavItemFilter-icon,
+.NavItemFilter-icon-active {
+	position: absolute;
+	width: 15px;
+	height: 20px;
+	vertical-align: bottom;
+
+	transition: opacity 0.2s ease;
+}
+
+.NavItemFilter-icon-active {
+	opacity: 0;
+}
+
+
+.NavItemFilter {
+	display: block;
+	margin-right: 15px;
+
+	&:hover,
+	&.is-active {
+		.NavItemFilter-icon {
+			opacity: 0;
+		}
+
+		.NavItemFilter-icon-active {
+			opacity: 1;
+		}
+	}
+
+	@media (min-width: 656px) {
+		display: inline-block;
+		margin: 0 rem(5);
+		padding: 0;
+
+	}
+}
+
+.NavItemFilter-title {
+	position: relative;
+	z-index: 22;
+}
+
+
+/* About */
+
+.NavItemAbout {
+	margin-left: 10px;
+}
+
+
+/* Recipes / Travel */
+
+.NavItemTravel,
+.NavItemRecipes {
+	display: inline-block;
+
+	&.is-active {
+		> a {
+			color: $yellow;
+		}
+	}
+}
+
+.Divider {
+	margin: 0 10px;
+}
+
+.NavItemTravel-title,
+.NavItemRecipes-title {
+	position: relative;
+	z-index: 21;
+	@extend %font-sans-serif-bold;
+}

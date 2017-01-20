@@ -109,6 +109,7 @@
 		};
 	}
 
+
 	/**
 	 * Recipes
 	 */
@@ -145,6 +146,19 @@
 		};
 
 	};
+
+
+	/**
+	 * About
+	 */
+
+	// Add active state to CSS
+	var NavAbout = document.querySelector('.NavItemAbout');
+
+	if (window.location.href.indexOf("travel") > -1) {
+		NavAbout.classList.add('is-active');
+		NavRecipeTitle.classList.remove('is-active');
+	}
 
 
 	/**

@@ -69,31 +69,34 @@ get_header(); ?>
 
 				        	if( get_sub_field('first_grid') ):?>
 
-							<?php if( !get_sub_field('is_first') ):?><div class="grid">FIRST<?php endif;?>
-							<?php if( get_sub_field('is_first') ):?><div class="grid"><div class="col-s-3-3 col-m-2-3"><?php endif;?>
-								FIRST
-								<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
+							<?php if( get_sub_field('is_first') ):?>
+								<h1>IS FIRST</h1>
+								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+							<?php elseif ( !get_sub_field('is_first')) :?>
+								<div class="grid">is-NOT-first
+							<?php endif;?>
+									<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
 
-									<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-2-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-1-3--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
-											<!-- {{#if grid.title}} -->
-											<?php if( get_sub_field('title') ):?>
-												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
-											<?php endif;?>
-											<!-- {{/if}} -->
-											<?php the_sub_field('text');?>
+										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-2-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-1-3--force<?php endif;?>">
+											<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+												<!-- {{#if grid.title}} -->
+												<?php if( get_sub_field('title') ):?>
+													<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
+												<?php endif;?>
+												<!-- {{/if}} -->
+												<?php the_sub_field('text');?>
+											</div>
+										</div>
+										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-1-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-2-3--force<?php endif;?>">
+											<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+
+												<?php $image = get_sub_field('image');?>
+
+												<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+
+											</div>
 										</div>
 									</div>
-									<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-2-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-1-3--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
-
-											<?php $image = get_sub_field('image');?>
-
-											<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
-
-										</div>
-									</div>
-								</div>
 							<?php if( get_sub_field('is_first') ):?></div><?php endif;?>
 							<!-- close grid wrap -->
 							</div>
@@ -102,10 +105,14 @@ get_header(); ?>
 
 
 				        	if( get_sub_field('second_grid') ):?>
-							<?php if( !get_sub_field('is_first') ):?><div class="grid">SECOND<?php endif;?>
-							<?php if( get_sub_field('is_first') ):?><div class="grid"><div class="col-s-3-3 col-m-2-3"><?php endif;?>
 
-								SECOND
+				        	<?php if( get_sub_field('is_first') ):?>
+								<h1>IS FIRST</h1>
+								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+							<?php elseif ( !get_sub_field('is_first')) :?>
+								<div class="grid">is-NOT-first
+							<?php endif;?>
+
 								<div class="DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?>">
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
 										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
@@ -136,6 +143,7 @@ get_header(); ?>
 										</div>
 									</div>
 								</div>
+
 							<?php if( get_sub_field('is_first') ):?></div><?php endif;?>
 
 				        	</div>
@@ -143,10 +151,13 @@ get_header(); ?>
 				        	endif;
 
 				        	if( get_sub_field('third_grid') ):?>
-							<?php if( !get_sub_field('is_first') ):?><div class="grid">THIRD<?php endif;?>
-							<?php if( get_sub_field('is_first') ):?><div class="grid"><div class="col-s-3-3 col-m-2-3"><?php endif;?>
 
-								THIRD
+				        	<?php if( get_sub_field('is_first') ):?>
+								<h1>IS FIRST</h1>
+								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+							<?php elseif ( !get_sub_field('is_first')) :?>
+								<div class="grid">is-NOT-first
+							<?php endif;?>
 								<div class="DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
 
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">

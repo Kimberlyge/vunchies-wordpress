@@ -26,22 +26,22 @@
 		}
 	}
 
-	&.is-center {
-		display: flex;
-		.DetailGrid-item--text:nth-of-type(2) {
-			order: 1;
+	// &.is-center {
+	// 	display: flex;
+	// 	.DetailGrid-item--text:nth-of-type(2) {
+	// 		order: 1;
 
-			@media (min-width: 640px) {
-				padding-left: rem(20);
-			}
-		}
-	}
+	// 		@media (min-width: 640px) {
+	// 			padding-left: rem(20);
+	// 		}
+	// 	}
+	// }
 
-	&.is-bigger {
-		.DetailGrid-item--text {
-			flex: 50%;
-		}
-	}
+	// &.is-bigger {
+	// 	.DetailGrid-item--text {
+	// 		flex: 50%;
+	// 	}
+	// }
 
 }
 
