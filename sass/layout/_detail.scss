@@ -13,16 +13,12 @@
 /* Intro */
 
 .DetailHead {
-	padding-bottom: 30px;
+	// padding-bottom: 30px;
+	position: relative;
 }
 
 .DetailHead-copy {
 	max-width: rem(300);
-	margin: auto;
-
-	@media (max-width: 656px) {
-		padding: rem(22) 0;
-	}
 }
 
 .DetailHead-title {
@@ -31,6 +27,12 @@
 }
 
 .DetailHead-body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
 	padding: rem($space);
 	margin: auto;
 

@@ -17,10 +17,10 @@ get_header(); ?>
 
 			<div class="Detail">
 				<div class="grid">
-					<div class="DetailHead">
-						<div class="col-s-3-3 col-m-2-4">
+					<div class="col-s-3-3 col-m-2-4">
+						<div class="DetailHead">
 							<div class="DetailHead-body js-animate-detail centered">
-								<div class="DetailHead-copy">
+								<div class="DetailHead-copy js-detail-head">
 									<h2 class="DetailHead-title">
 										<?php the_title();?>
 									</h2>
@@ -28,11 +28,11 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-						<div class="col-s-3-3 col-m-2-4">
-							<div class="DetailHead-media js-animate-detail">
-								<?php $image = get_field('cover');?>
-								<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
-							</div>
+					</div>
+					<div class="col-s-3-3 col-m-2-4">
+						<div class="DetailHead-media js-animate-detail">
+							<?php $image = get_field('cover');?>
+							<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 						</div>
 					</div>
 				</div>
