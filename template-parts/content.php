@@ -9,7 +9,7 @@
 
 ?>
 <div class="col-s-2-4 col-m-1-3 col-ml-1-4">
-	<a class="Teaser-wrap" href="<?php echo get_permalink(); ?>" rel="bookmark">
+	<a class="Teaser-wrap" id="overview" href="<?php echo get_permalink(); ?>" rel="bookmark">
 		<figure class="Teaser-media ImgToBg">
 			<?php $image = get_field('cover');?>
 

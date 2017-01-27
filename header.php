@@ -17,8 +17,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/921c28d4ab/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/921c28d4ab/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/6426f819f1/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/6426f819f1/UntitledProject/svgxuse.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <?php wp_head(); ?>
 </head>
@@ -53,6 +54,10 @@
 			<nav class="Nav Nav--main">
 				<div class="NavItemFilter" id="js-navItemFilter">
 					<div class="NavItemFilter-icons">
+						<?php
+						get_template_part( 'inc/icons/svg/instagram.svg' );
+						?>
+
 						<img class="NavItemFilter-icon js-navItemFilter-icon" src="http://vunchies.com/wp-content/uploads/2017/01/filter.svg" alt="Filter Icon">
 						<img class="NavItemFilter-icon-active js-navItemFilter-icon-active" src="http://vunchies.com/wp-content/uploads/2017/01/filter-active.svg" alt="Filter Icon">
 					</div>

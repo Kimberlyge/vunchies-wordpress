@@ -36,14 +36,6 @@
 	padding: 0.5em 0;
 	margin: 0.5em 0;
 
-
-	&:hover,
-	&:active,
-	&.is-active {
-		color: $yellow;
-		border-color: $yellow;
-	}
-
 	@media (min-width: 656px) {
 		display: inline-block;
 		margin: 0 rem(5);
@@ -51,6 +43,13 @@
 
 		border-bottom: 2px solid transparent;
 
+	}
+
+	&:hover,
+	&:active,
+	&.is-active {
+		color: $yellow;
+		border-color: $yellow;
 	}
 
 	&:first-of-type {

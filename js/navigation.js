@@ -7,117 +7,13 @@
 ( function() {
 
 	/**
-	 * Burger
-	 */
-
-	var burger = document.querySelector( '.Burger' );
-	var header = document.querySelector( '.Header-inner' );
-
-	var burgerActive = false;
-
-	burger.onclick = function(event) {
-
-		if (this.burgerActive) {
-
-			header.classList.remove('is-mobile');
-			this.burgerActive = false;
-
-			return;
-		}
-
-		header.classList.add('is-mobile');
-
-		this.burgerActive = true;
-
-	};
-
-
-	/**
-	 * Detail Nav
-	 */
-
-	var buttonFooterNext = document.querySelector( '.js-button-footerNav-next' );
-	var buttonFooterPrev = document.querySelector( '.js-button-footerNav-prev' );
-	var buttonFooterTitlePrev = document.querySelector( '.js-button-footerNav-title-prev' );
-	var buttonFooterTitleNext = document.querySelector( '.js-button-footerNav-title-next' );
-
-	if (buttonFooterNext) {
-		buttonFooterNext.onmouseenter = function(event) {
-
-			var target = event.currentTarget;
-
-			buttonFooterTitleNext.classList.add('is-active');
-
-
-			/* Hide */
-
-			target.onmouseleave = function(event) {
-
-				buttonFooterTitleNext.classList.remove('is-active');
-
-			};
-
-		};
-	}
-
-	if (buttonFooterPrev) {
-		buttonFooterPrev.onmouseenter = function(event) {
-
-			var target = event.currentTarget;
-
-			buttonFooterTitlePrev.classList.add('is-active');
-
-
-			/* Hide */
-
-			target.onmouseleave = function(event) {
-
-				buttonFooterTitlePrev.classList.remove('is-active');
-
-			};
-
-		};
-	}
-
-
-	/**
-	 * Travel Detail List
-	 */
-
-	var NavTravelList = document.getElementById( 'js-travellist' );
-
-	if (NavTravelList) {
-		NavTravelList.onmouseenter = function(event) {
-
-			var target = event.currentTarget;
-
-			target.classList.add('is-active');
-
-
-			/* Hide */
-
-			target.onmouseleave = function(event) {
-
-				event.preventDefault();
-
-				var target = event.currentTarget;
-
-				target.classList.remove('is-active');
-
-			};
-
-		};
-	}
-
-
-	/**
 	 * Recipes
 	 */
 
 	var NavRecipes = document.getElementById( 'js-navToggleRecipes' );
 	var NavRecipeTitle = document.querySelector('.NavItemRecipes-title');
-	console.log(window.location.href);
 
+	// Visually activate Anchor
 	if (window.location.href === "http://www.vunchies.com" || "http://vunchies.com") {
 		NavRecipeTitle.classList.add('is-active');
 	}
@@ -171,12 +67,12 @@
 	if (window.location.href.indexOf("travel") > -1) {
 		NavTravelTitle.classList.add('is-active');
 		NavRecipeTitle.classList.remove('is-active');
+		NavAbout.classList.remove('is-active');
 	}
 
 	var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
 
 	NavTravel.ontouchstart = function(event) {
-		console.log('touched');
 		return;
 	};
 
@@ -216,7 +112,6 @@
 
 	NavFilter.onmouseenter = function(event) {
 
-		console.log('filter mouseenter');
 		var target = event.currentTarget;
 		var subNav = document.querySelector('.js-nav-filter');
 
@@ -241,7 +136,6 @@
 
 	// If a Tag is defined, set a visual active state to the filter icon and remove it from 'All Recipes'
 	if (window.location.href.indexOf('tag/') > -1) {
-		console.log('has tags');
 		NavRecipeTitle.classList.remove('is-active');
 		NavFilter.classList.add('is-active');
 

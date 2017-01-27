@@ -16,6 +16,9 @@ if ( ! function_exists( 'vunchies_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 
+// function my_custom_handler() {
+// } // end my_custom_handler
+// add_action( 'wp_ajax_my_custom_handler', 'my_custom_handler' );
 
 function vunchies_setup() {
 	/*
@@ -71,7 +74,10 @@ function vunchies_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
+
 add_action( 'after_setup_theme', 'vunchies_setup' );
+
+
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -90,19 +96,28 @@ add_action( 'after_setup_theme', 'vunchies_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function vunchies_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'vunchies' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'vunchies' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'vunchies_widgets_init' );
+// function vunchies_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'vunchies' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => esc_html__( 'Add widgets here.', 'vunchies' ),
+// 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</section>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'vunchies_widgets_init' );
 
+
+add_action( 'wp_ajax_add_foobar', 'prefix_ajax_add_foobar' );
+
+function prefix_ajax_add_foobar() {
+    // Handle request then generate response using WP_Ajax_Response
+
+    // Don't forget to stop execution afterward.
+    wp_die();
+}
 
 //* Load Google Fonts
 add_action( 'wp_enqueue_scripts', 'bg_load_google_fonts' );
@@ -133,7 +148,11 @@ function vunchies_scripts() {
 
 	wp_enqueue_script( 'vunchies-comments', get_template_directory_uri() . '/js/comments.js', array(), '20151215', true );
 
-	// wp_enqueue_script( 'vunchies-sticky', get_template_directory_uri() . '/js/sticky.js', array(), '20151215', true );
+	wp_enqueue_script( 'vunchies-burger', get_template_directory_uri() . '/js/burger.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'vunchies-header', get_template_directory_uri() . '/js/header.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'vunchies-travel-detail', get_template_directory_uri() . '/js/travel-detail.js', array(), '20151215', true );
 
 	// wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/icomoon/svgxuse.js', array(), '20151215', true );
 

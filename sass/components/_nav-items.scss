@@ -74,12 +74,6 @@
 .NavItemTravel,
 .NavItemRecipes {
 	display: inline-block;
-
-	&.is-active {
-		> a {
-			color: $yellow;
-		}
-	}
 }
 
 .Divider {

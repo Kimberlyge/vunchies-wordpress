@@ -101,7 +101,7 @@ a,
 a:visited {
 	color: $black;
 	text-decoration: none;
-	transition: color 150ms;
+	transition: all 150ms ease-in-out;
 
 	&:hover,
 	&:active,
