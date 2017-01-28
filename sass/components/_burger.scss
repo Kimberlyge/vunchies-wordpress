@@ -24,5 +24,22 @@
 	&:active {
 		outline: none;
 	}
+
+	&.is-open {
+		.Burger-copy {
+			display: none;
+		}
+	}
 }
 
+.Burger-close {
+	display: none;
+
+	font-size: 30px;
+}
+
+.Burger.is-open {
+	.Burger-close {
+		display: inline-block;
+	}
+}

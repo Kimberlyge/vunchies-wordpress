@@ -34,7 +34,7 @@
 	letter-spacing: 0.1em;
 
 	padding: 0.5em 0;
-	margin: 0.5em 0;
+	// margin: 0.5em 0;
 
 	@media (min-width: 656px) {
 		display: inline-block;
@@ -48,12 +48,12 @@
 	&:hover,
 	&:active,
 	&.is-active {
-		color: $yellow;
-		border-color: $yellow;
+		color: $color-primary;
+		border-color: $color-primary;
 	}
 
-	&:first-of-type {
-		margin-top: 1.3em;
-	}
+	// &:first-of-type {
+	// 	margin-top: 1.3em;
+	// }
 
 }

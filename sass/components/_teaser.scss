@@ -45,6 +45,11 @@
 	@include ratio(1456,2177);
 	margin: 0;
 	overflow: hidden;
+
+	&--related {
+		height: 0;
+		padding-bottom: 70%;
+	}
 }
 
 .Teaser-body {

@@ -5,7 +5,7 @@
 .NavSocial {
 	position: absolute;
 
-	width: 55px;
+	width: 65px;
 
 	top: 0;
 	right: 0;
@@ -14,7 +14,7 @@
 	padding-right: rem(15);
 
 	@media (min-width: 656px) {
-		width: 85px;
+		width: 100px;
 		left: 0;
 		right: inherit;
 
@@ -26,12 +26,19 @@
 .NavSocial-item {
 	display: inline-block;
 	float: right;
+	margin-right: rem(10);
+	transition: opacity 0.2s ease-in-out;
+
 	@media (min-width: 656px) {
-		margin-right: rem(10);
 		float: left;
+		margin: 0;
+		padding: 4px 6px;
 	}
 
-	&:last-of-type {
-		margin-right: 10px;
+	&:hover {
+		opacity: 0.4;
 	}
+	// &:last-of-type {
+	// 	margin-right: 10px;
+	// }
 }

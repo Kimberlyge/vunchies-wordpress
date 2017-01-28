@@ -17,7 +17,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<!-- <h1>INDEX.PHP</h1> -->
-		<div class="grid Teaser Container" id="RecipeOverview">
+			<div class="grid Teaser Container" id="RecipeOverview">
 			<?php
 			if ( have_posts() ) :
 				/* Start the Loop */
@@ -37,12 +37,11 @@ get_header(); ?>
 				?>
 				<div class="Pagination">
 					<p><?php posts_nav_link(' ','&laquo; Newer posts','Older posts &raquo;'); ?></p>
-
 				</div>
 				<?php
 			endif; ?>
 
-		</div>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

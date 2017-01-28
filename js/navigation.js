@@ -51,8 +51,21 @@
 	// Add active state to CSS
 	var NavAbout = document.querySelector('.NavItemAbout');
 
-	if (window.location.href.indexOf("travel") > -1) {
+	if (window.location.href.indexOf("about") > -1) {
 		NavAbout.classList.add('is-active');
+
+	}
+
+
+	/**
+	 * Imprint
+	 */
+
+	// Add active state to CSS
+	var NavImprint = document.querySelector('.Footer-imprint');
+
+	if (window.location.href.indexOf("imprint") > -1) {
+		NavImprint.classList.add('is-active');
 		NavRecipeTitle.classList.remove('is-active');
 	}
 
@@ -110,6 +123,7 @@
 	var NavFilterSubItem = document.querySelectorAll( '.NavSubFilter-item' );
 	var _filterItemActive = false;
 
+	// Handle Subnavigation
 	NavFilter.onmouseenter = function(event) {
 
 		var target = event.currentTarget;
@@ -133,6 +147,7 @@
 		};
 
 	};
+
 
 	// If a Tag is defined, set a visual active state to the filter icon and remove it from 'All Recipes'
 	if (window.location.href.indexOf('tag/') > -1) {

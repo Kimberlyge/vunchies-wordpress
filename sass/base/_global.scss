@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+#wpadminbar {
+	display: none!important;
+}
+
 html {
 	@extend %font-sans-serif;
 	font-weight: 300;
@@ -20,6 +24,8 @@ html {
 	// Enable kerning and ligatures everywhere
 	// to use open-type features, bower install normalize-opentype
 	text-rendering: optimizeLegibility;
+
+	margin-top: 0!important;
 }
 
 body,

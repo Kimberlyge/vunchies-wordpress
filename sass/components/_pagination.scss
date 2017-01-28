@@ -14,14 +14,7 @@
 	}
 
 	a {
-		padding-bottom: 2px;
-		border-bottom: 2px solid;
-		line-height: 15px;
-		font-style: italic;
-
-		&:hover {
-			color: $yellow;
-		}
+		@extend .Button--invert;
 
 		&:nth-of-type(2) {
 			&:before {

@@ -29,7 +29,7 @@
 	text-transform: inherit;
 
 	&:hover {
-		color: $yellow;
+		color: $color-primary;
 	}
 }
 
@@ -78,6 +78,36 @@
 	h3 {
 		font-size: 12px;
 		margin: 2px 0;
+	}
+
+	&--1-2 {
+		width: 50%;
+	}
+
+	&--1-3 {
+		width: 31.33%;
+	}
+
+	&--2-3 {
+		width: 66.66%;
+	}
+}
+
+.NavSubFilter {
+	.NavSub-content > .NavSub-wrap:first-of-type {
+		margin-right: 2%;
+		border-right: 2px solid;
+	}
+
+	.NavSub-content > .NavSub-wrap:last-of-type {
+		.NavSub-item {
+			width: 100px;
+			margin: 0 auto;
+		}
+	}
+
+	h3 {
+		margin-bottom: 8px;
 	}
 }
 

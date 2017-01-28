@@ -212,14 +212,35 @@ get_header(); ?>
 			</div>
 			<?php
 
-			// get_template_part( 'template-parts/content', get_post_format() );
-
-			// the_post_navigation();
-
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
 			endif;?>
+
+			<?php $categories = get_the_category();
+			    foreach($categories as $category) {}?>
+
+			<?php $ids = get_the_ID();
+			    foreach($ids as $id) {}?>
+
+			<div class="grid Teaser Container">
+				<h2>Related posts:</h2>
+				<?php
+				$args = array(
+				    'limit' => 2,
+				    'pid' => $id,
+				    'range' => 'monthly',
+				    'cat' => $category->term_id,
+				    'thumbnail_width' => '500',
+    				'thumbnail_height' => '500',
+				    'post_type' => 'post',
+				    'post_html' => '<div class="col-s-2-4 col-m-2-4 col-ml-2-4"><a class="Teaser-wrap" id="overview" href="{url}" rel="bookmark"><figure class="Teaser-media Teaser-media--related">{thumb_img}</figure><div class="Teaser-body"><h2 class="Teaser-title">{text_title}</h2><ul class="Teaser-categories"></ul></div></a></div>'
+				);
+
+
+				wpp_get_mostpopular( $args );
+				?>
+			</div>
 
 			<div class="js-button-footer-nav Button-footerNav">
 				<?php next_post_link('%link','<button class="Button Button-footerNav-next js-button-footerNav-next">

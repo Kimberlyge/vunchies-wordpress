@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying results in search pages
+ * Template part for displaying posts
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,23 +8,49 @@
  */
 
 ?>
-<h1>CONTENT-SEARCH.PHP</h1>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<div class="col-s-2-4 col-m-1-3 col-ml-1-4">
+	<a class="Teaser-wrap" id="overview" href="<?php echo get_permalink(); ?>" rel="bookmark">
+		<figure class="Teaser-media ImgToBg">
+			<?php $image = get_field('cover');?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php vunchies_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+			<img class="ImgToBg-item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php the_title();?>">
+		</figure>
+		<div class="Teaser-body">
+			<h2 class="Teaser-title"><?php the_title();?></h2>
+			<ul class="Teaser-categories">
+				<?php
+			    $categories = get_the_category();
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+			    foreach($categories as $category) {
+			        echo "<li>$category->cat_name</li>";
+			   }
+				?>
+			</ul>
+			<ul class="Teaser-tags">
+				<?php
 
-	<footer class="entry-footer">
-		<?php vunchies_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+				if(has_tag('gluten')) {
+			    	?><li><svg class='icon icon-gluten-free'><use xlink:href='#icon-gluten-free'></use><span>gluten-free</span></svg></i><?php
+				}
+
+			   	if(has_tag('nut')) {
+			    	?><li><svg class='icon icon-nut-free'><use xlink:href='#icon-nut-free'></use><span>nut-free</span></svg></i><?php
+				}
+
+				if(has_tag('sugar')) {
+			    	?><li><svg class='icon icon-sugar-free'><use xlink:href='#icon-sugar-free'></use><span>sugar-free</span></svg></i><?php
+				}
+
+				if(has_tag('soy')) {
+			    	?><li><svg class='icon icon-soy-free'><use xlink:href='#icon-soy-free'></use><span>soy-free</span></svg></i><?php
+				}
+
+				if(has_tag('raw')) {
+			    	?><li><svg class='icon icon-raw'><use xlink:href='#icon-raw'></use><span>raw</span></svg></i><?php
+				}
+
+			   ?>
+			</ul>
+		</div>
+	</a>
+</div>

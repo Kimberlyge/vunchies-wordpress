@@ -11,29 +11,33 @@
 	@media (min-width: 655px) {
 		max-width: rem(1000);
 		padding: 0 rem(10);
-		margin: rem(20) auto rem(40);
+		margin: rem(20) auto rem(35);
 	}
 }
 
 .Header-inner {
-
 	.Logo {
+		display: none;
+	}
+
+	.SearchForm {
 		display: none;
 	}
 
 	@media (max-width: 655px) {
 		position: fixed;
-		z-index: 5;
 
 		width: 100%;
 		height: 100vh;
 		top: 0;
 		left: 0;
 
+		overflow-y: hidden;
+
 		transform: translateX(-100%);
 		transition: transform 0.35s cubic-bezier(0.445, 0.050, 0.550, 0.950);
 
-		padding-top: rem($space*2);
+		z-index: 5;
 
 		background-color: $white;
 
@@ -41,8 +45,33 @@
 			display: block;
 		}
 
-		.Nav > a {
+
+		.SearchForm {
+			display: block;
+		}
+
+
+		.Nav-item {
 			padding: rem(10) 0;
+			border-bottom: 1px solid;
+			width: 200px;
+			margin: auto;
+			padding-left: 11px;
+
+			text-align: left;
+			font-weight: 500;
+
+			&:hover,
+			&:active,
+			&.is-active {
+				color: $color-primary;
+				border-color: black;
+			}
+
+		}
+
+		.NavItemAbout {
+			border: 0;
 		}
 
 		&.is-mobile {
@@ -58,6 +87,7 @@
 	h1 {
 		margin-bottom: 0.1em;
 		font-size: $font-35;
+
 		@media (min-width: $layout-m) {
 			font-size: $font-40;
 		}
@@ -65,6 +95,7 @@
 			font-size: 50px;
 		}
 	}
+
 	h3 {
 		@extend %font-sans-serif;
 		font-size: $font-14;

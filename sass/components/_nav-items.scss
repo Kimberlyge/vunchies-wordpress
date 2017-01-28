@@ -9,9 +9,10 @@
 	position: relative;
     width: 15px;
     height: 15px;
+    margin: auto;
+
     cursor: pointer;
     z-index: 22;
-    margin: auto;
 
     @media (min-width: 656px) {
     	margin-right: 10px;

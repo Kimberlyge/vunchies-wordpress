@@ -20,7 +20,7 @@
 	<footer id="colophon" class="Footer" role="contentinfo">
 		<span>© Vunchies - 2016</span>
 		<span>
-			<a class"LinkScrollTop" href="<?php echo get_page_link(2); ?>">Imprint</a>
+			<a class="Footer-imprint LinkScrollTop" href="<?php echo get_page_link(2); ?>">Imprint</a>
 		</span>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

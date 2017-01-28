@@ -28,6 +28,20 @@
 	color: $black !important;
 	border: 3px solid $black;
 	box-shadow: 6px 6px 0 0 $black;
+
+	&:hover,
+	&:active {
+		color: $black !important;
+	}
+}
+
+.Button--invert {
+	background-color: $black;
+	color: $white;
+	text-transform: uppercase;
+	padding: 8px 11px;
+	font-size: 14px;
+	letter-spacing: 0.07em;
 }
 
 button {

@@ -10,11 +10,18 @@ a.share-jetpack-whatsapp {
 	text-indent: -9999px;
 	background-repeat: no-repeat !important;
 	background-size: contain !important;
-	margin: 0 4px !important;
-	padding: 0 !important;
+	background-position: center !important;
+	margin: 0px !important;
+	padding: 0 13px!important;
     border: 0!important;
     box-shadow: none!important;
     background-color: white!important;
+
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+    	opacity: 0.4;
+    }
 }
 
 a.share-jetpack-whatsapp {
@@ -31,7 +38,7 @@ a.share-facebook {
 
 a.share-twitter {
 	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/twitter-logo.svg') !important;
-	width: 18px;
+	width: 26px;
 	height: 18px;
 }
 

@@ -23,7 +23,7 @@
 
 			    foreach($categories as $category) {
 			        echo "<li>$category->cat_name</li>";
-			   }
+			   	}
 				?>
 			</ul>
 			<ul class="Teaser-tags">
