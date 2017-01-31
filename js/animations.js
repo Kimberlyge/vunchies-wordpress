@@ -12,11 +12,15 @@
 			console.log('has class is loaded');
 		}
 
+		if ($('.Teaser-wrap').hasClass('loaded')) {
+			console.log('some wraps are loaded');
+		}
+
 		$.ajax({
 			url: "http://vunchies.com/wp-json/wp/v2/posts",
 			success: function( data ) {
 
-				console.log(data);
+				// console.log(data);
 
 				/* Position absolute DetailHead */
 
@@ -32,7 +36,7 @@
 					detailHeadBody.style.height = detailHeadCopyHeight + 'px';
 					detailHead.style.height = detailHeadMediaHeight + 'px';
 				}
-				TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.11);
+				TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 
 				TweenMax.staggerFromTo('.js-animate-detail', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
 			}
@@ -42,7 +46,7 @@
 			url: "http://vunchies.com/wp-json/wp/v2/pages",
 			success: function( data ) {
 
-				console.log(data, 'pages');
+				// console.log(data, 'pages');
 
 
 				TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.5);

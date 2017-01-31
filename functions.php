@@ -16,6 +16,113 @@ if ( ! function_exists( 'vunchies_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 
+function misha_filter_function(){
+	$args = array(
+		'orderby' => 'date', // we will sort posts by date
+		'order'	=> $_POST['date'] // ASC или DESC
+	);
+
+	// for taxonomies / categories
+	if( isset( $_POST['categoryfilter'] ) )
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $_POST['categoryfilter']
+			)
+		);
+
+	// create $args['meta_query'] array if one of the following fields is filled
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] || isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
+		$args['meta_query'] = array( 'relation'=>'AND' ); // AND means that all conditions of meta_query should be true
+
+	// if both minimum price and maximum price are specified we will use BETWEEN comparison
+	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
+		$args['meta_query'][] = array(
+			'key' => '_price',
+			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
+			'type' => 'numeric',
+			'compare' => 'between'
+		);
+	} else {
+		// if only min price is set
+		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_min'],
+				'type' => 'numeric',
+				'compare' => '>'
+			);
+
+		// if only max price is set
+		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
+			$args['meta_query'][] = array(
+				'key' => '_price',
+				'value' => $_POST['price_max'],
+				'type' => 'numeric',
+				'compare' => '<'
+			);
+	}
+
+
+	// if post thumbnail is set
+	if( isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
+		$args['meta_query'][] = array(
+			'key' => '_thumbnail_id',
+			'compare' => 'EXISTS'
+		);
+
+	$query = new WP_Query( $args );
+
+	if( $query->have_posts() ) :
+		while( $query->have_posts() ): $query->the_post();
+            echo '<div class="col-s-2-4 col-m-1-3 col-ml-1-4">'.
+					'<a class="Teaser-wrap loaded" id="overview" href="'. get_permalink() .'">'.
+						'<figure class="Teaser-media ImgToBg">'.
+							'<img class="ImgToBg-item" src="'. get_field('cover')['sizes']['large'] .'" alt="'. get_the_title().'">'.
+						'</figure>'.
+					'</a>'.
+					'<div class="Teaser-body">'.
+						'<h2 class="Teaser-title">' . get_the_title() . '</h2>'.
+						'<ul class="Teaser-categories">'.
+
+						'</ul>'.
+						'<ul class="Teaser-tags">'.
+							// if(has_tag('gluten')) {
+						 //    '<li><svg class='icon icon-gluten-free'><use xlink:href="#icon-gluten-free"></use><span>gluten-free</span></svg></li>'.
+							// }
+
+						 //   	if(has_tag('nut')) {
+						 //    	'<li><svg class='icon icon-nut-free'><use xlink:href='#icon-nut-free'></use><span>nut-free</span></svg></li>'.
+							// }
+
+							// if(has_tag('sugar')) {
+						 //    	'<li><svg class='icon icon-sugar-free'><use xlink:href='#icon-sugar-free'></use><span>sugar-free</span></svg></li>'.
+							// }
+
+							// if(has_tag('soy')) {
+						 //    	'<li><svg class='icon icon-soy-free'><use xlink:href='#icon-soy-free'></use><span>soy-free</span></svg></li>'.
+							// }
+
+							// if(has_tag('raw')) {
+						 //    	'<li><svg class='icon icon-raw'><use xlink:href='#icon-raw'></use><span>raw</span></svg></li>'.
+							// }
+						'</ul>'.
+					'</div>'.
+				'</div>';
+		endwhile;
+		wp_reset_postdata();
+	else :
+		echo 'No posts found';
+	endif;
+
+	die();
+}
+
+
+add_action('wp_ajax_myfilter', 'misha_filter_function');
+add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
+
 // function my_custom_handler() {
 // } // end my_custom_handler
 // add_action( 'wp_ajax_my_custom_handler', 'my_custom_handler' );
@@ -142,7 +249,7 @@ function vunchies_scripts() {
 
 	wp_enqueue_script( 'vunchies-imgToBg', get_template_directory_uri() . '/js/img-to-bg.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
+	wp_enqueue_script( 'vunchies-header', get_template_directory_uri() . '/js/header.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-onscroll', get_template_directory_uri() . '/js/on-scroll.js', array(), '20151215', true );
 
@@ -150,7 +257,7 @@ function vunchies_scripts() {
 
 	wp_enqueue_script( 'vunchies-burger', get_template_directory_uri() . '/js/burger.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'vunchies-header', get_template_directory_uri() . '/js/header.js', array(), '20151215', true );
+	wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-travel-detail', get_template_directory_uri() . '/js/travel-detail.js', array(), '20151215', true );
 

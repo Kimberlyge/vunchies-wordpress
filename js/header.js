@@ -6,80 +6,89 @@
  */
 ( function() {
 
-	// var navItem = document.querySelectorAll('.Nav-item');
+	// $('#filter').submit(function(){
 
-	// $.ajaxSetup({cache:false});
- //    $(".Nav-item").click(function(){
- //        var post_link = $(this).attr("href");
- //        var filtered = post_link.filter("#main");
- //        console.log(post_link);
- //        console.log(filtered);
- //        // var post_link = "http://vunchies.com/wp-json/wp/v2/posts?filter[category_name]=dessert";
+	// 	var filter = $(this);
 
- //        $("#overview").html("content loading");
- //        $("#overview").load(post_link);
+	// 	console.log(filter);
+	// 	$.ajax({
+	// 		url:filter.attr('action'),
+	// 		data:filter.serialize(), // form data
+	// 		type:filter.attr('method'), // POST
+	// 		beforeSend:function(xhr){
+	// 			filter.find('button').text('Processing...'); // changing the button label
+	// 		},
+	// 		success:function(data){
+	// 			filter.find('button').text('Apply filter'); // changing the button label back
+	// 			$('#RecipeOverview').html(data); // insert data
 
- //        console.log('clicked', post_link);
- //    return false;
- //    });
+ //             	TweenMax.staggerFromTo('.Teaser-wrap.loaded', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 
- //    a.onclick = fn(e) {
-	//     e.preventDefault();
+	// 			/**
+	// 			 * Img to Bgi
+	// 			 */
 
-	//     pushState({optional data}, 'Title, you can also set it later', e.currentTarget.pathname);
+	// 			var html = document.querySelector('html');
+	// 			var teaserMedia = document.querySelectorAll('.ImgToBg');
 
-	// }
+	// 			for(var i=0; i < teaserMedia.length; i++) {
+	// 				var img = teaserMedia[i].getElementsByTagName('img');
 
-	// window.history.addEventListener('popstate', historyChangeHandler);
+	// 				for(var x=0; x < img.length; x++) {
+	// 					this._src = img[x].src;
+	// 				}
 
-	// var page = d.query('.Page');
-	// var container = d.query('.Container');
-
-	// function historyChangeHandler(e) {
-	//     var data= e.fakeData //doesnt exist u should look in e where the props are.
-	//     $.ajax(data.path).then(fn(data) {
-	//         container.remove(page);
-	//         var result = parseHtml(data);
-	//         container.append(result.page);
-	//         document.title = result.title
-	//     })
-	// }
-
-	// fn parseHtml(html) {
-	//     var div = createDiv()
-	//     div.innerHtml = html;
-
-	//     return {
-	//         title: div.query('title').textContent,
-	//         page: div.query('.Page'),
-	//     }
-	// }
-
-	// for(var i=0; i < navItem.length; i++) {
-
-	// 	navItem[i].addEventListener("click", function (event) {
-
-	// 		// $.post(ajaxurl, {
-
-
-	// 		// }, function (response) {
-	// 		//     // TODO
-	// 		//     console.log('response', response);
-	// 		// });
-	// 		event.preventDefault();
-
-	// 		jQuery.post(
-	// 		    ajaxurl,
-	// 		    {
-	// 		        'action': 'add_foobar',
-	// 		        'data':   'foobarid'
-	// 		    },
-	// 		    function(response){
-	// 		        alert('The server responded: ' + response);
-	// 		    }
-	// 		);
-
+	// 				teaserMedia[i].style.backgroundImage = 'url(' + this._src +')';
+	// 			}
+	// 		}
 	// 	});
-	// }
+
+	// 	return false;
+
+	// });
+
+	// $('.Nav-item').on('click', function(event){
+	// 	console.log('clicked');
+	// 	event.preventDefault();
+
+	// 	// var selecetd_taxonomy = $(this).attr('title');
+
+	// 	var filter = $(this);
+
+	// 	$.ajax({
+	// 		url: 'www.vunchies.com/wp-admin/admin-ajax.php',
+	// 		data:filter.serialize(), // form data
+	// 		type: 'POST', // POST
+	// 		beforeSend:function(xhr){
+	// 			filter.find('button').text('Processing...'); // changing the button label
+	// 		},
+	// 		success:function(data){
+	// 			filter.find('button').text('Apply filter'); // changing the button label back
+	// 			$('#RecipeOverview').html(data); // insert data
+
+ //             	TweenMax.staggerFromTo('.Teaser-wrap.loaded', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+
+	// 			/**
+	// 			 * Img to Bgi
+	// 			 */
+
+	// 			var html = document.querySelector('html');
+	// 			var teaserMedia = document.querySelectorAll('.ImgToBg');
+
+	// 			for(var i=0; i < teaserMedia.length; i++) {
+	// 				var img = teaserMedia[i].getElementsByTagName('img');
+
+	// 				for(var x=0; x < img.length; x++) {
+	// 					this._src = img[x].src;
+	// 				}
+
+	// 				teaserMedia[i].style.backgroundImage = 'url(' + this._src +')';
+	// 			}
+	// 		}
+	// 	});
+
+		return false;
+
+	});
 
 } )();

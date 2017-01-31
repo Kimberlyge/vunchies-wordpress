@@ -45,6 +45,18 @@
 
 
 	/**
+	 * Breakfast
+	 */
+
+	// Add active state to CSS
+	var NavAbout = document.querySelector('.NavItemAbout');
+
+	if (window.location.href.indexOf("about") > -1) {
+		NavAbout.classList.add('is-active');
+
+	}
+
+	/**
 	 * About
 	 */
 
@@ -115,9 +127,9 @@
 	};
 
 
-	/**
+	*
 	 * Filter
-	 */
+
 
 	var NavFilter = document.getElementById( 'js-navItemFilter' );
 	var NavFilterSubItem = document.querySelectorAll( '.NavSubFilter-item' );
