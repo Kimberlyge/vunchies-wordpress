@@ -14,15 +14,7 @@
 	}
 
 	a {
-		@extend .Button--invert;
-
-		&:nth-of-type(2) {
-			&:before {
-				content: '/';
-				padding: 10px;
-				color: #000000 !important;
-			}
-		}
+		@extend .Button--outline;
 
 	}
 }

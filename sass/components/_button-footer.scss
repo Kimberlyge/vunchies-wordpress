@@ -6,25 +6,28 @@
 .Button-footerNav .Button {
 	width: 35px;
 	height: 30px;
-	border: 2px solid;
 	padding: 0;
 
-	background: white;
+	// background: white;
 	text-align: center;
+
+	@extend .Button--outline;
 
 	svg {
 		vertical-align: middle;
 		margin: auto;
 		display: block;
+
+		fill: black;
 	}
 
-	&:hover {
-		background: black;
+	// &:hover {
+	// 	// background: black;
 
-		svg {
-			fill: white;
-		}
-	}
+	// 	svg {
+	// 		// fill: white;
+	// 	}
+	// }
 }
 
 .Button-scrollTop,

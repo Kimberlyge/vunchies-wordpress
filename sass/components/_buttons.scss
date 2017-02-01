@@ -23,27 +23,39 @@
 }
 
 .Button--outline {
-	background-image: none;
-	background-color: $white;
-	color: $black !important;
-	border: 3px solid $black;
-	box-shadow: 6px 6px 0 0 $black;
+    padding: 8px 11px;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: black;
+    text-transform: uppercase;
+
+	background-color: transparent;
+    border: 1px solid #000;
 
 	&:hover,
 	&:active {
-		color: $black !important;
+		color: #000 !important;
+		background-color: white !important;
+		border-color: white;
 	}
 }
 
 .Button--invert {
+	padding: 8px 11px;
+	border: 2px solid black;
+	font-weight: 500;
+
 	background-color: $black;
 	color: $white;
 	text-transform: uppercase;
-	padding: 8px 11px;
 	font-size: 14px;
-	letter-spacing: 0.07em;
-}
+	letter-spacing: 0.17em;
 
-button {
-	color: $black;
+	&:hover,
+	&:active {
+		color: $black !important;
+		background-color: white !important;
+	}
 }

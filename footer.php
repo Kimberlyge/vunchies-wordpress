@@ -13,8 +13,11 @@
 
 	</div><!-- #content -->
 
-	<button class="Button Button-scrollTop js-button-footer-scrollUp">
-		<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+	<button class="Button Button-scrollTop Button--outline js-button-footer-scrollUp">
+		<svg class="icon icon-arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+		<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+		</svg>
+
 	</button>
 
 	<footer id="colophon" class="Footer" role="contentinfo">

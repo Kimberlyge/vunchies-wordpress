@@ -8,10 +8,9 @@
 	z-index: 20;
 	width: 100%;
 	left: 0;
-	top: 0;
+	top: 20px;
+	padding-top: 20px;
 	min-height: 2em; //needs a height to keep it open while moving the cursor
-
-	padding-top: 60px;
 
 	&.is-active {
 		display: block;

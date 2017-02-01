@@ -32,46 +32,6 @@ function misha_filter_function(){
 			)
 		);
 
-	// create $args['meta_query'] array if one of the following fields is filled
-	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] || isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
-		$args['meta_query'] = array( 'relation'=>'AND' ); // AND means that all conditions of meta_query should be true
-
-	// if both minimum price and maximum price are specified we will use BETWEEN comparison
-	if( isset( $_POST['price_min'] ) && $_POST['price_min'] || isset( $_POST['price_max'] ) && $_POST['price_max'] ) {
-		$args['meta_query'][] = array(
-			'key' => '_price',
-			'value' => array( $_POST['price_min'], $_POST['price_max'] ),
-			'type' => 'numeric',
-			'compare' => 'between'
-		);
-	} else {
-		// if only min price is set
-		if( isset( $_POST['price_min'] ) && $_POST['price_min'] )
-			$args['meta_query'][] = array(
-				'key' => '_price',
-				'value' => $_POST['price_min'],
-				'type' => 'numeric',
-				'compare' => '>'
-			);
-
-		// if only max price is set
-		if( isset( $_POST['price_max'] ) && $_POST['price_max'] )
-			$args['meta_query'][] = array(
-				'key' => '_price',
-				'value' => $_POST['price_max'],
-				'type' => 'numeric',
-				'compare' => '<'
-			);
-	}
-
-
-	// if post thumbnail is set
-	if( isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
-		$args['meta_query'][] = array(
-			'key' => '_thumbnail_id',
-			'compare' => 'EXISTS'
-		);
-
 	$query = new WP_Query( $args );
 
 	if( $query->have_posts() ) :
@@ -88,25 +48,7 @@ function misha_filter_function(){
 
 						'</ul>'.
 						'<ul class="Teaser-tags">'.
-							// if(has_tag('gluten')) {
-						 //    '<li><svg class='icon icon-gluten-free'><use xlink:href="#icon-gluten-free"></use><span>gluten-free</span></svg></li>'.
-							// }
 
-						 //   	if(has_tag('nut')) {
-						 //    	'<li><svg class='icon icon-nut-free'><use xlink:href='#icon-nut-free'></use><span>nut-free</span></svg></li>'.
-							// }
-
-							// if(has_tag('sugar')) {
-						 //    	'<li><svg class='icon icon-sugar-free'><use xlink:href='#icon-sugar-free'></use><span>sugar-free</span></svg></li>'.
-							// }
-
-							// if(has_tag('soy')) {
-						 //    	'<li><svg class='icon icon-soy-free'><use xlink:href='#icon-soy-free'></use><span>soy-free</span></svg></li>'.
-							// }
-
-							// if(has_tag('raw')) {
-						 //    	'<li><svg class='icon icon-raw'><use xlink:href='#icon-raw'></use><span>raw</span></svg></li>'.
-							// }
 						'</ul>'.
 					'</div>'.
 				'</div>';
@@ -119,6 +61,8 @@ function misha_filter_function(){
 	die();
 }
 
+// add_action('wp_ajax_filter_posts', 'ajax_filter_get_posts');
+// add_action('wp_ajax_nopriv_filter_posts', 'ajax_filter_get_posts');
 
 add_action('wp_ajax_myfilter', 'misha_filter_function');
 add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');

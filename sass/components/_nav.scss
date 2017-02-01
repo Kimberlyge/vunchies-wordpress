@@ -3,8 +3,10 @@
  */
 
 .Nav {
+	display: inline-block;
 	position: relative;
 	padding-bottom: 0;
+	vertical-align: top;
 
 	@media (max-width: 656px) {
 		padding-top: 0;
@@ -22,6 +24,15 @@
 		position: relative;
 		z-index: 21;
 	}
+}
+
+.NavForm {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+
+    border: 0;
+    background: none;
+    overflow: hidden;
 }
 
 .Nav-item {

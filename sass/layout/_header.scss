@@ -16,6 +16,16 @@
 }
 
 .Header-inner {
+	position: relative;
+	display: inline-block;
+}
+
+
+/**
+ * MOBILE!!
+ */
+
+.Header-inner {
 	.Logo {
 		display: none;
 	}
@@ -24,9 +34,9 @@
 		display: none;
 	}
 
-	.NavItemFilter {
-		display: none;
-	}
+	// .NavItemFilter {
+	// 	display: none;
+	// }
 
 	@media (max-width: 655px) {
 		position: fixed;

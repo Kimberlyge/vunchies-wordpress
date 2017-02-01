@@ -117,6 +117,17 @@ a:visited {
 	}
 }
 
+// need to check!!
+
+select option:active,
+select option:focus,
+select option:checked,
+select option:hover {
+	background: none!important;
+	background-color: none!important;
+	border-bottom: 2px solid $color-primary;
+}
+
 iframe,
 img {
 	max-width: 100%;

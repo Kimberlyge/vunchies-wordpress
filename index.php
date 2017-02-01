@@ -36,8 +36,9 @@ get_header(); ?>
 				wp_link_pages();
 				?>
 				<div class="Pagination">
-					<p><?php posts_nav_link(' ','&laquo; Newer posts','Older posts &raquo;'); ?></p>
+					<p><?php posts_nav_link('Newer posts','Older posts'); ?></p>
 				</div>
+
 				<?php
 			endif; ?>
 
