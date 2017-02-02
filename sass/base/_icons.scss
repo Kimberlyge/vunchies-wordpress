@@ -107,12 +107,6 @@ Single-colored icons can be modified like so:
 	height: 0.7em;
 	width: 0.7em;
 
-	&:hover {
-		path {
-			color: $color-primary;
-		}
-	}
-
 	&--big {
 		height: 1.2em;
 		width: 1.2em;

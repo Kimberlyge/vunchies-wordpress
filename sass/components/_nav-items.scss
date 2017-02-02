@@ -66,11 +66,15 @@
 /* About */
 
 .NavItemAbout {
-	margin-left: 10px;
+	margin-left: rem(7);
 }
 
 .Divider {
-	margin: 0 10px;
+	display: none;
+	margin: 0 rem(5);
+	@media (min-width: 656px) {
+		display: inline-block;
+	}
 }
 
 .NavItemTravel-title,

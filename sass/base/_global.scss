@@ -124,8 +124,9 @@ select option:focus,
 select option:checked,
 select option:hover {
 	background: none!important;
-	background-color: none!important;
+	background-color: transparent!important;
 	border-bottom: 2px solid $color-primary;
+	color: $color-primary;
 }
 
 iframe,
@@ -142,11 +143,22 @@ ol {
 
 
 textarea,
+select,
 input {
 	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
 	border-radius: 0;
 	&:focus {
-		outline: 0;
+		outline: 0 !important;
 
 	}
+}
+
+::selection {
+  background: $color-primary; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $color-primary; /* Gecko Browsers */
 }

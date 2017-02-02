@@ -75,6 +75,8 @@
 	flex: 1 100%;
 	font-size: $font-15;
 
+	letter-spacing: 0.12em;
+
 	@media (min-width: $layout-ml) {
 		font-size: $font-17;
 	}

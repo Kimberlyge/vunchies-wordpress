@@ -3,8 +3,56 @@
  */
 
 .Footer {
-	padding: 10px 20px 20px;
-	backgroung-image: #eaeaea;
+	padding: rem(40) rem(10);
+	background-color: #e9e9e9;
+
+	.NavSocial {
+		position: relative;
+		width: rem(150);
+		margin: 0 auto;
+		overflow: auto;
+	}
+
+	.NavSocial-item {
+		width: 25%;
+		text-align: center;
+	}
+
+	.Seachform {
+		position: relative;
+		margin: 0 auto;
+		display: block;
+	}
+
+	.search-form {
+		position: relative;
+		width: 155px;
+		margin: 0 auto;
+		top: 0;
+		right: 0;
+	}
+	input.search-field {
+		width: 7em;
+	}
+}
+
+.Footer-grid {
+	max-width: rem(900);
+	margin: 0 auto !important;
+}
+
+.Footer-title {
+	font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+}
+
+.Footer-legal {
+	display: block;
+    padding-left: rem(40);
+    letter-spacing: 0.05em;
 
 	span {
 		font-size: 10px;
@@ -23,8 +71,60 @@
 			}
 		}
 	}
+
 }
 
 #infinite-footer {
 	display: none;
+}
+
+/* todo: refactor */
+
+.InstagramFeed {
+	margin-top: rem(40);
+
+	#sb_instagram #sbi_load {
+		padding: 0 !important;
+	}
+}
+
+.Newsletter {
+	width: 90%;
+	margin: 0 auto rem(40);
+}
+
+.Newsletter-title {
+	@extend %font-playfair;
+	font-size: $font-35;
+}
+
+.Newsletter-input {
+    background: white;
+    width: 49%;
+    margin: 15px auto 0;
+    padding: 7px 8px;
+    border: 1px solid;
+    font-size: 11px;
+    outline: 0;
+}
+
+.Newsletter-submit {
+    display: block !important;
+	width: 70%;
+    margin: 15px auto 0;
+}
+
+.RecentPosts {
+	width: 90%;
+	margin: 0 auto rem(40);
+	text-align: center;
+}
+
+.RecentPosts-item {
+    @extend %font-playfair-italic;
+    display: inline-block;
+	margin-bottom: 5px;
+
+    letter-spacing: 0.1em;
+    font-size: $font-12;
 }
