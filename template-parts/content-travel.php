@@ -1,13 +1,17 @@
 <?php
 /**
- * Ajax
+ * Template part for displaying page content in page.php
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Vunchies
  */
 
-    $post = get_post($_POST['id']); // this line is used to define the {id:post_id} which you will see in another snippet further down
+?>
+<!-- NOT IN USE -->
+<h1>TRAVELYO <?php the_ID(); ?></h1>
+<article id="post-90" <?php post_class(); ?>>
 
-    if ($post) { // this is necessary and is a replacement of the typical `if (have_posts())`
-        setup_postdata($post); // needed to format custom query results for template tags ?>
-        <!-- everything below this line is your typical page template coding -->
 		<div class="Container Container--big TravelOverview">
 			<div class="grid">
 				<?php
@@ -37,5 +41,4 @@
 			</div>
 		</div>
 
-<?php }
-?>
+</article><!-- #post-## -->

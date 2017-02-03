@@ -16,6 +16,71 @@ if ( ! function_exists( 'vunchies_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 
+/**
+ * Load Travel Overview and About Page
+ */
+
+add_action( 'wp_ajax_my_action', 'my_action_callback' );
+add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
+
+function my_action_callback() {
+
+    $pageid = intval( $_POST['pageid'] );
+
+    if( $pageid == 90 ) :
+	    $query = new WP_Query( array( 'page_id' => 90 ) );
+	    if( $query->have_posts() ) :
+			while( $query->have_posts() ): $query->the_post();
+
+			    echo '<div class="Container Container--big TravelOverview">'.
+						'<div class="grid">';
+
+					if( have_rows('city') ):
+						while ( have_rows('city') ) : the_row();
+
+							echo '<div class="col-s-3-3 col-m-2-4 col-l-1-3">'.
+									'<div class="TravelOverview-item js-animate">'.
+										'<a class="Teaser-wrap loaded" id="overview" href="'. esc_url( get_permalink() ), the_sub_field('city_slug') .'">'.
+											'<div class="Cover Cover--overlay Cover--small ImgToBg">'.
+												'<img class="ImgToBg-item" src="'. get_sub_field('city_image')['sizes']['large'] .'" alt="'. get_the_title().'">'.
+												'<div class="Cover-body">'.
+													'<h2>'. get_sub_field('city_title') .'</h2>'.
+													'<p>'. get_the_title() .'</p>'.
+													'<p>'. get_sub_field('city_country') .'</p>'.
+												'</div>'.
+											'</div>'.
+										'</a>'.
+									'</div>'.
+								'</div>';
+					    endwhile;
+					endif;
+				echo '</div>'.
+					 '</div>';
+			endwhile;
+		endif;
+
+	elseif( $pageid == 613 ) :
+
+	    $query = new WP_Query( array( 'page_id' => 613 ) );
+	    if( $query->have_posts() ) :
+			while( $query->have_posts() ): $query->the_post();
+				echo '<div class="About">'.
+						'<img class="About-cover" src="'. get_field('cover')['sizes']['large'] .'" alt="'. get_the_title().'">'.
+						'<div class="About-content">'. get_the_content() .'</div>'.
+					'</div>';
+			endwhile;
+		endif;
+	endif;
+
+
+    wp_die();
+}
+
+
+/**
+ * Filter Categories
+ */
+
 function misha_filter_function(){
 	$args = array(
 		'orderby' => 'date', // we will sort posts by date
@@ -61,15 +126,9 @@ function misha_filter_function(){
 	die();
 }
 
-// add_action('wp_ajax_filter_posts', 'ajax_filter_get_posts');
-// add_action('wp_ajax_nopriv_filter_posts', 'ajax_filter_get_posts');
-
 add_action('wp_ajax_myfilter', 'misha_filter_function');
 add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
 
-// function my_custom_handler() {
-// } // end my_custom_handler
-// add_action( 'wp_ajax_my_custom_handler', 'my_custom_handler' );
 
 function vunchies_setup() {
 	/*

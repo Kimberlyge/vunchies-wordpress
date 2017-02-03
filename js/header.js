@@ -6,6 +6,51 @@
  */
 ( function() {
 
+	$('.js-nav-item-travel').on('click', function(event) {
+		event.preventDefault();
+
+		var $this = $(this);
+			ajaxurl = $this.data('ajax');
+			id = $this.data('id');
+
+		console.log(id);
+
+		var data = {
+		    'action': 'my_action',
+		    'pageid': id
+		};
+
+		console.log(data);
+
+		jQuery.post(ajaxurl, data, function(response) {
+			console.log(data);
+
+			$('#RecipeOverview').html(response); // insert data
+			// window.history.pushState({path: pageurl}, '', pageurl);
+
+				TweenMax.staggerFromTo('.js-animate', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+
+
+				/**
+				 * Img to Bgi
+				 */
+
+				var html = document.querySelector('html');
+				var teaserMedia = document.querySelectorAll('.ImgToBg');
+
+				for(var i=0; i < teaserMedia.length; i++) {
+					var img = teaserMedia[i].getElementsByTagName('img');
+
+					for(var x=0; x < img.length; x++) {
+						this._src = img[x].src;
+					}
+
+					teaserMedia[i].style.backgroundImage = 'url(' + this._src +')';
+				}
+		});
+
+	});
+
 	$('.js-nav-form').on('change', function() {
 		console.log('option changed');
 

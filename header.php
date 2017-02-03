@@ -98,13 +98,13 @@
 
 			<nav class="Nav">
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
-					<a href=" http://vunchies.com/travel/" rel="90" class="Nav-item NavItemTravel-title">Travel</a>
+					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-id="90" class="Nav-item NavItemTravel-title js-nav-item-travel">Travel</a>
 				</div>
 			</nav>
 
 			<span class="Divider">|</span>
 
-			<a href="<?php echo get_page_link(613); ?>" class="Nav-item NavItemAbout">About</a>
+			<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-id="613" class="Nav-item NavItemAbout js-nav-item-travel">About</a>
 
 
 			<!-- Sub Navigations -->
