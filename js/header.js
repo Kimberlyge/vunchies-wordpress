@@ -6,18 +6,53 @@
  */
 ( function() {
 
-	$('.js-nav-item-travel').on('click', function(event) {
+	$('.js-nav-home').on('click', function(event) {
 		event.preventDefault();
 
 		var $this = $(this);
 			ajaxurl = $this.data('ajax');
-			id = $this.data('id');
 
-		console.log(id);
+		var data = {
+			'action': 'navigate_home'
+		};
+
+		console.log(data);
+
+		jQuery.post(ajaxurl, data, function(response) {
+			console.log(data);
+
+			$('#RecipeOverview').html(response); // insert data
+		});
+
+	});
+
+	$('.js-nav-item').on('click', function(event) {
+		event.preventDefault();
+
+		var $this = $(this);
+			ajaxurl = $this.data('ajax');
+
+		if($this.data('page')) {
+			console.log('has page id');
+			this.pageId = $this.data('page');
+		}
+
+		if($this.data('post')) {
+			console.log('has post id');
+			this.postId = $this.data('post');
+		}
+
+		if($this.data('category')) {
+			console.log('has category id');
+			this.categoryId = $this.data('category');
+		}
+
 
 		var data = {
 		    'action': 'my_action',
-		    'pageid': id
+		    'pageId': this.pageId,
+		    'postId': this.postId,
+		    'categoryId': this.categoryId
 		};
 
 		console.log(data);
@@ -47,6 +82,30 @@
 
 					teaserMedia[i].style.backgroundImage = 'url(' + this._src +')';
 				}
+
+
+				/* Post Detail */
+
+				if (data.postId) {
+
+					// var detailHeadBody = document.querySelector('.DetailHead-body' );
+					// var detailHeadMedia = document.getElementsByClassName('DetailHead-media' );
+					// var detailHeadCopy = document.getElementsByClassName('js-detail-head' );
+					// var detailHead = document.querySelector('.DetailHead' );
+
+					// if (detailHeadCopy[0]) {
+					// 	var detailHeadCopyHeight = detailHeadCopy[0].offsetHeight;
+					// 	var detailHeadMediaHeight = detailHeadMedia[0].offsetHeight;
+
+					// 	detailHeadBody.style.height = detailHeadCopyHeight + 'px';
+					// 	detailHead.style.height = detailHeadMediaHeight + 'px';
+					// }
+
+					TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+
+					TweenMax.staggerFromTo('.js-animate-detail', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
+				}
+
 		});
 
 	});

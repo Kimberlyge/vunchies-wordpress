@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/9f1da02ae6/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/9f1da02ae6/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/f78ba62da8/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/f78ba62da8/UntitledProject/svgxuse.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
@@ -55,11 +55,16 @@
 		</button>
 
 
+		<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class="Nav-item NavItemTravel-title js-nav-home">
+			<h1><?php bloginfo( 'name' ); ?></h1>
+			<h3><?php echo $description;?></h3>
+		</a>
+<!--
 		<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h3><?php echo $description;?></h3>
 		</a>
-
+ -->
 		<div class="Header-inner">
 			<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<h1><?php bloginfo( 'name' ); ?></h1>
@@ -81,6 +86,8 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="Nav-item NavItemRecipes-title">All Recipes</a>
 			</div>
 
+			<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item NavItemTravel-title js-nav-item">Breakfast2</a>
+
 			<form class="Nav" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
 				<?php
 					if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
@@ -98,13 +105,13 @@
 
 			<nav class="Nav">
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
-					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-id="90" class="Nav-item NavItemTravel-title js-nav-item-travel">Travel</a>
+					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class="Nav-item NavItemTravel-title js-nav-item">Travel</a>
 				</div>
 			</nav>
 
 			<span class="Divider">|</span>
 
-			<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-id="613" class="Nav-item NavItemAbout js-nav-item-travel">About</a>
+			<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="613" class="Nav-item NavItemAbout js-nav-item">About</a>
 
 
 			<!-- Sub Navigations -->

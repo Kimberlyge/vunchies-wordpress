@@ -25,9 +25,11 @@ add_action( 'wp_ajax_nopriv_my_action', 'my_action_callback' );
 
 function my_action_callback() {
 
-    $pageid = intval( $_POST['pageid'] );
+    $pageId = intval( $_POST['pageId'] );
+    $postId = intval( $_POST['postId'] );
+    $categoryid = intval( $_POST['categoryId'] );
 
-    if( $pageid == 90 ) :
+    if( $pageId == 90 ) :
 	    $query = new WP_Query( array( 'page_id' => 90 ) );
 	    if( $query->have_posts() ) :
 			while( $query->have_posts() ): $query->the_post();
@@ -59,7 +61,7 @@ function my_action_callback() {
 			endwhile;
 		endif;
 
-	elseif( $pageid == 613 ) :
+	elseif( $pageId == 613 ) :
 
 	    $query = new WP_Query( array( 'page_id' => 613 ) );
 	    if( $query->have_posts() ) :
@@ -67,6 +69,246 @@ function my_action_callback() {
 				echo '<div class="About">'.
 						'<img class="About-cover" src="'. get_field('cover')['sizes']['large'] .'" alt="'. get_the_title().'">'.
 						'<div class="About-content">'. get_the_content() .'</div>'.
+					'</div>';
+			endwhile;
+		endif;
+
+	elseif( $postId ) :
+		$thispost = get_post($postId);
+
+		global $post;
+	    foreach ( $thispost as $post ) :
+	        setup_postdata( $post );
+	        ?>
+			<div class="Detail">
+				<div class="grid">
+					<div class="col-s-3-3 col-m-2-4">
+						<div class="DetailHead">
+							<div class="DetailHead-body js-animate-detail centered">
+								<div class="DetailHead-copy js-detail-head">
+									<h2 class="DetailHead-title">
+										<?php the_title();?>
+									</h2>
+									<p><?php the_content();?></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-s-3-3 col-m-2-4">
+						<div class="DetailHead-media js-animate-detail">
+							<?php $image = get_field('cover');?>
+							<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+						</div>
+					</div>
+				</div>
+				<div class="grid">
+					<div class="col-s-3-3 col-m-1-3">
+						<div class="DetailGrid-item js-animate-detail DetailGrid-item--text">
+							<div class="DetailInfo">
+								<h3 class="DetailText-title">Ingredients</h3>
+								<ul>
+									<?php the_field('ingredients');?>
+								</ul>
+								<div class="DetailInfoFooter">
+									<div class="DetailInfoFooter-time">
+										<svg class="DetailInfoFooter-icon icon icon-stop-watch-2"><use xlink:href="#icon-stop-watch-2"></use></svg>
+										<?php the_field('info');?>
+									</div>
+									<a class="DetailInfoFooter-print" href="javascript:window.print()">Print</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				<?php
+
+				// check if the flexible content field has rows of data
+				if( have_rows('grids') ):
+
+				     // loop through the rows of data
+				    while ( have_rows('grids') ) : the_row();
+
+
+				        if( get_row_layout() == 'grid_content' ):
+
+				        	if( get_sub_field('first_grid') ):?>
+
+							<?php if( get_sub_field('is_first') ):?>
+								<h1>IS FIRST</h1>
+								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+							<?php elseif ( !get_sub_field('is_first')) :?>
+								<div class="grid">is-NOT-first
+							<?php endif;?>
+									<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
+
+										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-2-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-1-3--force<?php endif;?>">
+											<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+												<!-- {{#if grid.title}} -->
+												<?php if( get_sub_field('title') ):?>
+													<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
+												<?php endif;?>
+												<!-- {{/if}} -->
+												<?php the_sub_field('text');?>
+											</div>
+										</div>
+										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-1-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-2-3--force<?php endif;?>">
+											<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+
+												<?php $image = get_sub_field('image');?>
+
+												<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+
+											</div>
+										</div>
+									</div>
+							<?php if( get_sub_field('is_first') ):?></div><?php endif;?>
+							<!-- close grid wrap -->
+							</div>
+				        	<?php
+				        	endif;
+
+
+				        	if( get_sub_field('second_grid') ):?>
+
+				        	<?php if( get_sub_field('is_first') ):?>
+								<h1>IS FIRST</h1>
+								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+							<?php elseif ( !get_sub_field('is_first')) :?>
+								<div class="grid">is-NOT-first
+							<?php endif;?>
+
+								<div class="DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?>">
+									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+											<!-- {{#if grid.title}} -->
+											<?php if( get_sub_field('title') ):?>
+												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
+											<?php endif;?>
+											<!-- {{/if}} -->
+											<?php the_sub_field('text');?>
+										</div>
+									</div>
+									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+											<!-- {{#if grid.title}} -->
+											<?php if( get_sub_field('title_2') ):?>
+												<h3 class="DetailText-title"><?php the_sub_field('title_2');?>:</h3>
+											<?php endif;?>
+											<!-- {{/if}} -->
+											<?php the_sub_field('text_2');?>
+										</div>
+									</div>
+									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+
+											<?php $image = get_sub_field('image');?>
+
+											<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+										</div>
+									</div>
+								</div>
+
+							<?php if( get_sub_field('is_first') ):?></div><?php endif;?>
+
+				        	</div>
+				        	<?php
+				        	endif;
+
+				        	if( get_sub_field('third_grid') ):?>
+
+				        	<?php if( get_sub_field('is_first') ):?>
+								<h1>IS FIRST</h1>
+								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+							<?php elseif ( !get_sub_field('is_first')) :?>
+								<div class="grid">is-NOT-first
+							<?php endif;?>
+								<div class="DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
+
+									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+											<!-- {{#if grid.title}} -->
+											<?php if( get_sub_field('title') ):?>
+												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
+											<?php endif;?>
+											<!-- {{/if}} -->
+											<?php the_sub_field('text');?>
+										</div>
+									</div>
+									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+
+											<?php $image = get_sub_field('image');?>
+
+											<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+										</div>
+									</div>
+									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+
+											<?php $image = get_sub_field('image_2');?>
+
+											<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+
+								<!-- 			<img class="lazyload js-pin-it" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="{{grid.image.title}}" data-sizes="auto" data-srcset="
+												{{grid.image.sizes.medium}} 320w,
+												{{grid.image.sizes.large}} 640w"/>
+								 -->
+										</div>
+									</div>
+								</div>
+							<?php if( get_sub_field('is_first') ):?></div><?php endif;?>
+
+				        	</div>
+				        	<?php
+				        	endif;
+
+				        endif;
+
+				    endwhile;
+
+				else :
+
+				    // no layouts found
+
+				endif;
+
+				?>
+			</div>
+
+	    <?php
+	    wp_die();
+	    endforeach;
+	    wp_reset_postdata();
+
+	elseif( $categoryId ) :
+
+		$args['tax_query'] = array(
+			array(
+				'taxonomy' => 'category',
+				'field' => 'id',
+				'terms' => $_POST['categoryId']
+			)
+		);
+
+	    $query = new WP_Query( $args );
+	    if( $query->have_posts() ) :
+			while( $query->have_posts() ): $query->the_post();
+	            echo '<div class="col-s-2-4 col-m-1-3 col-ml-1-4">'.
+						'<a class="Teaser-wrap loaded" id="overview" href="'. get_permalink() .'">'.
+							'<figure class="Teaser-media ImgToBg">'.
+								'<img class="ImgToBg-item" src="'. get_field('cover')['sizes']['large'] .'" alt="'. get_the_title().'">'.
+							'</figure>'.
+						'</a>'.
+						'<div class="Teaser-body">'.
+							'<h2 class="Teaser-title">' . get_the_title() . '</h2>'.
+							'<ul class="Teaser-categories">'.
+
+							'</ul>'.
+							'<ul class="Teaser-tags">'.
+
+							'</ul>'.
+						'</div>'.
 					'</div>';
 			endwhile;
 		endif;
