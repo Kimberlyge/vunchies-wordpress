@@ -1,0 +1,29 @@
+/**
+ * Footer
+ */
+
+.FooterLegal {
+	display: block;
+    padding: rem(10) rem(20);
+    letter-spacing: 0.05em;
+    line-height: 0;
+    background: $white;
+
+	span {
+		font-size: 10px;
+		margin-right: 10px;
+
+	}
+}
+
+.FooterLegal-imprint {
+	display: inline-block;
+	border-bottom: 1px solid;
+	width: 32px;
+	line-height: 15px;
+	font-style: italic;
+
+	&:hover {
+		color: $color-primary;
+	}
+}

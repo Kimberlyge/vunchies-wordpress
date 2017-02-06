@@ -55,7 +55,7 @@
 		</button>
 
 
-		<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class="Nav-item NavItemTravel-title js-nav-home">
+		<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class="Logo">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h3><?php echo $description;?></h3>
 		</a>

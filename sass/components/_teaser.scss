@@ -23,33 +23,12 @@
 
 .Teaser-wrap {
 	display: block;
-	// opacity: 0;
-	// float: left;
-	// margin: 0.5%;
-	// width: 48%;
-
-	// @media (min-width: $layout-m) {
-	// 	width: 32%;
-	// }
-
-	// @media (min-width: $layout-l) {
-	// 	width: 24%;
-	// }
-
-	// &:after {
-	// 	clear: both;
-	// }
 }
 
 .Teaser-media {
 	@include ratio(1456,2177);
 	margin: 0;
 	overflow: hidden;
-
-	&--related {
-		height: 0;
-		padding-bottom: 70%;
-	}
 }
 
 .Teaser-body {

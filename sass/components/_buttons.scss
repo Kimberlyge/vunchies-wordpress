@@ -44,7 +44,7 @@
 
 .Button--invert {
 	padding: 8px 11px;
-	border: 2px solid black;
+	border: 2px solid transparent;
 	font-weight: 500;
 
 	background-color: $black;
@@ -57,5 +57,6 @@
 	&:active {
 		color: $black !important;
 		background-color: white !important;
+		border: 2px solid black;
 	}
 }

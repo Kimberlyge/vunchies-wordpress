@@ -21,7 +21,7 @@
 		jQuery.post(ajaxurl, data, function(response) {
 			console.log(data);
 
-			$('#RecipeOverview').html(response); // insert data
+			$('#content').html(response); // insert data
 		});
 
 	});
@@ -31,15 +31,19 @@
 
 		var $this = $(this);
 			ajaxurl = $this.data('ajax');
+			link = $this.attr('href');
 
 		if($this.data('page')) {
 			console.log('has page id');
 			this.pageId = $this.data('page');
+
+			// window.history.pushState("", "", link);
 		}
 
 		if($this.data('post')) {
 			console.log('has post id');
 			this.postId = $this.data('post');
+
 		}
 
 		if($this.data('category')) {
@@ -55,13 +59,14 @@
 		    'categoryId': this.categoryId
 		};
 
+		// history.pushState("data", "title", link);
+
 		console.log(data);
 
 		jQuery.post(ajaxurl, data, function(response) {
 			console.log(data);
 
-			$('#RecipeOverview').html(response); // insert data
-			// window.history.pushState({path: pageurl}, '', pageurl);
+			$('#content').html(response); // insert data
 
 				TweenMax.staggerFromTo('.js-animate', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 
@@ -88,18 +93,20 @@
 
 				if (data.postId) {
 
-					// var detailHeadBody = document.querySelector('.DetailHead-body' );
-					// var detailHeadMedia = document.getElementsByClassName('DetailHead-media' );
-					// var detailHeadCopy = document.getElementsByClassName('js-detail-head' );
-					// var detailHead = document.querySelector('.DetailHead' );
+					var detailHeadBody = document.querySelector('.DetailHead-body' );
+					var detailHeadMedia = document.getElementsByClassName('DetailHead-media' );
+					var detailHeadCopy = document.getElementsByClassName('js-detail-head' );
+					var detailHead = document.querySelector('.DetailHead' );
 
-					// if (detailHeadCopy[0]) {
-					// 	var detailHeadCopyHeight = detailHeadCopy[0].offsetHeight;
-					// 	var detailHeadMediaHeight = detailHeadMedia[0].offsetHeight;
+					if (detailHeadCopy[0]) {
+						var detailHeadCopyHeight = detailHeadCopy[0].offsetHeight;
+						var detailHeadMediaHeight = detailHeadMedia[0].offsetHeight;
 
-					// 	detailHeadBody.style.height = detailHeadCopyHeight + 'px';
-					// 	detailHead.style.height = detailHeadMediaHeight + 'px';
-					// }
+						console.log(detailHeadCopyHeight, detailHeadMediaHeight);
+
+						detailHeadBody.style.height = detailHeadCopyHeight + 'px';
+						detailHead.style.height = detailHeadMediaHeight + 'px';
+					}
 
 					TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 
@@ -107,6 +114,10 @@
 				}
 
 		});
+
+
+		history.pushState("data", "title", link);
+
 
 	});
 
@@ -150,6 +161,14 @@
 
 		return false;
 
+	});
+
+
+	// Revert to a previously saved state
+	window.addEventListener('popstate', function(event) {
+	  console.log('popstate fired!');
+
+	  updateContent(event.state);
 	});
 
 

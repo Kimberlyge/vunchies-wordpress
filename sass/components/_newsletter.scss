@@ -1,0 +1,34 @@
+/**
+ * Newsletter
+ */
+
+
+.Newsletter {
+	width: 90%;
+	margin: 0 auto rem(40);
+}
+
+.Newsletter-title {
+	@extend %font-playfair;
+	font-size: rem(28);
+
+    @media (min-width: $layout-s) {
+        font-size: $font-35
+    }
+}
+
+.Newsletter-input {
+    background: white;
+    width: 49%;
+    margin: 15px auto 0;
+    padding: 7px 8px;
+    border: 1px solid;
+    font-size: 11px;
+    outline: 0;
+}
+
+.Newsletter-submit {
+    display: block !important;
+	width: 70%;
+    margin: 15px auto 0;
+}

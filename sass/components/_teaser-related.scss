@@ -1,0 +1,25 @@
+/**
+ * Teaser
+ **/
+
+.Teaser--related {
+	margin-top: rem(30);
+	padding: rem(30) rem(5);
+	background-color: $lightgray;
+
+	h3 {
+		text-align: center;
+	}
+
+	.wpp-list {
+		display: inline-block;
+		margin: 0;
+		width: 100%;
+	}
+}
+
+.Teaser-media--related {
+	height: 0;
+	padding-bottom: 70%;
+}
+

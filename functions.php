@@ -276,6 +276,7 @@ function my_action_callback() {
 				?>
 			</div>
 
+
 	    <?php
 	    wp_die();
 	    endforeach;
@@ -312,8 +313,9 @@ function my_action_callback() {
 					'</div>';
 			endwhile;
 		endif;
-	endif;
 
+
+	endif;
 
     wp_die();
 }

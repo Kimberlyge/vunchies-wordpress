@@ -17,22 +17,28 @@
 }
 
 .Comments {
-	width: 90%;
-	margin: 50px auto;
+	// width: 90%;
+	// margin: 50px auto;
 
 	.form-submit {
 		margin: 20px 0;
+		text-align: center;
 
 		input {
+			@extend .Button;
+			@extend .Button--invert;
 			background: black;
 			color: white;
-			border: 0;
 			text-transform: uppercase;
 			padding: 10px 15px;
 			letter-spacing: 1px;
 			font-size: 12px;
 			margin-bottom: 10px;
 		}
+	}
+
+	.children li .children li {
+		padding: 20px 0;
 	}
 }
 
@@ -60,8 +66,10 @@
 }
 
 .comment-form-comment textarea {
-	border: 1px solid black;
+	width: 100%;
+	margin: 0;
 	padding: 8px;
+	border: 1px solid black;
 
 	@media (min-width: $layout-sm) {
 		width: 100%;
@@ -76,8 +84,7 @@
 .comment-form-author,
 .comment-form-url,
 .comment-form-email {
-	margin-top: 10px;
-	margin-bottom: 0;
+	margin-bottom: 5px;
 
 	label {
 		display: inline-block;
@@ -178,11 +185,15 @@
 
 	.children {
 		margin-bottom: 0;
+
+		li {
+			padding-bottom: 0;
+		}
 	}
 
-	li + li {
-		margin-top: 15px;
-	}
+	// li + li {
+	// 	margin-top: 15px;
+	// }
 }
 
 .comment {
@@ -249,5 +260,12 @@
 	    font-size: 11px;
 	    width: 25px;
 	    line-height: 15px;
+	}
+}
+
+.comment-respond {
+	input {
+		margin-top: 0;
+		margin-bottom: 5px;
 	}
 }

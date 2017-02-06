@@ -33,6 +33,8 @@
 					var detailHeadCopyHeight = detailHeadCopy[0].offsetHeight;
 					var detailHeadMediaHeight = detailHeadMedia[0].offsetHeight;
 
+					console.log(detailHeadCopyHeight, detailHeadMediaHeight);
+
 					detailHeadBody.style.height = detailHeadCopyHeight + 'px';
 					detailHead.style.height = detailHeadMediaHeight + 'px';
 				}

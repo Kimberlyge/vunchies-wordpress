@@ -3,11 +3,14 @@
  */
 
 .Pagination {
+	display: block;
 	width: 100%;
-	float: left;
+	margin-top: 40px;
+
 	text-align: center;
 	font-size: 12px;
-	margin-top: 40px;
+
+	clear: both;
 
 	p {
 		margin-bottom: 0;
@@ -15,7 +18,7 @@
 
 	a {
 		@extend .Button--outline;
-
+		display: inline-block;
 	}
 }
 

@@ -4,7 +4,6 @@
 
 .Detail	{
 	background: $white;
-	padding-bottom: 10px;
 }
 
 // .js-animate-detail {
@@ -14,12 +13,17 @@
 /* Intro */
 
 .DetailHead {
-	// padding-bottom: 30px;
 	position: relative;
+	display: block;
+	@media (max-width: $layout-s) {
+		height: auto!important;
+		margin: 0 auto;
+	}
 }
 
 .DetailHead-copy {
 	max-width: rem(300);
+	margin: auto;
 }
 
 .DetailHead-title {
@@ -33,12 +37,12 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	margin: auto rem(10) ;
 
-	padding: rem($space);
-	margin: auto;
-
-	@media (min-width: $layout-s) {
-		padding: rem(10) 0;
+	@media (max-width: $layout-s) {
+		position: relative;
+		height: auto !important;
+		margin: rem(45) auto rem(30);
 	}
 }
 

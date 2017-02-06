@@ -30,9 +30,7 @@
 	transition: opacity 0.2s ease-in-out;
 
 	@media (min-width: 656px) {
-		float: left;
-		margin: 0;
-		padding: 4px 6px;
+		float: initial;
 	}
 
 	svg {

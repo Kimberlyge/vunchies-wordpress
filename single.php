@@ -71,9 +71,9 @@ get_header(); ?>
 
 							<?php if( get_sub_field('is_first') ):?>
 								<h1>IS FIRST</h1>
-								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
-								<div class="grid">is-NOT-first
+								<div class="grid grid--inner">is-NOT-first
 							<?php endif;?>
 									<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
 
@@ -108,9 +108,9 @@ get_header(); ?>
 
 				        	<?php if( get_sub_field('is_first') ):?>
 								<h1>IS FIRST</h1>
-								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
-								<div class="grid">is-NOT-first
+								<div class="grid grid--inner">is-NOT-first
 							<?php endif;?>
 
 								<div class="DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?>">
@@ -154,9 +154,9 @@ get_header(); ?>
 
 				        	<?php if( get_sub_field('is_first') ):?>
 								<h1>IS FIRST</h1>
-								<div class="grid"><div class="col-s-3-3 col-m-2-3">
+								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
-								<div class="grid">is-NOT-first
+								<div class="grid grid--inner">is-NOT-first
 							<?php endif;?>
 								<div class="DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
 
@@ -210,12 +210,14 @@ get_header(); ?>
 
 				?>
 			</div>
-			<?php
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;?>
+			<div class="grid">
+				<?php
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;?>
+			</div>
 
 			<?php $categories = get_the_category();
 			    foreach($categories as $category) {}?>
@@ -223,8 +225,8 @@ get_header(); ?>
 			<?php $ids = get_the_ID();
 			    foreach($ids as $id) {}?>
 
-			<div class="grid Teaser Container">
-				<h2>Related posts:</h2>
+			<div class="grid Teaser Teaser--related Container">
+				<h3>Related posts</h3>
 				<?php
 				$args = array(
 				    'limit' => 2,

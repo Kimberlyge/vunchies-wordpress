@@ -59,12 +59,6 @@
 				</div>
 			</div>
 			<div class="col-s-3-3 col-m-1-3">
-				<div class="PinterestFeed">
-					<h2 class="Footer-title">Pinterest</h2>
-					<a data-pin-do="embedUser" href="https://www.pinterest.com/kimberlykashew/"></a>
-				</div>
-			</div>
-			<div class="col-s-3-3 col-m-1-3">
 				<div class="RecentPosts">
 					<h2 class="Footer-title">Recent Posts</h2>
 					<ul>
@@ -82,15 +76,21 @@
 					<?php get_search_form();?>
 				</div>
 			</div>
+			<div class="col-s-3-3 col-m-1-3">
+				<div class="PinterestFeed">
+					<h2 class="Footer-title">Pinterest</h2>
+					<a data-pin-do="embedUser" href="https://www.pinterest.com/kimberlykashew/"></a>
+				</div>
+			</div>
 		</div>
 
-		<div class="Footer-legal">
-			<span>© Vunchies - 2016</span>
-			<span>
-				<a class="Footer-imprint LinkScrollTop" href="<?php echo get_page_link(2); ?>">Imprint</a>
-			</span>
-		</div>
 	</footer><!-- #colophon -->
+	<div class="FooterLegal">
+		<span>© Vunchies - 2016</span>
+		<span>
+			<a class="FooterLegal-imprint LinkScrollTop" href="<?php echo get_page_link(2); ?>">Imprint</a>
+		</span>
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
