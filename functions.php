@@ -27,7 +27,7 @@ function my_action_callback() {
 
     $pageId = intval( $_POST['pageId'] );
     $postId = intval( $_POST['postId'] );
-    $categoryid = intval( $_POST['categoryId'] );
+    $categoryId = intval( $_POST['categoryId'] );
 
     if( $pageId == 90 ) :
 	    $query = new WP_Query( array( 'page_id' => 90 ) );
@@ -276,6 +276,68 @@ function my_action_callback() {
 				?>
 			</div>
 
+			<div class="grid">
+				<ol class="comment-list">
+					<?php
+						//Gather comments for a specific page/post
+						$comments = get_comments(array(
+							'post_id' => $postId,
+							'status' => 'approve' //Change this to the type of comments to be displayed
+						));
+
+						//Display the list of comments
+						wp_list_comments(array(
+							'per_page' => 10, //Allow comment pagination
+							'reverse_top_level' => false //Show the oldest comments at the top of the list
+						), $comments);
+					?>
+				</ol>
+			</div>
+
+			<?php $categories = get_the_category();
+			    foreach($categories as $category) {}?>
+
+			<?php $ids = get_the_ID();
+			    foreach($ids as $id) {}?>
+
+			<div class="grid grid--inner Teaser Teaser--related">
+				<h3>Related posts AJAX</h3>
+				<?php
+				$args = array(
+				    'limit' => 2,
+				    'pid' => $postId,
+				    'range' => 'monthly',
+				    'cat' => $category->term_id,
+				    'thumbnail_width' => '800',
+    				'thumbnail_height' => '800',
+				    'post_type' => 'post',
+				    'post_html' => '<div class="col-s-2-4 col-m-2-4 col-ml-2-4"><a class="Teaser-wrap" id="overview" href="{url}" rel="bookmark"><figure class="Teaser-media Teaser-media--related">{thumb_img}</figure><div class="Teaser-body"><h2 class="Teaser-title">{text_title}</h2><ul class="Teaser-categories"></ul></div></a></div>'
+				);
+
+
+				wpp_get_mostpopular( $args );
+				?>
+			</div>
+
+			<div class="js-button-footer-nav Button-footerNav">
+				<?php next_post_link('%link','<button class="Button Button-footerNav-next js-button-footerNav-next">
+										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+									</button>'); ?>
+				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev js-button-footerNav-prev">
+										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+									</button>');
+
+				$next_post = get_next_post();
+				if (!empty( $next_post )): ?>
+				  <a class="Button-footerNav-title Button-footerNav-title--next js-button-footerNav-title-next" href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo $next_post->post_title; ?></a>
+				<?php endif;
+
+				$previous_post = get_previous_post();
+				if (!empty( $previous_post )): ?>
+				  <a class="Button-footerNav-title Button-footerNav-title--prev js-button-footerNav-title-prev" href="<?php echo get_permalink( $previous_post->ID ); ?>"><?php echo $previous_post->post_title; ?></a>
+				<?php endif; ?>
+
+			</div>
 
 	    <?php
 	    wp_die();
@@ -313,7 +375,6 @@ function my_action_callback() {
 					'</div>';
 			endwhile;
 		endif;
-
 
 	endif;
 

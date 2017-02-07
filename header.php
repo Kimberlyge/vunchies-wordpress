@@ -20,6 +20,9 @@
 <link rel="stylesheet" href="https://i.icomoon.io/public/temp/f78ba62da8/UntitledProject/style-svg.css">
 <script defer src="https://i.icomoon.io/public/temp/f78ba62da8/UntitledProject/svgxuse.js"></script>
 
+<!-- Favicon -->
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <?php wp_head(); ?>
@@ -55,12 +58,12 @@
 		</button>
 
 
-		<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class="Logo">
+		<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" class="Logo">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h3><?php echo $description;?></h3>
 		</a>
-<!--
-		<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
+<!-- 		<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h3><?php echo $description;?></h3>
 		</a>

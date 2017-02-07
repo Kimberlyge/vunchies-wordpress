@@ -33,7 +33,7 @@
 
 		// If a Tag is defined, set a visual active state to the filter icon and remove it from 'All Recipes'
 		if (window.location.href.indexOf('tag/') > -1) {
-			NavRecipeTitle.classList.remove('is-active');
+			// NavRecipeTitle.classList.remove('is-active');
 			NavFilter.classList.add('is-active');
 
 		}

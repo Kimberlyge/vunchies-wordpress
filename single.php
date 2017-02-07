@@ -15,6 +15,7 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 
+
 			<div class="Detail">
 				<div class="grid">
 					<div class="col-s-3-3 col-m-2-4">
@@ -213,7 +214,6 @@ get_header(); ?>
 
 			<div class="grid">
 				<?php
-				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
 					comments_template();
 				endif;?>
@@ -225,7 +225,7 @@ get_header(); ?>
 			<?php $ids = get_the_ID();
 			    foreach($ids as $id) {}?>
 
-			<div class="grid Teaser Teaser--related Container">
+			<div class="grid grid--inner Teaser Teaser--related Container">
 				<h3>Related posts</h3>
 				<?php
 				$args = array(
@@ -233,8 +233,8 @@ get_header(); ?>
 				    'pid' => $id,
 				    'range' => 'monthly',
 				    'cat' => $category->term_id,
-				    'thumbnail_width' => '500',
-    				'thumbnail_height' => '500',
+				    'thumbnail_width' => '800',
+    				'thumbnail_height' => '800',
 				    'post_type' => 'post',
 				    'post_html' => '<div class="col-s-2-4 col-m-2-4 col-ml-2-4"><a class="Teaser-wrap" id="overview" href="{url}" rel="bookmark"><figure class="Teaser-media Teaser-media--related">{thumb_img}</figure><div class="Teaser-body"><h2 class="Teaser-title">{text_title}</h2><ul class="Teaser-categories"></ul></div></a></div>'
 				);
