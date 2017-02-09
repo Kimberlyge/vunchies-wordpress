@@ -98,7 +98,7 @@ function my_action_callback() {
 							<div class="DetailHead-body js-animate-alpha centered">
 								<div class="DetailHead-copy js-detail-head">
 									<h2 class="DetailHead-title">
-										<?php the_title();?>
+										AJAX<?php the_title();?>
 									</h2>
 									<p><?php the_content();?></p>
 									<?php sharing_display( '', true );?>
@@ -323,10 +323,8 @@ function my_action_callback() {
 				    'thumbnail_width' => '800',
     				'thumbnail_height' => '800',
 				    'post_type' => 'post',
-				    'post_html' => '<div class="col-s-2-4 col-m-2-4 col-ml-2-4"><a class="Teaser-wrap" id="overview" href="{url}" rel="bookmark"><figure class="Teaser-media Teaser-media--related">{thumb_img}</figure><div class="Teaser-body"><h2 class="Teaser-title">{text_title}</h2><ul class="Teaser-categories"></ul></div></a></div>'
+				    'post_html' => '<div class="col-s-2-4 col-m-2-4 col-ml-2-4"><a class="Teaser-wrap" id="overview" href="{url}" rel="bookmark"><figure class="Teaser-media Teaser-media--related">{thumb_img}</figure><div class="Teaser-body"><h2 class="Teaser-title">{text_title}</h2><ul class="Teaser-categories">{categories}</ul></div></a></div>'
 				);
-
-
 				wpp_get_mostpopular( $args );
 				?>
 			</div>
@@ -378,7 +376,7 @@ function my_action_callback() {
 							<img class="ImgToBg-item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php the_title();?>">
 						</figure>
 						<div class="Teaser-body">
-							<h2 class="Teaser-title">AJAX<?php the_title();?></h2>
+							<h2 class="Teaser-title"><?php the_title();?></h2>
 							<ul class="Teaser-categories">
 								<?php
 							    $categories = get_the_category();

@@ -97,8 +97,8 @@
 				if (data.postId) {
 
 					TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
-					TweenMax.staggerFromTo('.js-animate-detail', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
-;
+					TweenMax.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
+
 					// var detailHeadCopy = document.getElementsByClassName('js-detail-head' );
 
 						// console.log(detailHeadMedia, detailHeadMedia[0]);

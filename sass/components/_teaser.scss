@@ -29,6 +29,10 @@
 	@include ratio(1456,2177);
 	margin: 0;
 	overflow: hidden;
+
+	img {
+		transition: opacity 300ms ease-in-out;
+	}
 }
 
 .Teaser-body {

@@ -38,34 +38,66 @@
 
 .Nav-item {
 	display: block;
+	padding: 0.5em 0;
+
 	font-size: $font-14;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	text-decoration: none;
-	cursor: pointer;
 	letter-spacing: 0.1em;
 
-	padding: 0.5em 0;
-	// margin: 0.5em 0;
+	cursor: pointer;
+
+	transition: all 0.2s ease-in-out;
 
 	@media (min-width: 656px) {
 		display: inline-block;
 		margin: 0 rem(5);
 		padding: 0;
-
-		border-bottom: 2px solid transparent;
-
 	}
 
 	&:hover,
 	&:active,
 	&.is-active {
 		color: $color-primary;
-		border-color: $color-primary;
+
+		&:after {
+			transform: scale(1);
+		}
 	}
 
-	// &:first-of-type {
-	// 	margin-top: 1.3em;
-	// }
+	&:after {
+		position: absolute;
+		left: 0%;
+		top: 0%;
+		content: '';
+		height: 100%;
+		transition: transform 0.2s linear;
+		width: 100%;
+		border-bottom: 2px solid $color-primary;
+		transform: scaleX(0);
+	}
+}
 
+.NavItemRecipes-title,
+.NavItemTravel-title {
+	@extend .Nav-item;
+}
+
+.NavItemRecipes,
+.NavItemTravel {
+	display: inline-block;
+
+	&:hover,
+	&:active,
+	&.is-active {
+		.NavItemRecipes-title,
+		.NavItemTravel-title {
+			color: $color-primary;
+		}
+
+		&:after {
+			transform: scale(1);
+		}
+	}
 }

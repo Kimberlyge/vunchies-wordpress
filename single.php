@@ -20,7 +20,7 @@ get_header(); ?>
 				<div class="grid">
 					<div class="col-s-3-3 col-m-2-4">
 						<div class="DetailHead">
-							<div class="DetailHead-body js-animate-detail centered">
+							<div class="DetailHead-body js-animate-alpha centered">
 								<div class="DetailHead-copy js-detail-head">
 									<h2 class="DetailHead-title">
 										<?php the_title();?>
@@ -31,7 +31,7 @@ get_header(); ?>
 						</div>
 					</div>
 					<div class="col-s-3-3 col-m-2-4">
-						<div class="DetailHead-media js-animate-detail">
+						<div class="DetailHead-media js-animate">
 							<?php $image = get_field('cover');?>
 							<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 						</div>
@@ -39,7 +39,7 @@ get_header(); ?>
 				</div>
 				<div class="grid">
 					<div class="col-s-3-3 col-m-1-3">
-						<div class="DetailGrid-item js-animate-detail DetailGrid-item--text">
+						<div class="DetailGrid-item js-animate DetailGrid-item--text">
 							<div class="DetailInfo">
 								<h3 class="DetailText-title">Ingredients</h3>
 								<ul>
@@ -79,7 +79,7 @@ get_header(); ?>
 									<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
 
 										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-2-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-1-3--force<?php endif;?>">
-											<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+											<div class="DetailGrid-item DetailGrid-item--text js-animate">
 												<!-- {{#if grid.title}} -->
 												<?php if( get_sub_field('title') ):?>
 													<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -89,7 +89,7 @@ get_header(); ?>
 											</div>
 										</div>
 										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-1-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-2-3--force<?php endif;?>">
-											<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+											<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 												<?php $image = get_sub_field('image');?>
 
@@ -116,7 +116,7 @@ get_header(); ?>
 
 								<div class="DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?>">
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate">
 											<!-- {{#if grid.title}} -->
 											<?php if( get_sub_field('title') ):?>
 												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -126,7 +126,7 @@ get_header(); ?>
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate">
 											<!-- {{#if grid.title}} -->
 											<?php if( get_sub_field('title_2') ):?>
 												<h3 class="DetailText-title"><?php the_sub_field('title_2');?>:</h3>
@@ -136,7 +136,7 @@ get_header(); ?>
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 											<?php $image = get_sub_field('image');?>
 
@@ -162,7 +162,7 @@ get_header(); ?>
 								<div class="DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
 
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate">
 											<!-- {{#if grid.title}} -->
 											<?php if( get_sub_field('title') ):?>
 												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -172,7 +172,7 @@ get_header(); ?>
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 											<?php $image = get_sub_field('image');?>
 
@@ -180,7 +180,7 @@ get_header(); ?>
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 											<?php $image = get_sub_field('image_2');?>
 

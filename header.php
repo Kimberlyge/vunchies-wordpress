@@ -137,7 +137,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="Nav-item NavItemRecipes" id="js-navToggleRecipes">
+				<div class="NavItemRecipes" id="js-navToggleRecipes">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="NavItemRecipes-title">All Recipes</a>
 					<div class="NavSub NavSub--recipes js-nav-recipes">
 						<div class="NavSub-content">
@@ -178,26 +178,14 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="14" class="Nav-item js-nav-item">Dinner</a>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="17" class="Nav-item js-nav-item">Dessert</a>
 
-				<div class="Nav-item NavItemTravel" id="js-navToggleTravelOverview">
+				<div class="NavItemTravel" id="js-navToggleTravelOverview">
 					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class=" NavItemTravel-title js-nav-item">Travel</a>
 					<div class="NavSub NavSub--travel js-nav-travel">
 						<div class="NavSub-content">
-							<div class="NavSub-wrap">
+						<div class="NavSub-wrap">
 								<h3>Europe</h3>
-								<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-									<?php
-										if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
-											echo '<select size="2" class="NavForm js-nav-form" name="pagefilter">';
-
-											echo '<option class="NavSub-item" value="34">Amsterdam</option>';
-											echo '<option class="NavSub-item" value="34">Berlin</option>';
-
-											echo '</select>';
-										endif;
-									?>
-									<input type="hidden" name="action" value="myfilter">
-								</form>
-
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>/travel/amsterdam" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="34" class="NavSub-item js-nav-item">Amsterdam</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>travel/berlin" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="8" class="NavSub-item js-nav-item">Berlin</a>
 							</div>
 						</div>
 					</div>
