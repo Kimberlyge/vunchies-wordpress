@@ -2,15 +2,15 @@
 
 	jQuery(document).ready( function($) {
 
-		var NavTravelTitle = document.querySelector('.NavItemTravel-title');
+		// var NavTravelTitle = document.querySelector('.NavItemTravel-title');
 
-		if (window.location.href.indexOf("travel") > -1) {
-			NavTravelTitle.classList.add('is-active');
-			// NavRecipeTitle.classList.remove('is-active');
-			// NavAbout.classList.remove('is-active');
-		}
+		// if (window.location.href.indexOf("travel") > -1) {
+		// 	NavTravelTitle.classList.add('is-active');
+		// 	// NavRecipeTitle.classList.remove('is-active');
+		// 	// NavAbout.classList.remove('is-active');
+		// }
 
-		var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
+		// var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
 
 		// $.ajaxSetup({cache:false});
 		// NavTravelTitle.onclick = function(e) {
@@ -28,50 +28,50 @@
   //           return false;
 	 //    };
 
-		NavTravel.ontouchstart = function(event) {
-			return;
-		};
+		// NavTravel.ontouchstart = function(event) {
+		// 	return;
+		// };
 
 
-		NavTravel.onmouseenter = function(event) {
+		// NavTravel.onmouseenter = function(event) {
 
-			var target = event.currentTarget;
-			var subNav = document.querySelector('.js-nav-travel');
+		// 	var target = event.currentTarget;
+		// 	var subNav = document.querySelector('.js-nav-travel');
 
-			target.classList.add('is-active');
-			subNav.classList.add('is-active');
+		// 	target.classList.add('is-active');
+		// 	subNav.classList.add('is-active');
 
-			/* Hide */
+		// 	/* Hide */
 
-			// target.onmouseleave = function(event) {
+		// 	// target.onmouseleave = function(event) {
 
-			// 	event.preventDefault();
-			// 	var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
+		// 	// 	event.preventDefault();
+		// 	// 	var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
 
-			// 	var target = event.currentTarget;
-			// 	var subNav = document.querySelector('.NavSub.is-active');
-
-
-			// 	subNav.classList.remove('is-active');
-			// 	target.classList.remove('is-active');
-
-			// };
-
-			subNav.onmouseleave = function(event) {
-
-				event.preventDefault();
-				var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
-
-				var target = event.currentTarget;
-				var subNav = document.querySelector('.NavSub.is-active');
+		// 	// 	var target = event.currentTarget;
+		// 	// 	var subNav = document.querySelector('.NavSub.is-active');
 
 
-				subNav.classList.remove('is-active');
-				target.classList.remove('is-active');
+		// 	// 	subNav.classList.remove('is-active');
+		// 	// 	target.classList.remove('is-active');
 
-			};
+		// 	// };
 
-		};
+		// 	subNav.onmouseleave = function(event) {
+
+		// 		event.preventDefault();
+		// 		var NavTravel = document.getElementById( 'js-navToggleTravelOverview' );
+
+		// 		var target = event.currentTarget;
+		// 		var subNav = document.querySelector('.NavSub.is-active');
+
+
+		// 		subNav.classList.remove('is-active');
+		// 		target.classList.remove('is-active');
+
+		// 	};
+
+		// };
 	});
 
 } )();

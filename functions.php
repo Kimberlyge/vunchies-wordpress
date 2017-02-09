@@ -16,6 +16,18 @@ if ( ! function_exists( 'vunchies_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+
+add_action( 'loop_start', 'jptweak_remove_share' );
+
+
 /**
  * Load Travel Overview and About Page
  */
@@ -47,7 +59,6 @@ function my_action_callback() {
 												'<img class="ImgToBg-item" src="'. get_sub_field('city_image')['sizes']['large'] .'" alt="'. get_the_title().'">'.
 												'<div class="Cover-body">'.
 													'<h2>'. get_sub_field('city_title') .'</h2>'.
-													'<p>'. get_the_title() .'</p>'.
 													'<p>'. get_sub_field('city_country') .'</p>'.
 												'</div>'.
 											'</div>'.
@@ -84,26 +95,27 @@ function my_action_callback() {
 				<div class="grid">
 					<div class="col-s-3-3 col-m-2-4">
 						<div class="DetailHead">
-							<div class="DetailHead-body js-animate-detail centered">
+							<div class="DetailHead-body js-animate-alpha centered">
 								<div class="DetailHead-copy js-detail-head">
 									<h2 class="DetailHead-title">
 										<?php the_title();?>
 									</h2>
 									<p><?php the_content();?></p>
+									<?php sharing_display( '', true );?>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-s-3-3 col-m-2-4">
-						<div class="DetailHead-media js-animate-detail">
+						<div class="DetailHead-media js-animate">
 							<?php $image = get_field('cover');?>
-							<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
+							<img class="js-detail-cover js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 						</div>
 					</div>
 				</div>
 				<div class="grid">
 					<div class="col-s-3-3 col-m-1-3">
-						<div class="DetailGrid-item js-animate-detail DetailGrid-item--text">
+						<div class="DetailGrid-item js-animate DetailGrid-item--text">
 							<div class="DetailInfo">
 								<h3 class="DetailText-title">Ingredients</h3>
 								<ul>
@@ -143,7 +155,7 @@ function my_action_callback() {
 									<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
 
 										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-2-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-1-3--force<?php endif;?>">
-											<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+											<div class="DetailGrid-item DetailGrid-item--text js-animate">
 												<!-- {{#if grid.title}} -->
 												<?php if( get_sub_field('title') ):?>
 													<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -153,7 +165,7 @@ function my_action_callback() {
 											</div>
 										</div>
 										<div class="col-s-3-3 col-m-2-4 <?php if( get_sub_field('is_portrait') ):?>col-m-1-3--force<?php endif;?> <?php if( get_sub_field('is_landscape') ):?>col-m-2-3--force<?php endif;?>">
-											<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+											<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 												<?php $image = get_sub_field('image');?>
 
@@ -180,7 +192,7 @@ function my_action_callback() {
 
 								<div class="DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?>">
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate">
 											<!-- {{#if grid.title}} -->
 											<?php if( get_sub_field('title') ):?>
 												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -190,7 +202,7 @@ function my_action_callback() {
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate">
 											<!-- {{#if grid.title}} -->
 											<?php if( get_sub_field('title_2') ):?>
 												<h3 class="DetailText-title"><?php the_sub_field('title_2');?>:</h3>
@@ -200,7 +212,7 @@ function my_action_callback() {
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 											<?php $image = get_sub_field('image');?>
 
@@ -226,7 +238,7 @@ function my_action_callback() {
 								<div class="DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
 
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-2-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--text js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--text js-animate">
 											<!-- {{#if grid.title}} -->
 											<?php if( get_sub_field('title') ):?>
 												<h3 class="DetailText-title"><?php the_sub_field('title');?>:</h3>
@@ -236,7 +248,7 @@ function my_action_callback() {
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 											<?php $image = get_sub_field('image');?>
 
@@ -244,7 +256,7 @@ function my_action_callback() {
 										</div>
 									</div>
 									<div class="col-s-3-3 col-m-1-3 <?php if( get_sub_field('is_bigger') ):?>col-m-1-4--force<?php endif;?>">
-										<div class="DetailGrid-item DetailGrid-item--media js-animate-detail">
+										<div class="DetailGrid-item DetailGrid-item--media js-animate">
 
 											<?php $image = get_sub_field('image_2');?>
 
@@ -355,26 +367,57 @@ function my_action_callback() {
 		);
 
 	    $query = new WP_Query( $args );
+	    ?> <div class="grid Teaser Container" id="RecipeOverview"><?php
 	    if( $query->have_posts() ) :
 			while( $query->have_posts() ): $query->the_post();
-	            echo '<div class="col-s-2-4 col-m-1-3 col-ml-1-4">'.
-						'<a class="Teaser-wrap loaded" id="overview" href="'. get_permalink() .'">'.
-							'<figure class="Teaser-media ImgToBg">'.
-								'<img class="ImgToBg-item" src="'. get_field('cover')['sizes']['large'] .'" alt="'. get_the_title().'">'.
-							'</figure>'.
-						'</a>'.
-						'<div class="Teaser-body">'.
-							'<h2 class="Teaser-title">' . get_the_title() . '</h2>'.
-							'<ul class="Teaser-categories">'.
+	            ?><div class="col-s-2-4 col-m-1-3 col-ml-1-4">
+					<a class="Teaser-wrap js-animate js-nav-item" id="overview" data-post="<?php the_id(); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" href="<?php echo get_permalink(); ?>">
+						<figure class="Teaser-media ImgToBg">
+							<?php $image = get_field('cover');?>
 
-							'</ul>'.
-							'<ul class="Teaser-tags">'.
+							<img class="ImgToBg-item" src="<?php echo $image['sizes']['large']; ?>" alt="<?php the_title();?>">
+						</figure>
+						<div class="Teaser-body">
+							<h2 class="Teaser-title">AJAX<?php the_title();?></h2>
+							<ul class="Teaser-categories">
+								<?php
+							    $categories = get_the_category();
 
-							'</ul>'.
-						'</div>'.
-					'</div>';
+							    foreach($categories as $category) {
+							        echo "<li>$category->cat_name</li>";
+							   	}
+								?>
+							</ul>
+							<ul class="Teaser-tags">
+								<?php
+								if(has_tag('gluten')) {
+							    	?><li><svg class='icon icon-gluten-free'><use xlink:href='#icon-gluten-free'></use><span>gluten-free</span></svg></i><?php
+								}
+
+							   	if(has_tag('nut')) {
+							    	?><li><svg class='icon icon-nut-free'><use xlink:href='#icon-nut-free'></use><span>nut-free</span></svg></i><?php
+								}
+
+								if(has_tag('sugar')) {
+							    	?><li><svg class='icon icon-sugar-free'><use xlink:href='#icon-sugar-free'></use><span>sugar-free</span></svg></i><?php
+								}
+
+								if(has_tag('soy')) {
+							    	?><li><svg class='icon icon-soy-free'><use xlink:href='#icon-soy-free'></use><span>soy-free</span></svg></i><?php
+								}
+
+								if(has_tag('raw')) {
+							    	?><li><svg class='icon icon-raw'><use xlink:href='#icon-raw'></use><span>raw</span></svg></i><?php
+								}
+							   ?>
+							</ul>
+						</div>
+					</a>
+					</div><?php
 			endwhile;
 		endif;
+
+		?> </div><?php
 
 	endif;
 

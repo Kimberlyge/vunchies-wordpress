@@ -17,8 +17,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/f78ba62da8/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/f78ba62da8/UntitledProject/svgxuse.js"></script>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/cf64b2487e/UntitledProject/style-svg.css">
+<script defer src="https://i.icomoon.io/public/temp/cf64b2487e/UntitledProject/svgxuse.js"></script>
 
 <!-- Favicon -->
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
@@ -74,97 +74,189 @@
 				<h3><?php echo $description;?></h3>
 			</a>
 
+			<div class="Nav">
+				<div class="NavItemFilter" id="js-navItemFilter">
+					<div class="NavItemFilter-icons">
+						<?php
+						get_template_part( 'inc/icons/svg/instagram.svg' );
+						?>
+						<img class="NavItemFilter-icon js-navItemFilter-icon" src="http://vunchies.com/wp-content/uploads/2017/01/filter.svg" alt="Filter Icon">
+						<img class="NavItemFilter-icon-active js-navItemFilter-icon-active" src="http://vunchies.com/wp-content/uploads/2017/01/filter-active.svg" alt="Filter Icon">
+					</div>
+					<div class="NavSub NavSubFilter js-nav-filter">
+						<div class="NavSub-content grid grid--inner">
+							<!-- <div class="NavSub-wrap NavSub-wrap--2-3"> -->
+								<!-- <div class="grid grid--inner"></div> -->
+								<div class="col-s-3-4">
+									<h3>Ingredients</h3>
+									<div class="col-s-1-4">
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+									</div>
 
-			<div class="Nav NavItemFilter" id="js-navItemFilter">
-				<div class="NavItemFilter-icons">
-					<?php
-					get_template_part( 'inc/icons/svg/instagram.svg' );
-					?>
+									<div class="col-s-1-4">
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+									</div>
 
-					<img class="NavItemFilter-icon js-navItemFilter-icon" src="http://vunchies.com/wp-content/uploads/2017/01/filter.svg" alt="Filter Icon">
-					<img class="NavItemFilter-icon-active js-navItemFilter-icon-active" src="http://vunchies.com/wp-content/uploads/2017/01/filter-active.svg" alt="Filter Icon">
-				</div>
-			</div>
-			<div class="Nav NavItemRecipes" id="js-navToggleRecipes">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="Nav-item NavItemRecipes-title">All Recipes</a>
-			</div>
-
-			<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item NavItemTravel-title js-nav-item">Breakfast2</a>
-
-			<form class="Nav" action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-				<?php
-					if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
-						echo '<select size="2" class="NavForm js-nav-form" name="categoryfilter">';
-						echo '<option class="Nav-item" value="1">Breakfast</option>';
-						echo '<option class="Nav-item" value="13">Lunch</option>';
-						echo '<option class="Nav-item" value="14">Dinner</option>';
-						echo '<option class="Nav-item" value="17">Dessert</option>';
-
-						echo '</select>';
-					endif;
-				?>
-				<input type="hidden" name="action" value="myfilter">
-			</form>
-
-			<nav class="Nav">
-				<div class="NavItemTravel" id="js-navToggleTravelOverview">
-					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class="Nav-item NavItemTravel-title js-nav-item">Travel</a>
-				</div>
-			</nav>
-
-			<span class="Divider">|</span>
-
-			<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="613" class="Nav-item NavItemAbout js-nav-item">About</a>
+									<div class="col-s-1-4">
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+									</div>
 
 
-			<!-- Sub Navigations -->
-			<div class="NavSub NavSubFilter js-nav-filter">
-				<div class="NavSub-content">
-					<div class="NavSub-wrap NavSub-wrap--2-3">
-						<h3>Ingredients</h3>
-						<div class="NavSub-wrap">
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-						</div>
-						<div class="NavSub-wrap">
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-						</div>
-						<div class="NavSub-wrap">
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-						</div>
-						<div class="NavSub-wrap">
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
-							<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-							<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+									<div class="col-s-1-4">
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+									</div>
+								</div>
+
+							<div class="col-s-1-4">
+								<h3>Allergies</h3>
+								<button data-title="gluten" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Gluten-free</button>
+								<button data-title="sugar"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sugar-free</button>
+								<button data-title="soy"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Soy-free</button>
+								<button data-title="nut"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Nut-free</button>
+							</div>
 						</div>
 					</div>
-					<div class="NavSub-wrap NavSub-wrap--1-3">
-						<h3>Allergies</h3>
-						<button data-title="gluten" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Gluten-free</button>
-						<button data-title="sugar"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sugar-free</button>
-						<button data-title="soy"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Soy-free</button>
-						<button data-title="nut"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Nut-free</button>
+				</div>
+				<div class="Nav-item NavItemRecipes" id="js-navToggleRecipes">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="NavItemRecipes-title">All Recipes</a>
+					<div class="NavSub NavSub--recipes js-nav-recipes">
+						<div class="NavSub-content">
+							<div class="NavSub-wrap">
+								<h3>Course</h3>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/sidedish" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="34" class="NavSub-item js-nav-item">Sidedishes</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/snacks" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="8" class="NavSub-item js-nav-item">Snacks</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/salad" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="18" class="NavSub-item js-nav-item">Salad</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/sauce-dip-spread" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="23" class="NavSub-item js-nav-item">Sauce / Dip / Spread</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/smoothie" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="15" class="NavSub-item js-nav-item">Smoothie</a>
+							</div>
+							<div class="NavSub-wrap">
+								<h3>Sweet</h3>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/baked-goods" class="NavSub-item">Baked Goods</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/cake" class="NavSub-item">Cake</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/cookie" class="NavSub-item">Cookie</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/ice-cream" class="NavSub-item">Ice Cream</a>
+							</div>
+							<div class="NavSub-wrap">
+								<h3>Season</h3>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/spring" class="NavSub-item">Spring</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/summer" class="NavSub-item">Summer</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/fall" class="NavSub-item">Fall</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/winter" class="NavSub-item">Winter</a>
+							</div>
+							<div class="NavSub-wrap">
+								<h3>Cuisine</h3>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/thai" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="8" class="NavSub-item js-nav-item">Thai</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/vietnamese" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="8" class="NavSub-item js-nav-item">Vietnamese</a>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/middle-eastern" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="19" class="NavSub-item js-nav-item">Middle Eastern</a>
+							</div>
+						</div>
 					</div>
 				</div>
+
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item js-nav-item">Breakfast</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="13" class="Nav-item js-nav-item">Lunch</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="14" class="Nav-item js-nav-item">Dinner</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="17" class="Nav-item js-nav-item">Dessert</a>
+
+				<div class="Nav-item NavItemTravel" id="js-navToggleTravelOverview">
+					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class=" NavItemTravel-title js-nav-item">Travel</a>
+					<div class="NavSub NavSub--travel js-nav-travel">
+						<div class="NavSub-content">
+							<div class="NavSub-wrap">
+								<h3>Europe</h3>
+								<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+									<?php
+										if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
+											echo '<select size="2" class="NavForm js-nav-form" name="pagefilter">';
+
+											echo '<option class="NavSub-item" value="34">Amsterdam</option>';
+											echo '<option class="NavSub-item" value="34">Berlin</option>';
+
+											echo '</select>';
+										endif;
+									?>
+									<input type="hidden" name="action" value="myfilter">
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<span class="Divider">|</span>
+
+				<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="613" class="Nav-item NavItemAbout js-nav-item">About</a>
+
+
+				<!-- Sub Navigations -->
+				<!-- <div class="NavSub NavSubFilter js-nav-filter">
+					<div class="NavSub-content">
+						<div class="NavSub-wrap NavSub-wrap--2-3">
+							<h3>Ingredients</h3>
+							<div class="NavSub-wrap">
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+							<div class="NavSub-wrap">
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+							<div class="NavSub-wrap">
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+							<div class="NavSub-wrap">
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+								<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+								<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+							</div>
+						</div>
+						<div class="NavSub-wrap NavSub-wrap--1-3">
+							<h3>Allergies</h3>
+							<button data-title="gluten" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Gluten-free</button>
+							<button data-title="sugar"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sugar-free</button>
+							<button data-title="soy"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Soy-free</button>
+							<button data-title="nut"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Nut-free</button>
+						</div>
+					</div>
+				</div> -->
 			</div>
-			<div class="NavSub NavSub--travel js-nav-travel">
+			<!-- <div class="NavSub NavSub--travel js-nav-travel">
 				<div class="NavSub-content">
 					<div class="NavSub-wrap">
 						<h3>Europe</h3>
@@ -184,9 +276,9 @@
 
 					</div>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="NavSub NavSub--recipes js-nav-recipes">
+			<!-- <div class="NavSub NavSub--recipes js-nav-recipes">
 				<div class="NavSub-content">
 					<div class="NavSub-wrap">
 						<h3>Course</h3>
@@ -227,7 +319,7 @@
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/middle-eastern" class="NavSub-item">Middle Eastern</a>
 					</div>
 				</div>
-			</div>
+			</div> -->
 
 
 		</div>
