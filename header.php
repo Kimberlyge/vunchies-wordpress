@@ -12,20 +12,20 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-<!-- Icomoon - need to get the full version or a new solution -->
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/cf64b2487e/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/cf64b2487e/UntitledProject/svgxuse.js"></script>
+	<!-- Icomoon - need to get the full version or a new solution -->
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/cf64b2487e/UntitledProject/style-svg.css">
+	<script defer src="https://i.icomoon.io/public/temp/cf64b2487e/UntitledProject/svgxuse.js"></script>
 
-<!-- Favicon -->
-<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body class="hfeed">

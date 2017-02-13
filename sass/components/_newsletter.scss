@@ -4,8 +4,12 @@
 
 
 .Newsletter {
-	width: 90%;
+	max-width: rem(270);
 	margin: 0 auto rem(40);
+
+    @media (min-width: $layout-m) {
+        width: 90%;
+    }
 }
 
 .Newsletter-title {
@@ -19,16 +23,23 @@
 
 .Newsletter-input {
     background: white;
-    width: 49%;
+    width: 100%
     margin: 15px auto 0;
     padding: 7px 8px;
     border: 1px solid;
     font-size: 11px;
     outline: 0;
+
+    @media (min-width: $layout-m) {
+        width: 49%;
+    }
 }
 
 .Newsletter-submit {
     display: block !important;
-	width: 70%;
+	width: 50%;
     margin: 15px auto 0;
+    @media (min-width: $layout-m) {
+        width: 70%;
+    }
 }

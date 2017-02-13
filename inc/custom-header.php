@@ -20,7 +20,7 @@ function vunchies_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'vunchies_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'header-text'			 => 'Header yo',
+		'header-text'			 => 'Header',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,

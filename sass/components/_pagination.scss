@@ -5,7 +5,6 @@
 .Pagination {
 	display: block;
 	width: 100%;
-	margin-top: 40px;
 
 	text-align: center;
 	font-size: 12px;
@@ -19,12 +18,13 @@
 	a {
 		@extend .Button--outline;
 		display: inline-block;
+		margin: rem(20) auto;
 	}
 }
 
 .Pagination-item {
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 rem(5);
 
 
 	span {
