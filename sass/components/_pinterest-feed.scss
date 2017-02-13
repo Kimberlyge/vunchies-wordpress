@@ -1,0 +1,12 @@
+/**
+ * Pinterest Feed
+ */
+
+
+.PinterestFeed {
+	max-width: 260px;
+	margin: auto;
+	@media (max-width: $layout-s) {
+		width: 80%;
+	}
+}

@@ -21,22 +21,10 @@
 }
 
 
-/**
- * MOBILE!!
- */
-
 .Header-inner {
 	.Logo {
 		display: none;
 	}
-
-	.SearchForm {
-		display: none;
-	}
-
-	// .NavItemFilter {
-	// 	display: none;
-	// }
 
 	@media (max-width: 655px) {
 		position: fixed;
@@ -58,12 +46,6 @@
 		.Logo {
 			display: block;
 		}
-
-
-		.SearchForm {
-			display: block;
-		}
-
 
 		.Nav-item {
 			padding: rem(10) 0;
@@ -92,8 +74,8 @@
 			transform: translateX(0%);
 		}
 	}
-
 }
+
 .Header-title {
 	display: block;
 	margin: rem(40) 0;

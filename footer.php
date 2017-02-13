@@ -24,7 +24,7 @@
 	<footer id="colophon" class="Footer" role="contentinfo">
 
 		<div class="grid Footer-grid">
-			<div class="col-s-3-3 col-m-1-3">
+			<div class="Footer-item col-s-3-3 col-m-1-3">
 				<div class="Newsletter">
 					<h2 class="Newsletter-title">Sign up to get your monthly vunchies!</h2>
 					<form action="">
@@ -58,7 +58,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-s-3-3 col-m-1-3">
+			<div class="Footer-item col-s-3-3 col-m-1-3">
 				<div class="RecentPosts">
 					<h2 class="Footer-title">Recent Posts</h2>
 					<ul>
@@ -72,11 +72,11 @@
 					</ul>
 				</div>
 
-				<div class="SearchForm SearchForm--desktop">
+				<div class="SearchForm">
 					<?php get_search_form();?>
 				</div>
 			</div>
-			<div class="col-s-3-3 col-m-1-3">
+			<div class="Footer-item col-s-3-3 col-m-1-3">
 				<div class="PinterestFeed">
 					<h2 class="Footer-title">Pinterest</h2>
 					<a data-pin-do="embedUser" href="https://www.pinterest.com/kimberlykashew/"></a>

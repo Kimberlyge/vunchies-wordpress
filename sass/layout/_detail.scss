@@ -6,7 +6,6 @@
 	background: $white;
 }
 
-
 /* Intro */
 
 .DetailHead {
@@ -44,6 +43,11 @@
 
 .DetailHead-media {
 	position: relative;
+	overflow: hidden;
+	height: rem(350);
+	@media (min-width: $layout-m) {
+		height: initial;
+	}
 
 	img {
 		margin: 0 auto;
@@ -61,10 +65,11 @@
 
 .DetailInfo {
 	@extend %font-sans-serif;
-	max-width: 100%;
+	max-width: 300px;
 	border: 3px solid;
 	padding-bottom: 0;
 	margin-bottom: 0 !important;
+	margin: rem(20) auto 0;
 
 	h3,
 	ul {

@@ -2,7 +2,6 @@
  * Newsletter
  */
 
-
 .Newsletter {
 	max-width: rem(270);
 	margin: 0 auto rem(40);
@@ -17,13 +16,13 @@
 	font-size: rem(28);
 
     @media (min-width: $layout-s) {
-        font-size: $font-35
+        font-size: $font-35;
     }
 }
 
 .Newsletter-input {
     background: white;
-    width: 100%
+    width: 100%;
     margin: 15px auto 0;
     padding: 7px 8px;
     border: 1px solid;
@@ -39,6 +38,7 @@
     display: block !important;
 	width: 50%;
     margin: 15px auto 0;
+
     @media (min-width: $layout-m) {
         width: 70%;
     }

@@ -3,14 +3,6 @@
  */
 
 
-.SearchForm {
-    display: none;
-
-    @media (min-width: 655px) {
-        display: block;
-    }
-}
-
 .no-results {
     max-width: rem(580);
     margin: 20px auto;

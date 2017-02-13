@@ -51,17 +51,21 @@
 			this.categoryId = $this.data('category');
 		}
 
+		if($this.data('tag')) {
+			console.log('has tag id');
+			this.tagId = $this.data('tag');
+		}
+
 
 		var data = {
 		    'action': 'my_action',
 		    'pageId': this.pageId,
 		    'postId': this.postId,
-		    'categoryId': this.categoryId
+		    'categoryId': this.categoryId,
+		    'tagId': this.tagId
 		};
 
 		// history.pushState("data", "title", link);
-
-		console.log(data);
 
 		jQuery.post(ajaxurl, data, function(response) {
 			console.log(data);
@@ -117,8 +121,6 @@
 				}
 
 		history.pushState("data", "title", link);
-
-
 	});
 
 	$('.js-nav-form').on('change', function() {

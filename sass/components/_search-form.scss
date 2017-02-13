@@ -2,28 +2,40 @@
  * Custom Search form
  */
 
-.search-form {
-    background: white;
+.SearchForm {
+    &--mobile {
+        .search-form {
+            border: 0;
+        }
 
-    @media (max-width: 655px) {
-        width: 200px;
-        margin: 15px auto 0;
-
-        label {
-            display: inline-block;
-            width: 85%;
+        @media (min-width: 655px) {
+            display: none;
         }
     }
 
-    @media (min-width: 655px) {
-        position: absolute;
-        top: rem(15);
-        right: rem(15);
+    &--desktop {
+        display: none;
+        @media (min-width: 655px) {
+            display: block;
 
-        padding: 0px 7px 8px;
-        border: 1px solid;
+            position: absolute;
+            top: rem(15);
+            right: rem(15);
+        }
     }
+}
 
+.search-form {
+    width: 200px;
+    padding: 3px 8px 8px 11px;
+    margin: 0 auto;
+
+    background: white;
+    border: 1px solid;
+
+    @media (min-width: 655px) {
+        width: 130px;
+    }
 }
 
 .screen-reader-text {
@@ -31,7 +43,7 @@
 }
 
 input.search-field {
-    width: 100%;
+    width: 85%;
     margin: 0;
     padding: 3px 5px;
 
@@ -54,7 +66,7 @@ input.search-field {
 
 input.search-submit {
 	display: inline-block;
-    width: 10%;
+    width: 15%;
     height: 16px;
     padding: 0;
     margin: 0;
@@ -74,7 +86,6 @@ input.search-submit {
 
     @media (min-width: 655px) {
         width: 16px;
-        margin-top: 8px;
         margin-right: 5px;
     }
 }

@@ -51,23 +51,16 @@
 
 		<?php $description = get_bloginfo( 'description', 'display' );?>
 
-
 		<button class="Burger">
 			<span class="Burger-copy">Menu</span>
 			<span class="Burger-close">×</span>
 		</button>
-
 
 		<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" class="Logo">
 			<h1><?php bloginfo( 'name' ); ?></h1>
 			<h3><?php echo $description;?></h3>
 		</a>
 
-<!-- 		<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<h1><?php bloginfo( 'name' ); ?></h1>
-			<h3><?php echo $description;?></h3>
-		</a>
- -->
 		<div class="Header-inner">
 			<a class="Logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<h1><?php bloginfo( 'name' ); ?></h1>
@@ -90,7 +83,7 @@
 								<div class="col-s-3-4">
 									<h3>Ingredients</h3>
 									<div class="col-s-1-4">
-										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
+										<button data-title="sweet-potato" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" class="NavSub-item NavSubFilter-item NonBtn js-nav-item"><input type="checkbox" data-tag="sweet-potato" class="NavSub-checkbox"> Sweet Potato</button>
 										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
 										<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
 										<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
@@ -244,71 +237,10 @@
 					</div>
 				</div> -->
 			</div>
-			<!-- <div class="NavSub NavSub--travel js-nav-travel">
-				<div class="NavSub-content">
-					<div class="NavSub-wrap">
-						<h3>Europe</h3>
-						<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-							<?php
-								if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
-									echo '<select size="2" class="NavForm js-nav-form" name="pagefilter">';
 
-									echo '<option class="NavSub-item" value="34">Amsterdam</option>';
-									echo '<option class="NavSub-item" value="34">Berlin</option>';
-
-									echo '</select>';
-								endif;
-							?>
-							<input type="hidden" name="action" value="myfilter">
-						</form>
-
-					</div>
-				</div>
-			</div> -->
-
-			<!-- <div class="NavSub NavSub--recipes js-nav-recipes">
-				<div class="NavSub-content">
-					<div class="NavSub-wrap">
-						<h3>Course</h3>
-
-						<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-							<?php
-								if( $terms = get_terms( 'category', 'orderby=name' ) ) : // to make it simple I use default categories
-									echo '<select size="2" class="NavForm js-nav-form" name="categoryfilter">';
-
-									echo '<option class="NavSub-item" value="34">Sidedishes</option>';
-
-									echo '</select>';
-								endif;
-							?>
-							<input type="hidden" name="action" value="myfilter">
-						</form>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/sidedish" class="NavSub-item">Sidedishes</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/snacks" class="NavSub-item">Snacks</a>
-					</div>
-					<div class="NavSub-wrap">
-						<h3>Sweet</h3>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/baked-goods" class="NavSub-item">Baked Goods</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/cake" class="NavSub-item">Cake</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/cookie" class="NavSub-item">Cookie</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/ice-cream" class="NavSub-item">Ice Cream</a>
-					</div>
-					<div class="NavSub-wrap">
-						<h3>Season</h3>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/spring" class="NavSub-item">Spring</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/summer" class="NavSub-item">Summer</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/fall" class="NavSub-item">Fall</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/winter" class="NavSub-item">Winter</a>
-					</div>
-					<div class="NavSub-wrap">
-						<h3>Cuisine</h3>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/thai" class="NavSub-item">Thai</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/vietnamese" class="NavSub-item">Vietnamese</a>
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/middle-eastern" class="NavSub-item">Middle Eastern</a>
-					</div>
-				</div>
-			</div> -->
-
+			<div class="SearchForm SearchForm--mobile">
+				<?php get_search_form();?>
+			</div>
 
 		</div>
 	</header>
