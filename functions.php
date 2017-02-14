@@ -55,7 +55,7 @@ function my_action_callback() {
 
 							echo '<div class="col-s-3-3 col-m-2-4 col-l-1-3">'.
 									'<div class="TravelOverview-item js-animate">'.
-										'<a class="Teaser-wrap loaded" id="overview" href="'. esc_url( get_permalink() ), the_sub_field('city_slug') .'">'.
+										'<a class="Teaser-wrap" id="overview" href="'. esc_url( get_permalink() ), the_sub_field('city_slug') .'">'.
 											'<div class="Cover Cover--overlay Cover--small ImgToBg">'.
 												'<img class="ImgToBg-item" src="'. get_sub_field('city_image')['sizes']['large'] .'" alt="'. get_the_title().'">'.
 												'<div class="Cover-body">'.

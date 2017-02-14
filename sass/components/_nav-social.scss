@@ -3,17 +3,22 @@
  */
 
 .NavSocial {
-	position: absolute;
+	&--desktop {
+		display: none;
+	}
 
-	width: 65px;
+	@media (min-width: $layout-sm) {
+		display: block;
+		position: absolute;
 
-	top: 0;
-	right: 0;
+		width: 65px;
 
-	padding-top: rem(15);
-	padding-right: rem(15);
+		top: 0;
+		right: 0;
 
-	@media (min-width: 656px) {
+		padding-top: rem(15);
+		padding-right: rem(15);
+
 		width: 100px;
 		left: 0;
 		right: inherit;
@@ -29,7 +34,7 @@
 	margin-right: rem(10);
 	transition: opacity 0.2s ease-in-out;
 
-	@media (min-width: 656px) {
+	@media (min-width: $layout-sm) {
 		float: initial;
 	}
 

@@ -9,7 +9,7 @@
 .CustomSelect {
 	border: 0;
 	background: blue;
-	color: $white;
+	color: white;
 	font-size: rem(16);
 
 	// &:hover {
@@ -21,7 +21,7 @@
 		@include negative-text;
 		// Font size must the 16px or larger to prevent iOS page zoom on focus
 		font-size: 1em;
-		color: $white;
+		color: white;
 		padding: 0.4em 1.9em 0.3em 0.5em;
 		line-height: 1.3;
 
@@ -29,13 +29,13 @@
 			outline: none;
 			box-shadow: none;
 			background-color: transparent;
-			color: $white;
+			color: white;
 			border: 0;
 		}
 	}
 	option {
-		color: $black;
-		background-color: $white;
+		color: black;
+		background-color: white;
 		&:focus {
 			color: white;
 			background-color: blue;

@@ -3,7 +3,7 @@
 	width: 80%;
 	margin: 2.5em auto 2em;
 
-	@media (min-width: 656px) {
+	@media (min-width: $layout-sm) {
 		margin: 2.5em auto 2em;
 	}
 

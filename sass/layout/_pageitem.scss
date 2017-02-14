@@ -12,7 +12,7 @@
 		text-align: center;
 		white-space: nowrap;
 
-		@media (min-width: 656px) {
+		@media (min-width: $layout-sm) {
 			height: calc(100vh - 207px);
 		}
 

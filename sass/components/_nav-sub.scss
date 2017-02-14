@@ -16,7 +16,7 @@
 		display: block;
 	}
 
-	@media (max-width: 656px) {
+	@media (max-width: $layout-sm) {
 		display: none !important;
 	}
 }
@@ -63,8 +63,8 @@
 
 .NavSub-content {
 	overflow: auto;
-	background-color: $white;
-	border: 2px solid $black;
+	background-color: white;
+	border: 2px solid black;
 	padding: rem($space);
 }
 

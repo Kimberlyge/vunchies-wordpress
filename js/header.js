@@ -6,25 +6,25 @@
  */
 ( function() {
 
-	$('.js-nav-home').on('click', function(event) {
-		event.preventDefault();
+	// $('.js-nav-home').on('click', function(event) {
+	// 	event.preventDefault();
 
-		var $this = $(this);
-			ajaxurl = $this.data('ajax');
+	// 	var $this = $(this);
+	// 		ajaxurl = $this.data('ajax');
 
-		var data = {
-			'action': 'navigate_home'
-		};
+	// 	var data = {
+	// 		'action': 'navigate_home'
+	// 	};
 
-		console.log(data);
+	// 	console.log(data);
 
-		jQuery.post(ajaxurl, data, function(response) {
-			console.log(data);
+	// 	jQuery.post(ajaxurl, data, function(response) {
+	// 		console.log(data);
 
-			$('#content').html(response); // insert data
-		});
+	// 		$('#content').html(response); // insert data
+	// 	});
 
-	});
+	// });
 
 	$('.js-nav-item').on('click', function(event) {
 		event.preventDefault();
@@ -95,17 +95,10 @@
 
 				/* Post Detail */
 
-
-		});
-
 				if (data.postId) {
 
-					TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+					// TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 					TweenMax.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
-
-					// var detailHeadCopy = document.getElementsByClassName('js-detail-head' );
-
-						// console.log(detailHeadMedia, detailHeadMedia[0]);
 
 					setTimeout(function() {
 						var detailHead = document.querySelector('.DetailHead' );
@@ -119,51 +112,52 @@
 						TweenMax.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
 					}, 3000);
 				}
+		});
 
 		history.pushState("data", "title", link);
 	});
 
-	$('.js-nav-form').on('change', function() {
-		console.log('option changed');
+	// $('.js-nav-form').on('change', function() {
+	// 	console.log('option changed');
 
-		var filter = $('#filter');
+	// 	var filter = $('#filter');
 
-		// console.log(xhr);
-		$.ajax({
-			url:filter.attr('action'),
-			data:filter.serialize(), // form data
-			type:filter.attr('method'), // POST
-			beforeSend:function(xhr){
-				// filter.find('button').text('Processing...'); // changing the button label
-			},
-			success:function(data){
-				// filter.find('button').text('Apply filter'); // changing the button label back
-				$('#RecipeOverview').html(data); // insert data
+	// 	// console.log(xhr);
+	// 	$.ajax({
+	// 		url:filter.attr('action'),
+	// 		data:filter.serialize(), // form data
+	// 		type:filter.attr('method'), // POST
+	// 		beforeSend:function(xhr){
+	// 			// filter.find('button').text('Processing...'); // changing the button label
+	// 		},
+	// 		success:function(data){
+	// 			// filter.find('button').text('Apply filter'); // changing the button label back
+	// 			$('#RecipeOverview').html(data); // insert data
 
-             	TweenMax.staggerFromTo('.Teaser-wrap.loaded', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+ //             	TweenMax.staggerFromTo('.js-animate', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 
-				/**
-				 * Img to Bgi
-				 */
+	// 			/**
+	// 			 * Img to Bgi
+	// 			 */
 
-				var html = document.querySelector('html');
-				var teaserMedia = document.querySelectorAll('.ImgToBg');
+	// 			var html = document.querySelector('html');
+	// 			var teaserMedia = document.querySelectorAll('.ImgToBg');
 
-				for(var i=0; i < teaserMedia.length; i++) {
-					var img = teaserMedia[i].getElementsByTagName('img');
+	// 			for(var i=0; i < teaserMedia.length; i++) {
+	// 				var img = teaserMedia[i].getElementsByTagName('img');
 
-					for(var x=0; x < img.length; x++) {
-						this._src = img[x].src;
-					}
+	// 				for(var x=0; x < img.length; x++) {
+	// 					this._src = img[x].src;
+	// 				}
 
-					teaserMedia[i].style.backgroundImage = 'url(' + this._src +')';
-				}
-			}
-		});
+	// 				teaserMedia[i].style.backgroundImage = 'url(' + this._src +')';
+	// 			}
+	// 		}
+	// 	});
 
-		return false;
+	// 	return false;
 
-	});
+	// });
 
 
 	// Revert to a previously saved state

@@ -25,7 +25,7 @@
 	&--overlay {
 		&:after {
 			content: '';
-			background-color: rgba($white, 0.5);
+			background-color: rgba(white, 0.5);
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -55,7 +55,7 @@
 	vertical-align: middle;
 
 	padding: rem(40);
-	background-color: $white;
+	background-color: white;
 	text-align: center;
 
 	h2 {

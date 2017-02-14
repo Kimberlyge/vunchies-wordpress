@@ -5,14 +5,14 @@
 /* Travel Overview */
 
 .TravelOverview {
-	background: $white;
+	background: white;
 	padding: rem(30) 0;
 
 }
 
 .TravelOverview-item:hover {
 	.Cover::after {
-		background-color: rgba($white, 0.2);
+		background-color: rgba(white, 0.2);
 	}
 }
 

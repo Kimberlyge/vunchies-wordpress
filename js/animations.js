@@ -8,14 +8,6 @@
 
 	jQuery(document).ready( function($) {
 
-		if ($('.site-content').hasClass('is-loaded')) {
-			console.log('has class is loaded');
-		}
-
-		if ($('.Teaser-wrap').hasClass('loaded')) {
-			console.log('some wraps are loaded');
-		}
-
 		$.ajax({
 			url: "http://vunchies.com/wp-json/wp/v2/posts",
 			success: function( data ) {
@@ -33,22 +25,14 @@
 					detailHead.style.height = detailHeadMediaHeight + 'px';
 				}
 
-				TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+				// TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
+				TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.2);
+
 				TweenMax.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
 
 				TweenMax.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
 
-			}
-		});
 
-		$.ajax({
-			url: "http://vunchies.com/wp-json/wp/v2/pages",
-			success: function( data ) {
-
-				// console.log(data, 'pages');
-
-
-				TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.5);
 
 				/* Travel Detail */
 				TweenMax.fromTo('.js-animate-city-title', 0.25, {y:-15}, {opacity:1, y:0, ease:Power0.easeIn});

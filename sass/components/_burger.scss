@@ -16,7 +16,7 @@
 
 	cursor: pointer;
 
-	@media (min-width: 656px) {
+	@media (min-width: $layout-sm) {
 		display: none;
 	}
 

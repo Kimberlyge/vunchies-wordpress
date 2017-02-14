@@ -3,7 +3,7 @@
  */
 
 .Detail	{
-	background: $white;
+	background: white;
 }
 
 /* Intro */
@@ -11,10 +11,6 @@
 .DetailHead {
 	position: relative;
 	display: block;
-	@media (max-width: $layout-s) {
-		height: auto!important;
-		margin: 0 auto;
-	}
 }
 
 .DetailHead-copy {
@@ -100,9 +96,9 @@
 .DetailInfoFooter {
 	display: flex;
 	justify-content: space-between;
-	border-top: 3px solid $black;
+	border-top: 3px solid black;
 	padding: rem(10);
-	background: $black;
+	background: black;
 
 	@media (min-width: 980px) {
 		padding: rem(10) rem(20);
@@ -118,12 +114,12 @@
 		display: inline-block;
 		float: left;
 		margin-left: 5px;
-		color: $white;
+		color: white;
 	}
 
 	svg {
 		display: inline-block;
-		fill: $white;
+		fill: white;
 		height: 17px;
 		float: left;
 
@@ -144,8 +140,8 @@
 	font-size: 11px;
 	text-transform: lowercase;
 
-	color: $white;
-	border-bottom: 2px solid $white;
+	color: white;
+	border-bottom: 2px solid white;
 
 	@media (min-width: 980px) {
 		font-size: 14px;

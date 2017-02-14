@@ -4,8 +4,6 @@ $base-font-size-unitless: 16;
 $base-line-height-unitless: (26/16);
 
 // Colors
-$white: hsl(0, 0%, 100%);
-$black: hsl(0, 0%, 0%);
 $darkgrey: rgb(76, 76, 76);
 $gray: #D5D5D5;
 $lightgray: #f7f7f7;
@@ -15,7 +13,7 @@ $color-primary: #ffc440;
 $bg-color: $lightgray;
 $grey: hsl(0, 0%, 62%);
 $darkgrey: hsl(0, 0%, 30%);
-$text-color: $black;
+$text-color: black;
 
 // Layout
 $space: 20px;
@@ -30,13 +28,6 @@ $max-width: 46rem;
 // 	container: 1060px
 // );
 
-// debug: (
-// image: show,
-// color: hsla(0, 100%, 71%, 0.42),
-// output: overlay,
-// toggle: top right,
-// )
-
 // Good looking easings for animation
 $easing:  cubic-bezier(0.165, 0.840, 0.400, 1.000);
 $easing2: cubic-bezier(0.300, 0.000, 0.000, 1.300);
@@ -46,7 +37,7 @@ $easing5: cubic-bezier(0.200, 0.300, 0.250, 0.900);
 
 // Breakpoints
 $layout-s: 414px;
-$layout-sm: 600px;
+$layout-sm: 655px;
 $layout-m: 740px;
 $layout-ml: 1024px;
 $layout-l: 1280px;

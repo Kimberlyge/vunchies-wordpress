@@ -7,6 +7,8 @@
 	// Handle Subnavigation
 	NavFilter.onmouseenter = function(event) {
 
+		console.log(event, 'filter');
+
 		var target = event.currentTarget;
 		var subNav = document.querySelector('.js-nav-filter');
 
@@ -48,7 +50,6 @@
 		}
 
 		NavFilterSubItem[i].addEventListener("click", function (event) {
-
 			event.preventDefault();
 
 			var target = event.currentTarget;
