@@ -10,7 +10,7 @@
 
 .Filter-button {
 	position: fixed;
-	z-index: 2;
+	z-index: 6;
 	right: 10px;
 	height: 31px;
 	padding: 6px 8px;
@@ -30,6 +30,7 @@
 		transform: scale(0);
 		transform-origin: bottom;
 	}
+
 	svg {
 		width: 15px;
 		height: 18px;
@@ -58,18 +59,42 @@
 }
 
 .Filter-overlay {
-	display: none;
-	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	transform: translateX(100%);
+	transition: transform 0.35s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+	background-color: white;
+	z-index: 5;
+
 
 	&.is-active {
-		display: block;
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-		opacity: 1;
-		background-color: white;
-		z-index: 2;
+		transform: translateX(0%);
 	}
+
+	.NavSub-content {
+		height: 100%;
+		border: 0;
+		padding: rem(40);
+	}
+}
+
+.Filter-title {
+	background: #ffc440;
+	padding: 40px;
+	margin: 0;
+	letter-spacing: 0.1em;
+}
+
+.FilterContent {
+	padding: rem(40);
+}
+
+.FilterContent-title {
+	display: inline-block;
+	width: rem(50);
+	padding-bottom: rem(20);
+	border-bottom: 3px solid;
 }

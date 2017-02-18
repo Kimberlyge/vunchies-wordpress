@@ -1,5 +1,20 @@
 ( function() {
 
+	jQuery(document).ready( function($) {
+		$('.js-filter-icon').mouseenter( function() {
+			var timeline = new TimelineMax({paused:true});
+	        timeline.to($('.fillup'), 0.2, {scale:5, ease:Power1.easeOut}, 0);
+	        // timeline.to(this._indicatorGlow, 0.2, {scale:0 , ease:Power1.easeOut}, 0);
+	        // timeline.to(this._indicatorCircle, 0.2, {backgroundColor:'#ffffff', ease:Power1.easeOut}, 0);
+
+	        timeline.play();
+		});
+
+		$('.js-filter-icon').on('click', function() {
+			$('.js-filter-overlay').toggleClass('is-active');
+		});
+	});
+
 	var NavFilter = document.getElementById( 'js-navItemFilter' );
 	var NavFilterSubItem = document.querySelectorAll( '.NavSubFilter-item' );
 	var _filterItemActive = false;

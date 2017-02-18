@@ -19,7 +19,7 @@
 		</svg>
 	</button>
 
-	<div class="InstagramFeed"><?php echo do_shortcode('[instagram-feed]'); ?></div>
+	<!-- <div class="InstagramFeed"><?php echo do_shortcode('[instagram-feed]'); ?></div> -->
 
 	<footer id="colophon" class="Footer" role="contentinfo">
 

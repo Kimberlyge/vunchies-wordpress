@@ -49,6 +49,12 @@
 		}
 	}
 
+	&.is-active {
+		.NavSub {
+			display: block;
+		}
+	}
+
 	@media (min-width: $layout-sm) {
 		display: inline-block;
 		margin: 0 rem(5);
