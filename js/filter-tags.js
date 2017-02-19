@@ -17,12 +17,11 @@
 
 	var NavFilter = document.getElementById( 'js-navItemFilter' );
 	var NavFilterSubItem = document.querySelectorAll( '.NavSubFilter-item' );
+	var NavFilterIcon = document.querySelector( '.NavItemFilter-icon' );
 	var _filterItemActive = false;
 
 	// Handle Subnavigation
 	NavFilter.onmouseenter = function(event) {
-
-		console.log(event, 'filter');
 
 		var target = event.currentTarget;
 		var subNav = document.querySelector('.js-nav-filter');
@@ -31,7 +30,6 @@
 		subNav.classList.add('is-active');
 
 		/* Hide */
-
 		subNav.onmouseleave = function(event) {
 
 			event.preventDefault();
@@ -49,9 +47,7 @@
 
 	// If a Tag is defined, set a visual active state to the filter icon and remove it from 'All Recipes'
 	if (window.location.href.indexOf('tag/') > -1) {
-		// NavRecipeTitle.classList.remove('is-active');
-		NavFilter.classList.add('is-active');
-
+		NavFilterIcon.classList.add('is-active');
 	}
 
 
@@ -69,7 +65,9 @@
 
 			var target = event.currentTarget;
 			var tagName = target.dataset.title;
+
 			var url = window.location.href;
+
 
 			// Check if the tagname is already active
 			if (url.indexOf(tagName) > -1) {
@@ -105,11 +103,14 @@
 
 			// Add active state to CSS
 			target.classList.add('is-active');
+			NavFilter.classList.add('is-active');
+
 			this._filterItemActive = true;
 
 			// Check if there has already been a tag defined
 			if (url.indexOf('tag/') > -1) {
 
+				NavFilter.classList.add('is-active');
 				// Remove last dash and add the new Tag
 				if (url.substring(url.length-1) == "/") {
 					url = url.substring(0, url.length-1);

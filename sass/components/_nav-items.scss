@@ -5,53 +5,19 @@
 
 /* Filter */
 
-.NavItemFilter-icons {
-	position: relative;
-    width: 15px;
-    height: 15px;
-    margin: auto;
-
-    cursor: pointer;
-    z-index: 22;
-
-    @media (min-width: $layout-sm) {
-    	margin-right: 10px;
-	}
-}
-
-.NavItemFilter-icon,
-.NavItemFilter-icon-active {
-	position: absolute;
-	width: 15px;
-	height: 20px;
-	vertical-align: bottom;
-
-	transition: opacity 0.2s ease;
-}
-
-.NavItemFilter-icon-active {
-	opacity: 0;
-}
-
 
 .NavItemFilter {
 	display: none;
 	margin-right: 15px;
 
-	&:hover,
-	&.is-active {
-		.NavItemFilter-icon {
-			opacity: 0;
-		}
-
-		.NavItemFilter-icon-active {
-			opacity: 1;
-		}
-	}
-
 	&.is-active {
 		.NavSub {
 			display: block;
+		}
+
+		.fillup {
+			animation: fillup linear 0.3s;
+			animation-fill-mode: forwards;
 		}
 	}
 
@@ -67,6 +33,70 @@
 	position: relative;
 	z-index: 22;
 }
+
+.NavItemFilter-icon {
+	position: relative;
+    width: rem(12);
+    margin: auto;
+
+    cursor: pointer;
+    z-index: 22;
+
+ //    @media (min-width: $layout-sm) {
+ //    	margin-right: 10px;
+	// }
+
+	svg {
+		vertical-align: middle;
+	}
+
+	&:hover,
+	&.is-active {
+		.fillup {
+			animation: fillup linear 0.3s;
+			animation-fill-mode: forwards;
+		}
+	}
+}
+
+.fillup {
+	fill:#FFC440;
+	stroke:#000000;
+	stroke-width:0;
+	stroke-miterlimit:10;
+
+
+	transform: scale(0);
+	transform-origin: bottom;
+}
+
+
+@keyframes fillup {
+	0% {
+		transform:  scale(0);
+	}
+	90% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+		stroke-width: 2;
+	}
+}
+
+// .NavItemFilter-icon,
+// .NavItemFilter-icon-active {
+// 	position: absolute;
+// 	width: 15px;
+// 	height: 20px;
+// 	vertical-align: bottom;
+
+// 	transition: opacity 0.2s ease;
+// }
+
+// .NavItemFilter-icon-active {
+// 	opacity: 0;
+// }
 
 
 /* About */

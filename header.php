@@ -49,7 +49,7 @@
 
 	<div class="Filter">
 		<div class="Filter-button js-filter-icon">
-			<svg class="js-navItemFilter-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
 			<style type="text/css">
 				.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
 			</style>
@@ -133,12 +133,18 @@
 
 			<div class="Nav">
 				<div class="NavItemFilter" id="js-navItemFilter">
-					<div class="NavItemFilter-icons">
-						<?php
-						get_template_part( 'inc/icons/svg/instagram.svg' );
-						?>
-						<img class="NavItemFilter-icon js-navItemFilter-icon" src="http://vunchies.com/wp-content/uploads/2017/01/filter.svg" alt="Filter Icon">
-						<img class="NavItemFilter-icon-active js-navItemFilter-icon-active" src="http://vunchies.com/wp-content/uploads/2017/01/filter-active.svg" alt="Filter Icon">
+					<div class="NavItemFilter-icon">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
+							<style type="text/css">
+								.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+							</style>
+							<path class="fillup" d="M32.5,45.5v44l16-10v-21v-13c0,0,6.5-11.2,11.5-17.8c-21,2.5-44.4-6.1-44.4-6.1L32.5,45.5z"/>
+							<polygon class="st1" points="251.5,1.5 282.5,45.5 282.5,89.5 295.5,78.5 295.5,45.5 326.5,1.5 "/>
+							<polygon class="st1" points="251.5,1.5 282.5,45.5 282.5,92.5 298.5,79.5 298.5,45.5 329.5,1.5 "/>
+							<polygon class="st1" points="76.5,1.5 45.5,45.5 45.5,78.5 32.5,89.5 32.5,45.5 1.5,1.5 "/>
+							<polygon class="st1" points="1.5,1.5 32.5,45.5 32.5,92.5 48.5,79.5 48.5,45.5 79.5,1.5 "/>
+							<path class="st1" d="M32.5,45.5v44l16-10v-21v-13c0,0,6.5-11.2,11.5-17.8c-21,2.5-44.4-6.1-44.4-6.1L32.5,45.5z"/>
+						</svg>
 					</div>
 					<div class="NavSub NavSubFilter js-nav-filter">
 						<div class="NavSub-content grid grid--inner">

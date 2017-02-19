@@ -32,7 +32,7 @@
 	}
 }
 
-.NavSub-checkbox {
+.NavSubFilter-checkbox {
 	position: relative;
 	-webkit-appearance: none !important;
 	display: inline-block;
@@ -70,6 +70,12 @@
 			position: absolute;
 			top: -1px;
 			left: 2px;
+		}
+	}
+
+	&:hover {
+		.NavSubFilter-checkbox {
+			border-color: $yellow;
 		}
 	}
 }
