@@ -60,24 +60,13 @@ Single-colored icons can be modified like so:
   width: 0.9736328125em;
 }
 
-/* ICOMOON */
-
-.icon--arrow {
-	max-width: rem(15);
-}
-
-.icon-arrow-left,
-.icon-arrow-right {
+.icon-arrow {
 	display: inline-block;
 	vertical-align: middle;
 	width: rem(10);
 	height: rem(11);
-
-	// display: inline-block;
-	// vertical-align: middle;
-	// width: rem(34);
-	// height: rem(18);
 }
+
 .icon-marker {
 	background-image: url('../images/icons/marker-blue.svg');
 }
@@ -103,14 +92,8 @@ Single-colored icons can be modified like so:
 
 .icon-pinterest,
 .icon-instagram {
-	background-size: contain;
-	height: 0.7em;
-	width: 0.7em;
-
-	&--big {
-		height: 1.2em;
-		width: 1.2em;
-	}
+	height: 100%;
+	width: rem(14);
 }
 
 .NavWrap-close {

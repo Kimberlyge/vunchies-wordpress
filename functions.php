@@ -29,7 +29,7 @@ add_action( 'loop_start', 'jptweak_remove_share' );
 
 
 /**
- * Load Travel Overview and About Page
+ * Load Content with Ajax
  */
 
 add_action( 'wp_ajax_my_action', 'my_action_callback' );
@@ -705,60 +705,6 @@ function my_action_callback() {
     wp_die();
 }
 
-
-/**
- * Filter Categories
- */
-
-function misha_filter_function(){
-	$args = array(
-		'orderby' => 'date', // we will sort posts by date
-		'order'	=> $_POST['date'] // ASC или DESC
-	);
-
-	// for taxonomies / categories
-	if( isset( $_POST['categoryfilter'] ) )
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'category',
-				'field' => 'id',
-				'terms' => $_POST['categoryfilter']
-			)
-		);
-
-	$query = new WP_Query( $args );
-
-	if( $query->have_posts() ) :
-		while( $query->have_posts() ): $query->the_post();
-            echo '<div class="col-s-2-4 col-m-1-3 col-ml-1-4">'.
-					'<a class="Teaser-wrap loaded" id="overview" href="'. get_permalink() .'">'.
-						'<figure class="Teaser-media ImgToBg">'.
-							'<img class="ImgToBg-item" src="'. get_field('cover')['sizes']['large'] .'" alt="'. get_the_title().'">'.
-						'</figure>'.
-					'</a>'.
-					'<div class="Teaser-body">'.
-						'<h2 class="Teaser-title">' . get_the_title() . '</h2>'.
-						'<ul class="Teaser-categories">'.
-
-						'</ul>'.
-						'<ul class="Teaser-tags">'.
-
-						'</ul>'.
-					'</div>'.
-				'</div>';
-		endwhile;
-		wp_reset_postdata();
-	else :
-		echo 'No posts found';
-	endif;
-
-	die();
-}
-
-add_action('wp_ajax_myfilter', 'misha_filter_function');
-add_action('wp_ajax_nopriv_myfilter', 'misha_filter_function');
-
-
 function vunchies_setup() {
 	/*
 	 * Make theme available for translation.
@@ -817,7 +763,6 @@ endif;
 add_action( 'after_setup_theme', 'vunchies_setup' );
 
 
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -874,9 +819,6 @@ function cc_mime_types($mimes) { $mimes['svg'] = 'image/svg+xml'; return $mimes;
 function vunchies_scripts() {
 	wp_enqueue_style( 'vunchies-style', get_stylesheet_uri() );
 
-
-	// mine
-
 	wp_enqueue_script( 'vunchies-pinit', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-imgToBg', get_template_directory_uri() . '/js/img-to-bg.js', array(), '20151215', true );
@@ -892,8 +834,6 @@ function vunchies_scripts() {
 	wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-travel-detail', get_template_directory_uri() . '/js/travel-detail.js', array(), '20151215', true );
-
-	// wp_enqueue_script( 'svgxuse', get_template_directory_uri() . '/js/icomoon/svgxuse.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-travel', get_template_directory_uri() . '/js/travel.js', array(), '20151215', true );
 	wp_enqueue_script( 'vunchies-filter-tags', get_template_directory_uri() . '/js/filter-tags.js', array(), '20151215', true );

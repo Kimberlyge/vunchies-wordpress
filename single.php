@@ -74,7 +74,7 @@ get_header(); ?>
 								<h1>IS FIRST</h1>
 								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
-								<div class="grid grid--inner">is-NOT-first
+								<div class="grid grid--inner">is-NOT-first FIRST
 							<?php endif;?>
 									<div class="DetailGrid <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?>">
 
@@ -111,7 +111,7 @@ get_header(); ?>
 								<h1>IS FIRST</h1>
 								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
-								<div class="grid grid--inner">is-NOT-first
+								<div class="grid grid--inner">is-NOT-first SECOND
 							<?php endif;?>
 
 								<div class="DetailGrid DetailGrid--second <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?>">
@@ -157,7 +157,7 @@ get_header(); ?>
 								<h1>IS FIRST</h1>
 								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
-								<div class="grid grid--inner">is-NOT-first
+								<div class="grid grid--inner">is-NOT-first THIRD
 							<?php endif;?>
 								<div class="DetailGrid DetailGrid--third <?php if( get_sub_field('is_first') ):?>is-first<?php endif;?> <?php if( get_sub_field('reverse') ):?>is-reverse<?php endif;?> <?php if( get_sub_field('is_center') ):?>is-center<?php endif;?><?php if( get_sub_field('is_bigger') ):?>is-bigger<?php endif;?>">
 
@@ -246,10 +246,14 @@ get_header(); ?>
 
 			<div class="js-button-footer-nav Button-footerNav">
 				<?php next_post_link('%link','<button class="Button Button-footerNav-next js-button-footerNav-next">
-										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+										<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+										<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+										</svg>
 									</button>'); ?>
 				<?php previous_post_link('%link','<button class="Button Button-footerNav-prev js-button-footerNav-prev">
-										<svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg>
+										<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+										<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+										</svg>
 									</button>');
 
 				$next_post = get_next_post();
