@@ -819,6 +819,10 @@ function cc_mime_types($mimes) { $mimes['svg'] = 'image/svg+xml'; return $mimes;
 function vunchies_scripts() {
 	wp_enqueue_style( 'vunchies-style', get_stylesheet_uri() );
 
+	// wp_enqueue_script( 'vunchies-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'vunchies-prefixfree', get_template_directory_uri() . '/js/prefixfree.min.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'vunchies-pinit', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-imgToBg', get_template_directory_uri() . '/js/img-to-bg.js', array(), '20151215', true );

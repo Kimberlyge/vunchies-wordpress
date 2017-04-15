@@ -14,8 +14,6 @@ get_header(); ?>
 
 		<?php
 		while ( have_posts() ) : the_post(); ?>
-
-
 			<div class="Detail">
 				<div class="grid">
 					<div class="col-s-3-3 col-m-2-4">
@@ -38,7 +36,7 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="grid">
-					<div class="col-s-3-3 col-m-1-3">
+					<div class="col-s-3-3 col-ml-1-3">
 						<div class="DetailGrid-item js-animate DetailGrid-item--text">
 							<div class="DetailInfo">
 								<h3 class="DetailText-title">Ingredients</h3>
@@ -72,7 +70,7 @@ get_header(); ?>
 
 							<?php if( get_sub_field('is_first') ):?>
 								<h1>IS FIRST</h1>
-								<div class="grid grid--inner"><div class="col-s-3-3 col-m-2-3">
+								<div class="grid grid--inner"><div class="col-s-3-3 col-ml-2-3">
 							<?php elseif ( !get_sub_field('is_first')) :?>
 								<div class="grid grid--inner">is-NOT-first FIRST
 							<?php endif;?>
