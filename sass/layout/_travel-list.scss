@@ -15,11 +15,6 @@
 
 	transform: translateX(-140px);
 
-	// &.is-sticky {
-	// 	position: fixed;
-	// 	top: 0;
-	// }
-
 	&.is-active {
 		.TravelList-head {
 			background-color: #000000;
@@ -35,22 +30,27 @@
 }
 
 .TravelList-wrap {
-    border: 2px solid;
-    width: auto;
-    display: inline-block;
+  border: 1px solid;
+  width: auto;
+  display: inline-block;
 }
 
 .TravelList-head {
-	padding: 3px 10px 5px;
+	padding: 5px 10px 7px 14px;
 	font-weight: 400;
 	cursor: pointer;
 
 	transition: all 0.15s ease;
+
+	.icon {
+		vertical-align: inherit;
+		margin-left: 5px;
+	}
 }
 
 .TravelList-item {
 	display: none;
-	border-bottom: 2px solid;
+	border-bottom: 1px solid;
 }
 
 .TravelList-link {

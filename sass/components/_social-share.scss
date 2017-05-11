@@ -2,99 +2,101 @@
  * Social sharing buttons
  */
 
-a.share-email,
-a.share-facebook,
-a.share-twitter,
-a.share-pinterest,
-a.share-jetpack-whatsapp {
+.sd-content ul {
+	// margin-bottom: 0;
+}
+
+.share-email,
+.share-facebook,
+.share-twitter,
+.share-pinterest,
+.share-jetpack-whatsapp {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	margin: 0px;
+	padding: 5px 15px;
+  border: 0;
+  box-shadow: none;
+  background-color: white;
+
+	cursor: pointer;
 	text-indent: -9999px;
-	background-repeat: no-repeat !important;
-	background-size: contain !important;
-	background-position: center !important;
-	margin: 0px !important;
-	padding: 0 13px!important;
-    border: 0!important;
-    box-shadow: none!important;
-    background-color: white!important;
 
-    opacity: 0.7;
+  opacity: 1;
 
-    transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 
-    &:hover {
-    	opacity: 1;
-    }
+  &:hover {
+  	opacity: 0.65;
+  }
 }
 
-a.share-jetpack-whatsapp {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/whatsapp-logo.svg') !important;
-	width: 17px;
-	height: 17px;
+.share-jetpack-whatsapp {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/whatsapp-logo.svg');
+	background-size: 17px;
 }
 
-a.share-facebook {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/facebook.svg') !important;
-	width: 18px;
-	height: 18px;
+.share-facebook {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/facebook.svg');
+	background-size: 18px;
 }
 
-a.share-twitter {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/twitter-logo.svg') !important;
-	width: 26px;
-	height: 18px;
+.share-twitter {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/twitter-logo.svg');
+	background-size: 26px 18px;
 }
 
-a.share-email {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/icon-2-mail-envelope-open.svg') !important;
-	width: 16px;
-	height: 16px;
+.share-email {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/icon-2-mail-envelope-open.svg');
+	background-size: 16px;
 }
-a.share-pinterest {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg') !important;
-	width: 16px;
-	height: 16px;
+.share-pinterest {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg');
+	background-size: 50%;
 }
 
 #sharing_email {
-	border: 2px solid black !important;
-    box-shadow: none !important;
-    margin-top: 11px !important;
-    margin: auto !important;
-    position: fixed !important;
-    bottom: 0 !important;
-    top: 0!important;
-    height: 252px !important;
-    outline: 1px solid black !important;
-	box-shadow: 7px 7px 0px #000000 !important;
+	border: 2px solid black;
+  margin-top: 11px;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  top: 0!important;
+  height: 252px;
+  outline: 1px solid black;
+	box-shadow: 7px 7px 0px #000000;
 
 	left: 0!important;
-    top: 0 !important;
-    right: 0!important;
-    margin: auto!important;
+  top: 0;
+  right: 0!important;
+  margin: auto!important;
 
-    @media (max-width: $layout-s) {
-    	width: 60% !important;
+  @media (max-width: $layout-s) {
+  	width: 60%;
 	}
 
-    label {
-    	font-size: 12px !important;
-    	letter-spacing: 0.04em !important;
-    	font-weight: 600 !important;
-    }
+  label {
+  	font-size: 12px;
+  	letter-spacing: 0.04em;
+  	font-weight: 600;
+  }
 
-    input {
-    	padding: 8px 10px !important;
-    	border: 1px solid !important;
-    }
+  input {
+  	padding: 8px 10px;
+  	border: 1px solid;
+  }
+
 	.sharing_send {
-	    background: black !important;
-	    color: white !important;
-	    border: 0 !important;
-	    text-transform: uppercase !important;
-	    padding: 10px 15px !important;
-	    letter-spacing: 1px !important;
-	    font-size: 12px !important;
-	    margin-bottom: 10px !important;
+	    background: black;
+	    color: white;
+	    border: 0;
+	    text-transform: uppercase;
+	    padding: 10px 15px;
+	    letter-spacing: 1px;
+	    font-size: 12px;
+	    margin-bottom: 10px;
 	}
 
 	&:after {
@@ -106,21 +108,23 @@ a.share-pinterest {
 		background-color: black;
 	}
 }
+
 #sharing_email .sharing_send.email-form-submit {
-		color: white!important;
-		border-radius: 0 !important;
+	color: white!important;
+	border-radius: 0;
 }
+
 #sharing_email .sharing_cancel {
 	text-shadow: none;
-    font-style: italic;
-    display: inline-block;
-    border-bottom: 1px solid;
-    font-size: 11px;
-    padding: 0 !important;;
-    width: 29px;
-    line-height: 15px;
-    text-align: left;
-    margin-left: 10px;
+  font-style: italic;
+  display: inline-block;
+  border-bottom: 1px solid;
+  font-size: 11px;
+  padding: 0;;
+  width: 29px;
+  line-height: 15px;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .jetpack-likes-widget-wrapper {

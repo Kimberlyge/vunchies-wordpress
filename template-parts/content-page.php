@@ -8,8 +8,24 @@
  */
 
 ?>
-<!-- <h1>CONTENT-PAGE.PHP</h1> -->
 
+<article id="post-715" <?php post_class(); ?>>
+	<?php $args = array(
+		'post_type' => 'page',
+		'post_parent' => $post->ID
+	);?>
+	<div class="About-content"><?php the_content();?></div>
+
+	<h1>ARCHIE</h1>
+
+	<?php while ( have_posts() ) : the_post(); ?>
+	<div class="About-content"><?php the_content();?></div>
+
+
+<?php endwhile; ?>
+</article>
+
+<!-- <h1>CONTENT-PAGE.PHP</h1> -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php $args = array(
@@ -100,7 +116,11 @@
 						<?php endif;
 					endwhile;
 				endwhile;?>
-				<li class="TravelList-head">Restaurants <svg class="icon icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></li>
+				<li class="TravelList-head">Restaurants
+					<svg class="icon icon-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+					<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+					</svg>
+				</li>
 			</div>
 		</ul>
 
@@ -171,7 +191,7 @@
 
 					if( get_row_layout() == 'grid_images' ):
 						if( get_sub_field('first_grid') ):?>
-							<div class="grid">
+							<div class="grid grid--flex">
 								<div class="ImageGrid ImageGrid--first">
 									<div class="col-s-3-3 col-m-3-3">
 										<div class="ImageGrid-item js-animate">
@@ -205,20 +225,16 @@
 						if( get_sub_field('third_grid') ):?>
 							<div class="grid">
 								<div class="ImageGrid">
-
 									<div class="ImageGrid-item js-animate">
 										<?php $image = get_sub_field('image');?>
-
 										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 									</div>
-									<div class=-item--media js-animate">
+									<div class="ImageGrid-item ImageGrid-item--media js-animate">
 										<?php $image = get_sub_field('image_2');?>
-
 										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 									</div>
-									<div class=-item--media js-animate">
+									<div class="ImageGrid-item ImageGrid-item--media js-animate">
 										<?php $image = get_sub_field('image_3');?>
-
 										<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 									</div>
 								</div>

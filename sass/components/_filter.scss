@@ -21,8 +21,8 @@
 	transition: all 0.3s ease-in-out;
 
 	.fillup {
-		fill:#FFC440;
-		stroke:#000000;
+		fill: #FFC440;
+		stroke: #000000;
 		stroke-width:0;
 		stroke-miterlimit:10;
 
@@ -40,10 +40,9 @@
 
 	&:hover {
 		.fillup {
-			animation-fill-mode: forwards;
-			-webkit-animation: fillup linear 0.3s;
-			-o-animation: fillup linear 0.3s;
-			animation: fillup linear 0.3s;
+			-webkit-animation: fillup linear 0.3s forwards;
+			-o-animation: fillup linear 0.3s forwards;
+			animation: fillup linear 0.3s forwards;
 		}
 	}
 }

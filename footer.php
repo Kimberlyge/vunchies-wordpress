@@ -89,6 +89,9 @@
 				<span>
 					<a class="FooterLegal-imprint LinkScrollTop" href="<?php echo get_page_link(2); ?>">Imprint</a>
 				</span>
+				<span>
+					<a class="FooterLegal-imprint LinkScrollTop" href="<?php echo get_page_link(715); ?>">Archive</a>
+				</span>
 			</div>
 		</div><!-- #page -->
 

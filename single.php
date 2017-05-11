@@ -15,24 +15,18 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post(); ?>
 			<div class="Detail">
-				<div class="grid grid--inner">
-					<div class="col-s-3-3 col-m-2-4">
-						<div class="DetailHead">
-							<div class="DetailHead-body js-animate-alpha centered">
-								<div class="DetailHead-copy js-detail-head">
-									<h2 class="DetailHead-title">
-										<?php the_title();?>
-									</h2>
-									<p><?php the_content();?></p>
-								</div>
-							</div>
+				<div class="DetailCover">
+					<div class="DetailCover-wrap js-animate-alpha">
+						<div class="DetailCover-title">
+							<h2>
+								<?php the_title();?>
+							</h2>
+							<?php the_content();?>
 						</div>
 					</div>
-					<div class="col-s-3-3 col-m-2-4">
-						<div class="DetailHead-media js-animate">
-							<?php $image = get_field('cover');?>
-							<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
-						</div>
+					<div class="Detail-cover js-animate">
+						<?php $image = get_field('cover');?>
+						<img class="js-pin-it" src="<?php echo $image['sizes']['large']; ?>" alt=""/>
 					</div>
 				</div>
 
@@ -158,23 +152,17 @@ get_header(); ?>
 
 				?>
 			</div>
-			<div class="grid">
-				<div class="col-s-3-3 col-ml-1-3">
-					<div class="DetailGrid-item js-animate DetailGrid-item--text">
-						<div class="DetailInfo">
-							<h3 class="DetailText-title">Ingredients</h3>
-							<ul>
-								<?php the_field('ingredients');?>
-							</ul>
-							<div class="DetailInfoFooter">
-								<div class="DetailInfoFooter-time">
-									<svg class="DetailInfoFooter-icon icon icon-stop-watch-2"><use xlink:href="#icon-stop-watch-2"></use></svg>
-									<?php the_field('info');?>
-								</div>
-								<a class="DetailInfoFooter-print" href="javascript:window.print()">Print</a>
-							</div>
-						</div>
+			<div class="DetailInfo js-animate">
+				<h3 class="DetailText-title">Ingredients</h3>
+				<ul>
+					<?php the_field('ingredients');?>
+				</ul>
+				<div class="DetailInfoFooter">
+					<div class="DetailInfoFooter-time">
+						<svg class="DetailInfoFooter-icon icon icon-stop-watch-2"><use xlink:href="#icon-stop-watch-2"></use></svg>
+						<?php the_field('info');?>
 					</div>
+					<a class="DetailInfoFooter-print" href="javascript:window.print()">Print</a>
 				</div>
 			</div>
 

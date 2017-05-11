@@ -60,16 +60,19 @@
 .Button-footerNav-title {
 	visibility: hidden;
 	opacity: 0;
-	transition: opacity 0.4s easeInOut;
+	transition: opacity 0.4s ease-in-out;
 
 	position: absolute;
-    left: 90px;
-    bottom: 7px;
-    right: 0;
+  left: 90px;
+  bottom: 4px;
+	border: 1px solid;
+	padding: 3px 10px;
 
-    &.is-active {
+	background-color: white;
+
+  &.is-active {
 		visibility: visible;
 		opacity: 1;
-		transition: opacity 0.3s easeInOut;
+		transition: opacity 0.3s ease-in-out;
 	}
 }

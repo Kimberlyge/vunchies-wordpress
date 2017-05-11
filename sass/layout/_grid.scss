@@ -11,6 +11,10 @@ $pad: 20px;
 
 }
 
+.grid--flex {
+	display: flex;
+}
+
 .grid--inner {
 	margin: 0;
 }
@@ -308,6 +312,11 @@ $pad: 20px;
 		&--force {
 			width: 25% !important;
 		}
+	}
+
+	// Grid 1-5
+	.col-l-1-5 {
+		width: 20%;
 	}
 }
 

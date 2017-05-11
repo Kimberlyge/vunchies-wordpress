@@ -8,52 +8,77 @@
 
 /* Intro */
 
-.DetailHead {
-	position: relative;
-	display: block;
-}
+.Detail-copy {
+	max-width: 300px;
+	margin: 0 auto;
 
-.DetailHead-copy {
-	max-width: rem(300);
-	margin: auto;
-}
-
-.DetailHead-title {
-	text-transform: uppercase;
-	margin-bottom: 0.5em;
-}
-
-.DetailHead-body {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-
-	transform: translate(-50%, -50%);
-
-	@media (max-width: $layout-s) {
-		position: relative;
-		height: auto !important;
-		margin: rem(45) auto rem(30);
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
 	}
 }
 
-.DetailHead-media {
+.Detail-cover {
 	position: relative;
-	overflow: hidden;
-	height: rem(350);
-	@media (min-width: $layout-m) {
-		height: initial;
-	}
+	// overflow: hidden;
+	// height: rem(350);
+	//
+	// @media (min-width: $layout-m) {
+	// 	height: initial;
+	// }
 
 	img {
+		display: block;
 		margin: 0 auto;
 		width: 100%;
-		object-fit: cover;
 		height: 100%;
+		object-fit: cover;
 	}
 
 	&.is-reverse {
 		padding: rem($space*2);
+	}
+}
+
+.DetailCover {
+	position: relative;
+	height: 490px;
+	overflow: hidden;
+}
+
+.DetailCover-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	z-index: 2
+}
+
+.DetailCover-title {
+	background: white;
+	padding: 25px 25px 15px 25px;
+	max-width: 400px;
+	margin: 0 auto;
+
+	h2 {
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+}
+
+.DetailCover-image {
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
@@ -77,6 +102,7 @@
 
 		@media (min-width: 980px) {
 			margin: 30px;
+			font-size: 14px;
 			line-height: 30px;
 		}
 
@@ -92,6 +118,10 @@
 	div:empty,
 	p:empty {
 		height: 0.8em;
+	}
+
+	@media (min-width: 980px) {
+		max-width: 500px;
 	}
 }
 

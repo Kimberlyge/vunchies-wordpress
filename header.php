@@ -230,11 +230,12 @@
 					</div>
 				</div>
 
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item js-nav-item">Breakfast</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="13" class="Nav-item js-nav-item">Lunch</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="14" class="Nav-item js-nav-item">Dinner</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="17" class="Nav-item js-nav-item">Dessert</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item Nav-item--breakfast js-nav-item">Breakfast</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/lunch" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="13" class="Nav-item Nav-item--lunch js-nav-item">Lunch</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dinner" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="14" class="Nav-item Nav-item--dinner js-nav-item">Dinner</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dessert" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="17" class="Nav-item Nav-item--dessert js-nav-item">Dessert</a>
 
+				<span class="Divider">/</span>
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
 					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class=" NavItemTravel-title js-nav-item">Travel</a>
 					<div class="NavSub NavSub--travel js-nav-travel">
@@ -247,7 +248,7 @@
 						</div>
 					</div>
 				</div>
-				<span class="Divider">|</span>
+				<span class="Divider">/</span>
 				<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="613" class="Nav-item NavItemAbout js-nav-item">About</a>
 			</div>
 

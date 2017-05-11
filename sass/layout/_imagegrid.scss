@@ -5,6 +5,18 @@
 .ImageGrid {
 	display: inline-block;
 
+	&--first {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	&--second {
+		&.is-portrait {
+			max-height: rem(540);
+		}
+	}
+
 	&.is-reverse {
 		display: flex;
 		> div:last-of-type {
@@ -30,16 +42,5 @@
 	@media (min-width: 640px) and (max-width: 980px) {
 		// margin-top: 0;
 		margin-left: rem(20);
-	}
-}
-
-.ImageGrid--first {
-	width: 100%;
-	max-width: 1000px;
-}
-
-.ImageGrid--second {
-	&.is-portrait {
-		max-height: rem(540);
 	}
 }
