@@ -3,7 +3,6 @@
  */
 
 .sd-content ul {
-	// margin-bottom: 0;
 }
 
 .share-email,
@@ -29,18 +28,18 @@
   transition: opacity 0.2s ease-in-out;
 
   &:hover {
-  	opacity: 0.65;
+  	opacity: 0.35;
   }
 }
 
 .share-jetpack-whatsapp {
 	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/whatsapp-logo.svg');
-	background-size: 17px;
+	background-size: 50%;
 }
 
 .share-facebook {
 	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/facebook.svg');
-	background-size: 18px;
+	background-size: 63%;
 }
 
 .share-twitter {
@@ -50,11 +49,11 @@
 
 .share-email {
 	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/icon-2-mail-envelope-open.svg');
-	background-size: 16px;
+	background-size: 48%;
 }
 .share-pinterest {
 	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg');
-	background-size: 50%;
+	background-size: 40%;
 }
 
 #sharing_email {
