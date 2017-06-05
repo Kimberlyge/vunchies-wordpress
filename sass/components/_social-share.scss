@@ -2,7 +2,18 @@
  * Social sharing buttons
  */
 
+.Detail-share {
+	position: absolute;
+	top: 30%;
+	margin-left: 25px;
+}
+
 .sd-content ul {
+	&:hover {
+		li {
+			opacity: 0.2;
+		}
+	}
 }
 
 .share-email,
@@ -10,15 +21,16 @@
 .share-twitter,
 .share-pinterest,
 .share-jetpack-whatsapp {
-	display: inline-block;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+	display: block !important;
+	width: 30px;
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	background-position: center !important;
 	margin: 0px;
 	padding: 5px 15px;
   border: 0;
   box-shadow: none;
-  background-color: white;
+  // background-color: white;
 
 	cursor: pointer;
 	text-indent: -9999px;
@@ -28,32 +40,42 @@
   transition: opacity 0.2s ease-in-out;
 
   &:hover {
-  	opacity: 0.35;
+  	opacity: 1 !important;
   }
 }
 
-.share-jetpack-whatsapp {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/whatsapp-logo.svg');
-	background-size: 50%;
+.sd-social-icon .sd-content ul li[class*=share-] a, .sd-social-icon .sd-content ul li[class*=share-] a:hover, .sd-social-icon .sd-content ul li[class*=share-] div.option a {
+	background-color: transparent !important;
+	width: 30px !important;
+	height: 25px !important;
 }
 
-.share-facebook {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/facebook.svg');
-	background-size: 63%;
+.sd-social-icon .sd-content ul li[class*=share-] a.sd-button:before {
+	display: none;
 }
 
-.share-twitter {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/twitter-logo.svg');
-	background-size: 26px 18px;
+.share-jetpack-whatsapp a {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/whatsapp-logo.svg')!important;
+	background-size: 50% !important;
 }
 
-.share-email {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/icon-2-mail-envelope-open.svg');
-	background-size: 48%;
+.share-facebook a {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/facebook.svg')!important;
+	background-size: 63% !important;
 }
-.share-pinterest {
-	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg');
-	background-size: 40%;
+
+.share-twitter a {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/twitter-logo.svg')!important;
+	background-size: 26px 18px !important;
+}
+
+.share-email a {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/icon-2-mail-envelope-open.svg')!important;
+	background-size: 48% !important;
+}
+.share-pinterest a {
+	background-image: url('http://vunchies.com/wp-content/uploads/2017/01/pinterest-1.svg')!important;
+	background-size: 40% !important;
 }
 
 #sharing_email {

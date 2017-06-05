@@ -2,6 +2,7 @@ $pad: 20px;
 
 .grid {
 	margin: 0 $pad;
+	position: relative;
 
 	&:after {
 		content: "";
@@ -9,6 +10,13 @@ $pad: 20px;
 		clear: both;
 	}
 
+	&--gray {
+		background-color: $lightgray;
+	}
+
+	&--white {
+		background-color: white;
+	}
 }
 
 .grid--flex {

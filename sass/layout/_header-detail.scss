@@ -1,0 +1,38 @@
+/**
+ * Header
+ */
+
+.Header--light {
+	.Nav a {
+		color: white;
+
+		&:after {
+			border-color: white;
+		}
+	}
+}
+
+.HeaderDetail-logo {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	padding: 20px;
+
+	background: black;
+	color: $lightgray !important;
+
+	-webkit-font-smoothing: antialiased;
+
+	z-index: 1;
+
+	h1 {
+		font-size: rem(18);
+		padding: rem(2) 0;
+		margin: 0 !important;
+	}
+
+	@media (min-width: $layout-m) {
+			display: block;
+	}
+}

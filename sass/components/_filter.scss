@@ -3,6 +3,9 @@
  */
 
 .Filter {
+	position: relative;
+	z-index: 12;
+	
 	@media (min-width: $layout-sm) {
 		display: none;
 	}
@@ -11,7 +14,7 @@
 .Filter-button {
 	position: fixed;
 	z-index: 6;
-	right: 10px;
+	right: 15px;
 	height: 31px;
 	padding: 6px 8px;
 	cursor: pointer;

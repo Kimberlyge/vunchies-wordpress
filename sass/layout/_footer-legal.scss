@@ -3,11 +3,12 @@
  */
 
 .FooterLegal {
+	position: relative;
 	display: block;
-    padding: rem(10) rem(20);
-    letter-spacing: 0.05em;
-    line-height: 0;
-    background: white;
+  padding: rem(10) rem(20);
+  letter-spacing: 0.05em;
+  line-height: 0;
+  background: white;
 
 	span {
 		font-size: 10px;

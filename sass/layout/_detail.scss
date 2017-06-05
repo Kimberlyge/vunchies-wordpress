@@ -19,13 +19,11 @@
 }
 
 .Detail-cover {
-	position: relative;
-	// overflow: hidden;
-	// height: rem(350);
-	//
-	// @media (min-width: $layout-m) {
-	// 	height: initial;
-	// }
+	position: fixed;
+	top: -20%;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
 	img {
 		display: block;
@@ -38,11 +36,15 @@
 	&.is-reverse {
 		padding: rem($space*2);
 	}
+
+	@media (min-width: $layout-m) {
+		bottom: initial;
+	}
 }
 
 .DetailCover {
 	position: relative;
-	height: 490px;
+	height: 600px;
 	overflow: hidden;
 }
 
@@ -53,6 +55,7 @@
 	right: 0;
 	left: 0;
 	margin: auto;
+
 	display: flex;
 	align-items: center;
 	text-align: center;
@@ -62,7 +65,7 @@
 
 .DetailCover-title {
 	background: white;
-	padding: 25px 25px 15px 25px;
+	padding: 20px 25px 15px 25px;
 	max-width: 400px;
 	margin: 0 auto;
 
@@ -85,12 +88,7 @@
 /* Ingredients */
 
 .DetailInfo {
-	@extend %font-sans-serif;
-	max-width: 300px;
-	border: 3px solid;
-	padding-bottom: 0;
-	margin-bottom: 0 !important;
-	margin: rem(50) auto 0;
+	padding: rem(20) 0 rem(50);
 
 	background: white;
 
@@ -120,8 +118,17 @@
 		height: 0.8em;
 	}
 
+}
+
+.DetailInfo-wrap {
+	@extend %font-sans-serif;
+	max-width: rem(300);
+	margin: auto;
+
+	border: 3px solid;
+
 	@media (min-width: 980px) {
-		max-width: 500px;
+		max-width: rem(500);
 	}
 }
 

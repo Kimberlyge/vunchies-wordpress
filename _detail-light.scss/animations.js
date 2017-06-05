@@ -8,17 +8,6 @@
 
 	jQuery(document).ready( function($) {
 
-    var header = $('.Header');
-		var detailLight = $('.Detail--light');
-
-    if (detailLight) {
-      console.log('light theme available')
-      header.addClass('Header--light')
-    } else {
-			console.log('NO light theme available')
-			header.removeClass('Header--light')
-		}
-
 		var detailCover = $('.Detail-cover');
 
 		window.onscroll = function() {
