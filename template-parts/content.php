@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class="col-s-2-4 col-m-1-3 col-l-1-5">
+<div class="col-s-2-4 col-m-1-3 col-l-1-3">
 	<a class="Teaser-wrap js-animate js-nav-item" id="overview" data-post="<?php the_id(); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" href="<?php echo get_permalink(); ?>" rel="bookmark">
 		<figure class="Teaser-media ImgToBg">
 			<?php $image = get_field('cover');?>

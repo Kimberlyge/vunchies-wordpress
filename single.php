@@ -220,12 +220,12 @@ get_header('detail'); ?>
 
 				$next_post = get_next_post();
 				if (!empty( $next_post )): ?>
-				  <a class="Button-footerNav-title Button-footerNav-title--next js-button-footerNav-title-next" href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo $next_post->post_title; ?></a>
+				  <a class="Button-footerNav-title <?php if (!empty( $next_post )): ?>Button-footerNav-titleSingle<?php endif?> Button-footerNav-title--next js-button-footerNav-title-next" href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo $next_post->post_title; ?></a>
 				<?php endif;
 
 				$previous_post = get_previous_post();
 				if (!empty( $previous_post )): ?>
-				  <a class="Button-footerNav-title Button-footerNav-title--prev js-button-footerNav-title-prev" href="<?php echo get_permalink( $previous_post->ID ); ?>"><?php echo $previous_post->post_title; ?></a>
+				  <a class="Button-footerNav-title <?php if (!empty( $next_post )): ?>Button-footerNav-titleSingle<?php endif?> Button-footerNav-title--prev js-button-footerNav-title-prev" href="<?php echo get_permalink( $previous_post->ID ); ?>"><?php echo $previous_post->post_title; ?></a>
 				<?php endif; ?>
 
 			</div><?php

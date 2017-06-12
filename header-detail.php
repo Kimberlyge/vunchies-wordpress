@@ -21,6 +21,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/detail.js"></script>
+
 	<?php wp_head(); ?>
 </head>
 
@@ -89,7 +91,7 @@
 		<h1><?php bloginfo( 'name' ); ?></h1>
 	</a>
 
-	<header class="Header">
+	<header class="HeaderDetail">
 		<button class="Burger">
 			<span class="Burger-copy">Menu</span>
 			<span class="Burger-close">×</span>

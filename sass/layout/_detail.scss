@@ -36,10 +36,6 @@
 	&.is-reverse {
 		padding: rem($space*2);
 	}
-
-	@media (min-width: $layout-m) {
-		bottom: initial;
-	}
 }
 
 .DetailCover {
