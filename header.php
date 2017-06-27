@@ -44,8 +44,11 @@
 	</div>
 
 	<div class="Filter">
-		<div class="Filter-button js-filter-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
+		<div class="FilterButton js-filter-icon">
+			<svg class="FilterButton-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+				<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+			</svg>
+			<svg class="FilterButton-state" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
 			<style type="text/css">
 				.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
 			</style>

@@ -32,17 +32,20 @@
 	</div>
 
 	<div class="Filter">
-		<div class="Filter-button js-filter-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
-			<style type="text/css">
-				.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
-			</style>
-			<path class="fillup" d="M32.5,45.5v44l16-10v-21v-13c0,0,6.5-11.2,11.5-17.8c-21,2.5-44.4-6.1-44.4-6.1L32.5,45.5z"/>
-			<polygon class="st1" points="251.5,1.5 282.5,45.5 282.5,89.5 295.5,78.5 295.5,45.5 326.5,1.5 "/>
-			<polygon class="st1" points="251.5,1.5 282.5,45.5 282.5,92.5 298.5,79.5 298.5,45.5 329.5,1.5 "/>
-			<polygon class="st1" points="76.5,1.5 45.5,45.5 45.5,78.5 32.5,89.5 32.5,45.5 1.5,1.5 "/>
-			<polygon class="st1" points="1.5,1.5 32.5,45.5 32.5,92.5 48.5,79.5 48.5,45.5 79.5,1.5 "/>
-			<path class="st1" d="M32.5,45.5v44l16-10v-21v-13c0,0,6.5-11.2,11.5-17.8c-21,2.5-44.4-6.1-44.4-6.1L32.5,45.5z"/>
+		<div class="FilterButton js-filter-icon">
+			<svg class="FilterButton-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+				<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+			</svg>
+			<svg class="FilterButton-state" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
+				<style type="text/css">
+					.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
+				</style>
+				<path class="fillup" d="M32.5,45.5v44l16-10v-21v-13c0,0,6.5-11.2,11.5-17.8c-21,2.5-44.4-6.1-44.4-6.1L32.5,45.5z"/>
+				<polygon class="st1" points="251.5,1.5 282.5,45.5 282.5,89.5 295.5,78.5 295.5,45.5 326.5,1.5 "/>
+				<polygon class="st1" points="251.5,1.5 282.5,45.5 282.5,92.5 298.5,79.5 298.5,45.5 329.5,1.5 "/>
+				<polygon class="st1" points="76.5,1.5 45.5,45.5 45.5,78.5 32.5,89.5 32.5,45.5 1.5,1.5 "/>
+				<polygon class="st1" points="1.5,1.5 32.5,45.5 32.5,92.5 48.5,79.5 48.5,45.5 79.5,1.5 "/>
+				<path class="st1" d="M32.5,45.5v44l16-10v-21v-13c0,0,6.5-11.2,11.5-17.8c-21,2.5-44.4-6.1-44.4-6.1L32.5,45.5z"/>
 			</svg>
 		</div>
 		<div class="Filter-overlay js-filter-overlay">

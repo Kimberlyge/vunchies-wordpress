@@ -9,21 +9,6 @@
 
 ?>
 
-<article id="post-715" <?php post_class(); ?>>
-	<?php $args = array(
-		'post_type' => 'page',
-		'post_parent' => $post->ID
-	);?>
-	<div class="About-content"><?php the_content();?></div>
-
-	<h1>ARCHIE</h1>
-
-	<?php while ( have_posts() ) : the_post(); ?>
-	<div class="About-content"><?php the_content();?></div>
-
-
-<?php endwhile; ?>
-</article>
 
 <!-- <h1>CONTENT-PAGE.PHP</h1> -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
