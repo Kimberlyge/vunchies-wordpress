@@ -4,6 +4,33 @@
 ( function() {
 
 	jQuery(document).ready( function($) {
+		console.log('on detail page');
+
+		TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.2);
+		TweenMax.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
+		TweenMax.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
+
+		// var scrollElems  = $('.js-animate'),
+		//     scrollTop2,
+		// 		lastScrollTop = 0;
+		//
+		// window.onscroll = function (e) {
+		// 	scrollTop2 = $(window).scrollTop();
+		//
+		// 	scrollElems.each( function(i) {
+		// 		console.log(i)
+    //     var itemOffset = Math.abs($(this).offset().top);
+    //     var height = window.pageYOffset + window.pageYOffset/3;
+		//
+    //     if (itemOffset > 0 && itemOffset < height) {
+		// 			console.log('hits top', i)
+		// 			$(this).removeClass('js-animate');
+    //     }
+	  //   });
+		//
+		// 	lastScrollTop = scrollTop2;
+		//
+		// };
 
     var headerDetail = $('.HeaderDetail');
 				detailLight = $('.Detail--light');
@@ -40,6 +67,48 @@
 				TweenLite.to(detailCover, 0.15, {y:-scrollTopPartly/2});
 			}
 		};
+
+		var buttonFooterNext = document.querySelector( '.js-button-footerNav-next' );
+		var buttonFooterPrev = document.querySelector( '.js-button-footerNav-prev' );
+		var buttonFooterTitlePrev = document.querySelector( '.js-button-footerNav-title-prev' );
+		var buttonFooterTitleNext = document.querySelector( '.js-button-footerNav-title-next' );
+
+		if (buttonFooterNext) {
+			buttonFooterNext.onmouseenter = function(event) {
+				var target = event.currentTarget;
+
+				buttonFooterTitleNext.classList.add('is-active');
+
+
+				/* Hide */
+
+				target.onmouseleave = function(event) {
+
+					buttonFooterTitleNext.classList.remove('is-active');
+
+				};
+
+			};
+		}
+
+		if (buttonFooterPrev) {
+			buttonFooterPrev.onmouseenter = function(event) {
+
+				var target = event.currentTarget;
+
+				buttonFooterTitlePrev.classList.add('is-active');
+
+
+				/* Hide */
+
+				target.onmouseleave = function(event) {
+
+					buttonFooterTitlePrev.classList.remove('is-active');
+
+				};
+
+			};
+		}
 
 		var submitEmail = document.querySelector('.sharing_send');
 

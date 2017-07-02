@@ -92,18 +92,32 @@
 .TravelDetail-body {
 	padding: rem(30) rem(0);
 	margin: auto;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
 
 	> .Box {
 		padding: 0px 20px;
 	}
+
+	&.js-animate {
+		opacity: 0;
+	}
 }
 
 .TravelDetail-cover {
+	position: relative;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+
 	img {
 		margin: 0 auto;
 		width: 100%;
 		object-fit: cover;
 		height: 100%;
+	}
+
+	&.js-animate {
+		opacity: 0;
 	}
 
 	&.is-reverse {

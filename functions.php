@@ -147,36 +147,34 @@ function bg_load_google_fonts() {
 function cc_mime_types($mimes) { $mimes['svg'] = 'image/svg+xml'; return $mimes; } add_filter('upload_mimes', 'cc_mime_types');
 
 function vunchies_scripts() {
+  global $post;
+
 	wp_enqueue_style( 'vunchies-style', get_stylesheet_uri() );
 
-	// wp_enqueue_script( 'vunchies-modernizr', get_template_directory_uri() . '/js/modernizr.js', array(), '20151215', true );
-
-	// wp_enqueue_script( 'vunchies-prefixfree', get_template_directory_uri() . '/js/prefixfree.min.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'vunchies-pinit', get_template_directory_uri() . '/js/pin-it.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'vunchies-imgToBg', get_template_directory_uri() . '/js/img-to-bg.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-header', get_template_directory_uri() . '/js/header.js', array(), '20151215', true );
+  wp_enqueue_script( 'vunchies-burger', get_template_directory_uri() . '/js/burger.js', array(), '20151215', true );
+  wp_enqueue_script( 'vunchies-filter-tags', get_template_directory_uri() . '/js/filter-tags.js', array(), '20151215', true );
+  wp_enqueue_script( 'vunchies-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-onscroll', get_template_directory_uri() . '/js/on-scroll.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-comments', get_template_directory_uri() . '/js/comments.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'vunchies-burger', get_template_directory_uri() . '/js/burger.js', array(), '20151215', true );
+  if ( is_front_page() ) {	
+      wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
+  }
 
-  // if ( is_page($post->ID) ) {
-  //   wp_enqueue_script( 'vunchies-detail', get_template_directory_uri() . '/js/detail.js', array(), '20151215', true );
-  // }
+  if ($post->post_parent == 90) {
+    wp_enqueue_script( 'vunchies-travel-detail', get_template_directory_uri() . '/js/travel-detail.js', array(), '20151215', true );
+  }
 
+  if ( is_page(90) ) {
+    wp_enqueue_script( 'vunchies-travel-overview', get_template_directory_uri() . '/js/travel-overview.js', array(), '20151215', true );
+  }
 
-	wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'vunchies-travel-detail', get_template_directory_uri() . '/js/travel-detail.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'vunchies-travel', get_template_directory_uri() . '/js/travel.js', array(), '20151215', true );
-	wp_enqueue_script( 'vunchies-filter-tags', get_template_directory_uri() . '/js/filter-tags.js', array(), '20151215', true );
-	wp_enqueue_script( 'vunchies-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'vunchies-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

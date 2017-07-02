@@ -6,48 +6,48 @@
  */
 ( function() {
 	jQuery(document).ready( function($) {
-		TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.2);
-		TweenMax.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
-		TweenMax.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
+		console.log('front page');
 
-		/* Travel Detail */
-		TweenMax.fromTo('.js-animate-city-title', 0.25, {y:-15}, {opacity:1, y:0, ease:Power0.easeIn});
-		TweenMax.fromTo('.js-animate-city-country p', 0.25, {y:15}, {opacity:1, y:0, ease:Power0.easeIn});
-		TweenMax.fromTo('.js-travellist', 0.3, {x:-140}, {x:0, delay:0.5, ease:Power0.easeIn});
+		function getAllImagesDonePromise() {
+		    // A jQuery-style promise we'll resolve
+		    var d = $.Deferred();
 
-		// $.ajax({
-		// 	url: "http://vunchies.com/wp-json/wp/v2/posts",
-		// 	success: function( data ) {
+		    // Get all images to start with (even complete ones)
+		    var imgs = $("img");
 
-				// var detailHeadBody = document.querySelector('.DetailHead-body' );
-				// var detailHeadMedia = document.getElementsByClassName('DetailHead-media' );
-				// var detailHeadCopy = document.getElementsByClassName('js-detail-head' );
-				// var detailHead = document.querySelector('.DetailHead' );
+		    // Add a one-time event handler for the load and error events on them
+		    imgs.one("load.allimages error.allimages", function() {
+		        // This one completed, remove it
+		        imgs = imgs.not(this);
+		        if (imgs.length == 0) {
+		            // It was the last, resolve
+		            d.resolve();
+		        }
+		    });
 
-				// if (detailHeadCopy[0]) {
-				// 	var detailHeadCopyHeight = detailHeadCopy[0].offsetHeight;
-				// 	var detailHeadMediaHeight = detailHeadMedia[0].offsetHeight;
+		    // Find the completed ones
+		    var complete = imgs.filter(function() { return this.complete; });
 
-				// 	detailHeadBody.style.height = detailHeadCopyHeight + 'px';
-				// 	detailHead.style.height = detailHeadMediaHeight + 'px';
-				// }
+		    // Remove our handler from completed ones, remove them from our list
+		    complete.off(".allimages");
+		    imgs = imgs.not(complete);
+		    complete = undefined; // Don't need it anymore
 
-				// TweenMax.staggerFromTo('.Teaser-wrap', 0.25, {y:-10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
-				// TweenMax.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.2);
-				//
-				// TweenMax.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
-				//
-				// TweenMax.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
-				//
-				//
-				//
-				// /* Travel Detail */
-				// TweenMax.fromTo('.js-animate-city-title', 0.25, {y:-15}, {opacity:1, y:0, ease:Power0.easeIn});
-				// TweenMax.fromTo('.js-animate-city-country p', 0.25, {y:15}, {opacity:1, y:0, ease:Power0.easeIn});
-				// TweenMax.fromTo('.js-travellist', 0.3, {x:-140}, {x:0, delay:0.5, ease:Power0.easeIn});
+		    // If none left, resolve; otherwise wait for events
+		    if (imgs.length == 0) {
+		        d.resolve();
+		    }
 
-		// 	}
-		// });
+		    // Return the promise for our deferred
+		    return d.promise();
+		}
+
+		getAllImagesDonePromise().then(function() {
+		  console.log('imgs are done loading')
+			TweenMax.staggerFromTo('.Teaser-wrap', 0.35, {y:10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
+
+		});
+
 	});
 
 } )();

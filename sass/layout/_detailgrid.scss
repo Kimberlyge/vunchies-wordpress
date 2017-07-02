@@ -6,6 +6,9 @@
 	padding: rem(15) 0;
 	margin: 0 auto;
 
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+
 	// &--inline {
 	// 	display: inline-block;
 	// 	width: 30%;
@@ -16,6 +19,10 @@
 		> div:last-of-type {
 			order: -1;
 		}
+	}
+
+	&.js-animate {
+		opacity: 0;
 	}
 }
 
@@ -97,6 +104,12 @@
 
 .DetailGrid-item {
 	letter-spacing: 0.05em;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out;
+
+	&.js-animate {
+		opacity: 0;
+	}
 }
 
 .DetailGrid-item--text {
