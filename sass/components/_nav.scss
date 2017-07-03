@@ -17,6 +17,8 @@
 
 	span {
 		display: none;
+		position: relative;
+		z-index: 1;
 
 		@media (min-width: $layout-sm) {
 			display: inline-block;

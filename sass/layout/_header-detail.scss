@@ -16,12 +16,19 @@
 }
 
 .HeaderDetail--light {
-	.Nav a {
+	.Nav-item,
+	.Divider,
+	.NavItemTravel a,
+	.NavItemRecipes a {
 		color: white;
 
 		&:after {
 			border-color: white;
 		}
+	}
+
+	a.NavSub-item {
+		color: black;
 	}
 }
 
