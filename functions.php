@@ -163,7 +163,7 @@ function vunchies_scripts() {
 
 	wp_enqueue_script( 'vunchies-comments', get_template_directory_uri() . '/js/comments.js', array(), '20151215', true );
 
-  if ( is_front_page() ) {	
+  if ( is_front_page() ) {
       wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
   }
 
@@ -173,6 +173,10 @@ function vunchies_scripts() {
 
   if ( is_page(90) ) {
     wp_enqueue_script( 'vunchies-travel-overview', get_template_directory_uri() . '/js/travel-overview.js', array(), '20151215', true );
+  }
+
+  if ( is_page(613) ) {
+    wp_enqueue_script( 'vunchies-about', get_template_directory_uri() . '/js/about.js', array(), '20151215', true );
   }
 
 
