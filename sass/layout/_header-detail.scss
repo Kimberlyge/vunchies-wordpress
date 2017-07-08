@@ -29,6 +29,10 @@
 
 	a.NavSub-item {
 		color: black;
+
+		&:hover {
+			color: $color-primary;
+		}
 	}
 }
 

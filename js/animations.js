@@ -6,7 +6,7 @@
  */
 ( function() {
 	jQuery(document).ready( function($) {
-		console.log('front page');
+		console.log('front page')
 
 		function getAllImagesDonePromise() {
 		    // A jQuery-style promise we'll resolve
@@ -43,7 +43,7 @@
 		}
 
 		getAllImagesDonePromise().then(function() {
-		  console.log('imgs are done loading')
+		  // console.log('imgs are done loading')
 			TweenMax.staggerFromTo('.Teaser-wrap', 0.35, {y:10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15);
 
 		});

@@ -11,21 +11,29 @@
 		margin: 0 auto rem(40);
 		border: 0;
 	}
+
+	ul:hover {
+		.RecentPosts-item a {
+			opacity: 0.2;
+		}
+	}
 }
 
 .RecentPosts-item {
-    @extend %font-playfair-italic;
-    display: block;
+	// @extend %font-playfair-italic;
+	display: block;
 	margin-bottom: 5px;
 
-    letter-spacing: 0.1em;
-    font-size: $font-12;
+	letter-spacing: 0.1em;
+	font-size: $font-12;
 
-    a {
-    	transition: color 0.2s ease-in-out;
-    }
 
-    &:hover a {
-    	color: $color-primary;
-    }
+	a {
+		color: white;
+		transition: all 0.2s ease-in-out;
+	}
+
+	&:hover a {
+		opacity: 1!important;
+	}
 }

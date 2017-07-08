@@ -33,9 +33,20 @@
 		object-fit: cover;
 	}
 
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: rgba(black, 0.1);
+	}
+
 	&.is-reverse {
 		padding: rem($space*2);
 	}
+
 }
 
 .DetailCover {

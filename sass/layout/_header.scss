@@ -3,10 +3,12 @@
  */
 
 .Header {
+	position: relative;
 	max-width: 100%;
-	z-index: 10;
 	margin-top: 0;
 	text-align: center;
+
+	z-index: 10;
 
 	@media (min-width: $layout-sm) {
 		max-width: rem(1000);

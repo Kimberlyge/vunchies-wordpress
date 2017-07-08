@@ -1,0 +1,62 @@
+/**
+ * Preloader
+ */
+
+ .Preloader {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+  //  background: white;
+	//  background: #24252f;
+   background: $color-primary;
+   z-index: 30;
+
+  //  opacity: 0;
+ }
+
+ .Preloader-svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+   svg {
+     width: 100%;
+     height: 100%;
+
+     path {
+       stroke: #e4ab2a;
+       fill: transparent;
+       stroke-linecap: round;
+       stroke-linejoin: round;
+       stroke-miterlimit: 10;
+       stroke-dasharray: 1000;
+       stroke-dashoffset: 1000;
+       stroke-width: 0.5;
+     }
+   }
+ }
+
+ .Preloader-logo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   z-index: 31;
+
+	 color: white;
+
+   opacity: 0;
+ }
+
+ .js-preload {
+  //  opacity: 0;
+   transition: opacity 0.3s ease-out;
+
+ }

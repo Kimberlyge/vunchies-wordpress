@@ -26,11 +26,13 @@
 					<div class="Footer-item col-s-3-3 col-m-1-3">
 						<div class="Newsletter">
 							<h2 class="Newsletter-title">Sign up to get your monthly vunchies!</h2>
-							<form action="">
-								<input class="Newsletter-input" type="text" placeholder="Your name">
-								<input class="Newsletter-input" type="email" placeholder="Your email address">
+							<form action="https://vunchies.us14.list-manage.com/subscribe/post" method="POST">
+								<input type="hidden" name="u" value="7d5191058016a98802b74c80d">
+								<input type="hidden" name="id" value="efb35ae6e6">
+								<!-- <input class="Newsletter-input" type="text" placeholder="Your name"> -->
+								<input class="Newsletter-input" name="MERGE0" id="MERGE0" type="email" placeholder="Your email address" required="">
+								<button class="Button Button--invert Newsletter-submit" type="submit">Submit</button>
 							</form>
-							<button class="Button Button--invert Newsletter-submit" type="submit">Submit</button>
 						</div>
 
 						<div class="NavSocial">
@@ -71,16 +73,54 @@
 							</ul>
 						</div>
 
-						<div class="SearchForm">
+						<!-- <div class="SearchForm">
 							<?php get_search_form();?>
-						</div>
+						</div> -->
 					</div>
+
 					<div class="Footer-item col-s-3-3 col-m-1-3">
+						<div class="RecentPosts">
+							<h2 class="Footer-title">Sitemap</h2>
+							<ul>
+								<li class="RecentPosts-item">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast">Breakfast</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/Lunch">Lunch</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/Dinner">Dinner</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/Dessert">Dessert</a>
+								</li>
+								<li class="RecentPosts-item">
+									-
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo site_url() ?>/travel">Travel</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo get_page_link(613); ?>">About</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo get_page_link(761); ?>">Pantry and Tools</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo get_page_link(620); ?>">Contact</a>
+								</li>
+								<li class="RecentPosts-item">
+									<a href="<?php echo get_page_link(715); ?>">Archive</a>
+								</li>
+							</ul>
+						</div>
+
+					<!-- <div class="Footer-item col-s-3-3 col-m-1-3">
 						<div class="PinterestFeed">
 							<h2 class="Footer-title">Pinterest</h2>
 							<a data-pin-do="embedUser" href="https://www.pinterest.com/kimberlykashew/"></a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 
 			</footer><!-- #colophon -->

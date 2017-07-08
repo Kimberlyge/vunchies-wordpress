@@ -38,7 +38,7 @@
 }
 
 .AboutCover-svgPath {
-	stroke-width: 5px;
+	stroke-width: 3px;
 	stroke: $color-primary;
 	fill: none;
 	stroke-linecap: round;
@@ -60,8 +60,23 @@
 	}
 }
 
+.About-contributors {
+	h2 {
+		margin-bottom: 0;
+
+		&:after {
+			content: '';
+			display: block;
+			background: black;
+			width: 75px;
+			height: 3px;
+			margin-top: 10px;
+		}
+	}
+}
+
 .dummy-img {
-	background: $color-primary;
+	background: rgba(36, 37, 47, 0.1);
 	height: 0;
 	width: 100%;
 	padding-bottom: 100%;

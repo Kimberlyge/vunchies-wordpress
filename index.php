@@ -12,9 +12,14 @@
  * @package Vunchies
  */
 
-get_header(); ?>
+		get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div class="Preloader is-hidden">
+		<?php include 'template-parts/preloader.php';
+		?>
+	</div>
+
+	<div id="primary" class="content-area js-preload">
 		<main id="main" class="site-main" role="main">
 		<!-- <h1>INDEX.PHP</h1> -->
 			<div class="grid Teaser Container" id="RecipeOverview">
