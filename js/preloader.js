@@ -18,9 +18,15 @@
 		if (sessionStorage.getItem('preloader-seen') == null) {
 			preloader.removeClass('is-hidden');
 
-			// preloader.addClass('is-active');
-			tlPreloader.staggerTo(preloaderSvg, 5, {css:{strokeDashoffset: 0}, ease:Power4.easeOut}, 0.1)
-			tlPreloader.to(preloaderLogo, 1.5, {opacity:1}, 1);
+
+			if( $(window).innerWidth() > 750) {
+				tlPreloader.staggerTo(preloaderSvg, 5, {css:{strokeDashoffset: 0}, ease:Power4.easeOut}, 0.1)
+				tlPreloader.to(preloaderLogo, 1.5, {opacity:1}, 1);
+			} else {
+				$('.Preloader-mobile').removeClass('is-hidden');
+				tlPreloader.to(preloaderLogo, 1.5, {opacity:1}, 0);
+			}
+
 
 			$(window).on('load', function() {
 				var newTime = Date.now()-timerStart;
@@ -37,6 +43,11 @@
 
 						tl.staggerFromTo(preloaderAnimation, 0.8, {y:20}, {y:0, opacity: 1, ease:Power2.easeInOut}, 0.15, 0.5);
 						tl.staggerFromTo('.Teaser-wrap', 0.35, {opacity:0, y:10}, {opacity:1, y:0, ease:Power0.easeIn}, 0.15, 1);
+
+						if( $(window).innerWidth() < 750) {
+
+						}
+
 
 					}, restTime);
 
