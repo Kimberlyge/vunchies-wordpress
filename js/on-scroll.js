@@ -19,7 +19,6 @@
 		};
 
 		buttonScroll.onclick = function(event) {
-			console.log('osceoll clck')
 			TweenMax.to(window, 0.9, { scrollTo:{y:0, offsetY:hasOffset}, ease:Power3.easeOut});
 		};
 	});
