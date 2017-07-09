@@ -1,0 +1,62 @@
+/**
+ * Header
+ */
+
+.HeaderDetail {
+	max-width: 100%;
+	z-index: 10;
+	margin-top: 0;
+	text-align: center;
+
+	@media (min-width: $layout-sm) {
+		max-width: rem(1000);
+		padding: 0 rem(10);
+		margin: rem(20) auto rem(35);
+	}
+}
+
+.HeaderDetail--light {
+	.Nav-item,
+	.Divider,
+	.NavItemTravel a,
+	.NavItemRecipes a {
+		color: white;
+
+		&:after {
+			border-color: white;
+		}
+	}
+
+	a.NavSub-item {
+		color: black;
+
+		&:hover {
+			color: $color-primary;
+		}
+	}
+}
+
+.HeaderDetail-logo {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	padding: 20px;
+
+	background: black;
+	color: $lightgray !important;
+
+	-webkit-font-smoothing: antialiased;
+
+	z-index: 1;
+
+	h1 {
+		font-size: rem(18);
+		padding: rem(2) 0;
+		margin: 0 !important;
+	}
+
+	@media (min-width: $layout-m) {
+			display: block;
+	}
+}

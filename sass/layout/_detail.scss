@@ -8,64 +8,96 @@
 
 /* Intro */
 
-.DetailHead {
-	position: relative;
-	display: block;
-}
+.Detail-copy {
+	max-width: 300px;
+	margin: 0 auto;
 
-.DetailHead-copy {
-	max-width: rem(300);
-	margin: auto;
-}
-
-.DetailHead-title {
-	text-transform: uppercase;
-	margin-bottom: 0.5em;
-}
-
-.DetailHead-body {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-
-	transform: translate(-50%, -50%);
-
-	@media (max-width: $layout-s) {
-		position: relative;
-		height: auto !important;
-		margin: rem(45) auto rem(30);
+	h2 {
+		text-transform: uppercase;
+		margin-bottom: 0.5em;
 	}
 }
 
-.DetailHead-media {
-	position: relative;
-	overflow: hidden;
-	height: rem(350);
-	@media (min-width: $layout-m) {
-		height: initial;
-	}
+.Detail-cover {
+	position: fixed;
+	top: -20%;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
 	img {
+		display: block;
 		margin: 0 auto;
 		width: 100%;
-		object-fit: cover;
 		height: 100%;
+		object-fit: cover;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: rgba(black, 0.1);
 	}
 
 	&.is-reverse {
 		padding: rem($space*2);
+	}
+
+}
+
+.DetailCover {
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+}
+
+.DetailCover-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	z-index: 2
+}
+
+.DetailCover-title {
+	background: white;
+	padding: 20px 25px 15px 25px;
+	max-width: 400px;
+	margin: 0 auto;
+
+	h2 {
+		margin-bottom: 5px;
+		text-transform: uppercase;
+	}
+}
+
+.DetailCover-image {
+	img {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 }
 
 /* Ingredients */
 
 .DetailInfo {
-	@extend %font-sans-serif;
-	max-width: 300px;
-	border: 3px solid;
-	padding-bottom: 0;
-	margin-bottom: 0 !important;
-	margin: rem(20) auto 0;
+	padding: rem(20) 0 rem(50);
+
+	background: white;
 
 	h3,
 	ul {
@@ -75,6 +107,7 @@
 
 		@media (min-width: 980px) {
 			margin: 30px;
+			font-size: 14px;
 			line-height: 30px;
 		}
 
@@ -90,6 +123,19 @@
 	div:empty,
 	p:empty {
 		height: 0.8em;
+	}
+
+}
+
+.DetailInfo-wrap {
+	@extend %font-sans-serif;
+	max-width: rem(300);
+	margin: auto;
+
+	border: 3px solid;
+
+	@media (min-width: 980px) {
+		max-width: rem(500);
 	}
 }
 

@@ -5,7 +5,6 @@
 
 /* Filter */
 
-
 .NavItemFilter {
 	display: none;
 	margin-right: 15px;
@@ -16,8 +15,7 @@
 		}
 
 		.fillup {
-			animation: fillup linear 0.3s;
-			animation-fill-mode: forwards;
+			animation: fillup linear 0.3s forwards;
 		}
 	}
 
@@ -36,11 +34,11 @@
 
 .NavItemFilter-icon {
 	position: relative;
-    width: rem(12);
-    margin: auto;
+  width: rem(12);
+  margin: auto;
 
-    cursor: pointer;
-    z-index: 22;
+  cursor: pointer;
+  z-index: 22;
 
  //    @media (min-width: $layout-sm) {
  //    	margin-right: 10px;
@@ -53,8 +51,9 @@
 	&:hover,
 	&.is-active {
 		.fillup {
-			animation: fillup linear 0.3s;
-			animation-fill-mode: forwards;
+			-webkit-animation: fillup linear 0.3s forwards;
+			-o-animation: fillup linear 0.3s forwards;
+			animation: fillup linear 0.3s forwards;
 		}
 	}
 }
@@ -65,25 +64,34 @@
 	stroke-width:0;
 	stroke-miterlimit:10;
 
-
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
 	transform: scale(0);
 	transform-origin: bottom;
 }
 
-
 @keyframes fillup {
 	0% {
-		transform:  scale(0);
+		-webkit-transform: scale(0);
+		-ms-transform: scale(0);
+		-o-transform: scale(0);
+		transform: scale(0);
 	}
 	90% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
 		transform: scale(1);
 	}
 	100% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
 		transform: scale(1);
 		stroke-width: 2;
 	}
 }
-
 // .NavItemFilter-icon,
 // .NavItemFilter-icon-active {
 // 	position: absolute;
@@ -103,6 +111,7 @@
 
 .NavItemAbout {
 	margin-left: rem(7);
+	font-weight: 500;
 }
 
 .Divider {
@@ -116,6 +125,7 @@
 .NavItemTravel-title,
 .NavItemRecipes-title {
 	position: relative;
+	font-weight: 500;
 	z-index: 21;
-	@extend %font-sans-serif-bold;
+	// @extend %font-sans-serif-bold;
 }

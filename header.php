@@ -9,7 +9,9 @@
  * @package Vunchies
  */
 
-?><!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -23,29 +25,18 @@
 
 	<?php wp_head(); ?>
 </head>
-
 <body class="hfeed">
-	<div class="NavSocial NavSocial--desktop">
-		<a class='NavSocial-item' href="https://pinterest.com/kimberlyges/" target="_blank">
-			<svg class="icon icon-pinterest" viewBox="0 0 56.693 56.693" xmlns="http://www.w3.org/2000/svg"><path d="M30.374,4.622c-13.586,0-20.437,9.74-20.437,17.864c0,4.918,1.862,9.293,5.855,10.922c0.655,0.27,1.242,0.01,1.432-0.715  c0.132-0.5,0.445-1.766,0.584-2.295c0.191-0.717,0.117-0.967-0.412-1.594c-1.151-1.357-1.888-3.115-1.888-5.607  c0-7.226,5.407-13.695,14.079-13.695c7.679,0,11.898,4.692,11.898,10.957c0,8.246-3.649,15.205-9.065,15.205  c-2.992,0-5.23-2.473-4.514-5.508c0.859-3.623,2.524-7.531,2.524-10.148c0-2.34-1.257-4.292-3.856-4.292  c-3.058,0-5.515,3.164-5.515,7.401c0,2.699,0.912,4.525,0.912,4.525s-3.129,13.26-3.678,15.582  c-1.092,4.625-0.164,10.293-0.085,10.865c0.046,0.34,0.482,0.422,0.68,0.166c0.281-0.369,3.925-4.865,5.162-9.359  c0.351-1.271,2.011-7.859,2.011-7.859c0.994,1.896,3.898,3.562,6.986,3.562c9.191,0,15.428-8.379,15.428-19.595  C48.476,12.521,41.292,4.622,30.374,4.622z"/></svg>
-		</a>
-		<a class='NavSocial-item' href="https://www.instagram.com/vunchies/" target="_blank">
-			<svg class="icon icon-instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-				<path d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"></path>
-				<path d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"></path>
-				<path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
-			</svg>
-
-		</a>
-	</div>
 
 	<div class="SearchForm SearchForm--desktop">
 		<?php get_search_form();?>
 	</div>
 
 	<div class="Filter">
-		<div class="Filter-button js-filter-icon">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
+		<div class="FilterButton js-filter-icon">
+			<svg class="FilterButton-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
+				<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
+			</svg>
+			<svg class="FilterButton-state" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
 			<style type="text/css">
 				.st1{fill:none;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;}
 			</style>
@@ -127,7 +118,7 @@
 				<h3><?php echo $description;?></h3>
 			</a>
 
-			<div class="Nav">
+			<div class="Nav js-preload">
 				<div class="NavItemFilter" id="js-navItemFilter">
 					<div class="NavItemFilter-icon">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 81 94">
@@ -230,13 +221,14 @@
 					</div>
 				</div>
 
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item js-nav-item">Breakfast</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="13" class="Nav-item js-nav-item">Lunch</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="14" class="Nav-item js-nav-item">Dinner</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="17" class="Nav-item js-nav-item">Dessert</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/breakfast" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="1" class="Nav-item Nav-item--breakfast js-nav-item">Breakfast</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/lunch" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="13" class="Nav-item Nav-item--lunch js-nav-item">Lunch</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dinner" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="14" class="Nav-item Nav-item--dinner js-nav-item">Dinner</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>category/dessert" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-category="17" class="Nav-item Nav-item--dessert js-nav-item">Dessert</a>
 
+				<span class="Divider">|</span>
 				<div class="NavItemTravel" id="js-navToggleTravelOverview">
-					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class=" NavItemTravel-title js-nav-item">Travel</a>
+					<a href="<?php echo site_url() ?>/travel" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="90" class=" NavItemTravel-title js-nav-item">Vegan Spots</a>
 					<div class="NavSub NavSub--travel js-nav-travel">
 						<div class="NavSub-content">
 							<div class="col-s-1-4">
@@ -247,8 +239,8 @@
 						</div>
 					</div>
 				</div>
-				<span class="Divider">|</span>
-				<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="613" class="Nav-item NavItemAbout js-nav-item">About</a>
+				<!-- <span class="Divider">/</span> -->
+				<a href="<?php echo get_page_link(613); ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" data-page="613" class="Nav-item NavItemAbout js-nav-item">Vunchies</a>
 			</div>
 
 			<div class="SearchForm SearchForm--mobile">

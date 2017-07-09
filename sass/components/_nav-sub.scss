@@ -32,15 +32,15 @@
 	}
 }
 
-.NavSubFilter-checkbox {
+.NavSub-checkbox {
 	position: relative;
 	-webkit-appearance: none !important;
 	display: inline-block;
 	width: 9px;
-    height: 9px;
-    margin-bottom: 0;
-    margin-right: 10px;
-    padding: 0;
+  height: 9px;
+  margin-bottom: 0;
+  margin-right: 10px;
+  padding: 0;
 
 	border: 1px solid black;
 }
@@ -74,8 +74,20 @@
 	}
 
 	&:hover {
+		color: black;
+		
+		&:after {
+			content: '✔';
+			display: inline-block;
+			font-size: 12px;
+			position: absolute;
+			top: -1px;
+			left: 2px;
+		}
+
 		.NavSubFilter-checkbox {
-			border-color: $yellow;
+			// border-color: $color-primary;
+
 		}
 	}
 }

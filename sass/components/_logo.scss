@@ -20,4 +20,8 @@
 		font-size: 12px;
 		letter-spacing: 0.6em;
 	}
+
+	&.is-hidden {
+		opacity: 0;
+	}
 }

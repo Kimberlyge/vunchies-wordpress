@@ -17,6 +17,8 @@
 
 	span {
 		display: none;
+		position: relative;
+		z-index: 1;
 
 		@media (min-width: $layout-sm) {
 			display: inline-block;
@@ -54,7 +56,7 @@
 	&:hover,
 	&:active,
 	&.is-active {
-		color: $color-primary;
+		// color: $color-primary;
 	}
 
 	&:after {
@@ -63,9 +65,16 @@
 		top: 0%;
 		content: '';
 		height: 100%;
-		transition: transform 0.2s linear;
 		width: 100%;
-		border-bottom: 2px solid $color-primary;
+		border-bottom: 2px solid black;
+
+		-webkit-transition: transform 0.2s linear;
+		-o-transition: transform 0.2s linear;
+		transition: transform 0.2s linear;
+
+		-webkit-transform: scaleX(0);
+		-ms-transform: scaleX(0);
+		-o-transform: scaleX(0);
 		transform: scaleX(0);
 	}
 
@@ -78,7 +87,10 @@
 		&:active,
 		&.is-active {
 			&:after {
-				transform: scale(1);
+				-webkit-transform: scaleX(1);
+				-ms-transform: scaleX(1);
+				-o-transform: scaleX(1);
+				transform: scaleX(1);
 			}
 		}
 	}
@@ -98,7 +110,7 @@
 	&.is-active {
 		.NavItemRecipes-title,
 		.NavItemTravel-title {
-			color: $color-primary;
+			// color: $color-primary;
 		}
 	}
 

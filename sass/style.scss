@@ -29,6 +29,7 @@
  */
 
 @import 'layout/header';
+@import 'layout/header-detail';
 @import 'layout/layout';
 @import 'layout/about';
 @import 'layout/pageitem';
@@ -40,6 +41,7 @@
 @import 'layout/imprint';
 @import 'layout/grid';
 @import 'layout/detail';
+@import 'layout/detail-light';
 @import 'layout/detailgrid';
 @import 'layout/imagegrid';
 @import 'layout/scrollbar';
@@ -67,6 +69,7 @@
 @import 'components/side-nav';
 @import 'components/teaser';
 @import 'components/filter';
+@import 'components/preloader';
 @import 'components/img-to-bg';
 @import 'components/newsletter';
 @import 'components/pagination';

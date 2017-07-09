@@ -6,7 +6,7 @@
     &--mobile {
         margin-bottom: rem(40);
         .search-form {
-            border: 0;
+          padding: 5px 11px 9px 7px;
         }
 
         @media (min-width: $layout-sm) {
@@ -22,6 +22,8 @@
             position: absolute;
             top: rem(15);
             right: rem(15);
+
+            z-index: 1;
         }
     }
 }
@@ -66,27 +68,27 @@ input.search-field {
 
 
 input.search-submit {
-	display: inline-block;
-    width: 15%;
-    height: 16px;
-    padding: 0;
-    margin: 0;
-	margin-top: 5px;
+  display: inline-block;
+  width: 15%;
+  height: 16px;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
 
-	float: left;
+  float: left;
 
-    background: none;
-    border: 0;
-    text-indent: -9999px;
-    background-image: url(http://vunchies.com/wp-content/uploads/2017/01/search-big.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    vertical-align: middle;
+  background: none;
+  border: 0;
+  text-indent: -9999px;
+  background-image: url(http://vunchies.com/wp-content/uploads/2017/01/search-big.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
 
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 
-    @media (min-width: $layout-sm) {
-        width: 16px;
-        margin-right: 5px;
-    }
+  @media (min-width: $layout-sm) {
+      width: 16px;
+      margin-right: 5px;
+  }
 }

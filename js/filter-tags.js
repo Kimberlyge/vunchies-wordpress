@@ -11,6 +11,7 @@
 		});
 
 		$('.js-filter-icon').on('click', function() {
+			$(this).toggleClass('is-active');
 			$('.js-filter-overlay').toggleClass('is-active');
 		});
 	});
