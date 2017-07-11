@@ -27,11 +27,11 @@
 </head>
 
 <body class="hfeed">
-	<div class="SearchForm SearchForm--desktop">
+	<div class="SearchForm SearchForm--desktop js-animate-header">
 		<?php get_search_form();?>
 	</div>
 
-	<div class="Filter">
+	<div class="Filter" js-animate-header>
 		<div class="FilterButton js-filter-icon">
 			<svg class="FilterButton-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 32">
 				<path d="M0.372 29.805c-0.484 0.521-0.484 1.302 0 1.823 0.484 0.484 1.302 0.521 1.786 0l14.586-14.735c0.484-0.521 0.484-1.302 0-1.823l-14.586-14.698c-0.484-0.484-1.302-0.484-1.786 0-0.484 0.521-0.484 1.302 0 1.823l13.284 13.805-13.284 13.805z"></path>
@@ -90,11 +90,11 @@
 		</div>
 	</div>
 
-	<a href="<?php echo site_url() ?>" data-ajax="<?php echo site_url() ?>/wp-admin/admin-ajax.php" class="HeaderDetail-logo">
+	<a href="<?php echo site_url() ?>" class="HeaderDetail-logo js-animate-header">
 		<h1><?php bloginfo( 'name' ); ?></h1>
 	</a>
 
-	<header class="HeaderDetail">
+	<header class="HeaderDetail js-animate-header">
 		<button class="Burger">
 			<span class="Burger-copy">Menu</span>
 			<span class="Burger-close">×</span>
@@ -252,4 +252,4 @@
 
 <div id="page" class="site">
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content js-animate-content">

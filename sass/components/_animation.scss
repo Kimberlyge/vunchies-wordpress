@@ -4,6 +4,14 @@
 
 .js-animate {
 	opacity: 0;
+
+	&-header {
+		opacity: 0
+	}
+
+	&-content {
+		opacity: 0
+	}
 }
 
 .js-animate-reverse {
