@@ -1,0 +1,120 @@
+/**
+ * Ingredients
+ */
+
+ .Ingredients {
+ 	padding: rem(20) 0 rem(50);
+
+ 	background: white;
+
+ 	h3,
+ 	ul {
+ 		margin: 10px;
+ 		font-size: 12px;
+ 		// line-height: 23px;
+
+ 		@media (min-width: 980px) {
+ 			margin: 30px;
+ 			font-size: 14px;
+ 			// line-height: 30px;
+ 		}
+
+ 		p {
+ 			margin-bottom: rem(15);
+ 			line-height: 1.6em;
+ 		}
+
+ 		em {
+ 			text-decoration: underline;
+ 		}
+ 	}
+
+ 	div:empty,
+ 	p:empty {
+ 		height: 0.8em;
+ 	}
+
+  ul {
+    margin-top: 0;
+  }
+
+ }
+
+ .Ingredients-wrap {
+ 	@extend %font-sans-serif;
+ 	max-width: rem(300);
+ 	margin: auto;
+
+ 	border: 3px solid;
+
+ 	@media (min-width: 980px) {
+ 		max-width: rem(500);
+ 	}
+ }
+
+ .Ingredients-title {
+ 	@extend .DetailText-title;
+ }
+
+ .Ingredients-info {
+ 	@extend .Allergies;
+ 	width: auto !important;
+ }
+
+ .IngredientsFooter {
+ 	display: flex;
+ 	justify-content: space-between;
+ 	align-items: flex-start;
+ 	padding: rem(10);
+
+ 	border-top: 3px solid black;
+ 	background: black;
+
+ 	@media (min-width: 980px) {
+ 		padding: rem(10) rem(20);
+ 	}
+ }
+
+ .IngredientsFooter-icon {
+ 	width: 17px;
+ }
+
+ .IngredientsFooter-time {
+ 	p {
+ 		display: inline-block;
+ 		float: left;
+ 		margin: 0 5px 0;
+ 		color: white;
+ 	}
+
+ 	svg {
+ 		display: inline-block;
+ 		fill: white;
+ 		height: 17px;
+ 		float: left;
+
+ 		@media (min-width: 980px) {
+ 			height: 24px;
+ 			width: 25px;
+ 		}
+ 	}
+ }
+
+ .IngredientsFooter-print {
+ 	display: inline-block;
+ 	margin-bottom: 0;
+ 	padding-bottom: 0;
+
+ 	font-style: italic;
+ 	line-height: 17px;
+ 	font-size: 11px;
+ 	text-transform: lowercase;
+
+ 	color: white;
+ 	border-bottom: 2px solid white;
+
+ 	@media (min-width: 980px) {
+ 		font-size: 14px;
+ 		padding-botton: rem(3);
+ 	}
+ }

@@ -31,7 +31,7 @@
 			   	}
 				?>
 			</ul>
-			<ul class="Teaser-tags">
+			<ul class="Allergies">
 				<?php
 
 				if(has_tag('gluten')) {

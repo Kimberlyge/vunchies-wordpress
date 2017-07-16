@@ -164,9 +164,12 @@ function vunchies_scripts() {
 
 	wp_enqueue_script( 'vunchies-comments', get_template_directory_uri() . '/js/comments.js', array(), '20151215', true );
 
-  if ( is_front_page() ) {
-      wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
-  }
+  wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
+  // if ( is_front_page() ) {
+  //     wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
+  // } else {
+  //   wp_enqueue_script( 'vunchies-animations', get_template_directory_uri() . '/js/animations.js', array(), '20151215', true );
+  // }
 
   if ($post->post_parent == 90) {
     wp_enqueue_script( 'vunchies-travel-detail', get_template_directory_uri() . '/js/travel-detail.js', array(), '20151215', true );

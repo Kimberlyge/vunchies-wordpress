@@ -11,6 +11,7 @@
 	display: flex;
 	flex-direction: row;
 }
+
 @mixin flexRowWrap {
 	display: flex;
 	flex-direction: row;
@@ -21,8 +22,14 @@
 	-o-display: flex;
 	display: flex;
 }
+
 @mixin flexColWrap {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+}
+
+.FlexRow {
+	@include flexRow;
+	justify-content: space-between;
 }
