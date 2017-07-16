@@ -3,7 +3,7 @@
  */
 ( function() {
 	console.log('on detail page out');
-	
+
 	jQuery(document).ready( function($) {
 		console.log('on detail page in');
 
@@ -13,9 +13,9 @@
 
 			tl.to('.js-animate-content', 1, {opacity: 1, ease:Power1.easeIn})
 			tl.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
-			tl.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.2);
+			tl.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
 			tl.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
-			tl.to('.js-animate-header', 1, {opacity: 1, ease:Power1.easeIn})
+			tl.to('.js-animate-header', 1, {opacity: 1, ease:Power1.easeIn}, 0.1)
 
 
 			// var scrollElems  = $('.js-animate'),
