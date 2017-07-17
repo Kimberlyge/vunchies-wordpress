@@ -67,53 +67,13 @@ Single-colored icons can be modified like so:
 	height: rem(11);
 }
 
-.icon-marker {
-	background-image: url('../images/icons/marker-blue.svg');
-}
-
 .icon-clock-arrow,
 .icon-clock-dashed {
 	background-size: contain;
-}
-
-.icon-overview {
-	background-size: contain;
-	margin-top: rem(5);
-	width: 24px;
-	height: 24px;
-}
-
-.icon-camping {
-	background-image: url('../assets/images/icons/camping.svg');
-	background-size: contain;
-	width: 20px;
-	height: 24px;
 }
 
 .icon-pinterest,
 .icon-instagram {
 	height: 100%;
 	width: rem(14);
-}
-
-.NavWrap-close {
-	padding: 20px 0;
-	right: rem(16);
-
-	.icon-cross {
-		vertical-align: middle;
-	}
-
-	@media (min-width: $layout-s) {
-		right: rem(20)
-	}
-}
-.NavWrap .icon-map {
-	background-size: contain;
-	margin-top: rem(5);
-	height: 28px;
-}
-.icon-map,
-.icon-website {
-	background-size: contain;
 }

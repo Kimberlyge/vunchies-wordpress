@@ -21,8 +21,6 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
 	<?php wp_head(); ?>
 </head>
 <body class="hfeed">
@@ -55,35 +53,38 @@
 					<h3 class="FilterContent-title">Ingredients</h3>
 					<div class="col-s-1-4">
 						<button data-title="avocado" class="NavSub-item NavSubFilter-item NonBtn js-nav-item"><input type="checkbox" data-tag="avocado" class="NavSub-checkbox"> Avocado</button>
-						<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
+						<button data-title="tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tofu</button>
 						<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sweet Potato</button>
-						<button data-title="Kale"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Kale</button>
-						<button data-title="Chickpeas" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Chickpeas</button>
-						<button data-title="Tempeh"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tempeh</button>
+						<button data-title="kale"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Kale</button>
+						<button data-title="chickpea" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Chickpeas</button>
+						<button data-title="tempeh"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tempeh</button>
 					</div>
+
 					<div class="col-s-1-4">
-						<button data-title="Basil" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Basil</button>
-						<button data-title="Cilantro / Koriander"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Cilantro / Koriander</button>
-						<button data-title="Parsley" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Parsley</button>
-						<button data-title="Mint"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Mint</button>
-						<button data-title="Thyme" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Thyme</button>
-						<button data-title="Rosemary"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Rosemary</button>
+						<button data-title="basil" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Basil</button>
+						<button data-title="cilantro"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Cilantro</button>
+						<button data-title="parsley" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Parsley</button>
+						<button data-title="mint"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Mint</button>
+						<button data-title="thyme" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Thyme</button>
+						<button data-title="rosemary"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Rosemary</button>
 					</div>
+
 					<div class="col-s-1-4">
 						<button data-title="sriracha" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Sriracha</button>
 						<button data-title="tamari"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Tamari</button>
-						<button data-title="kecap-mains" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Kecap Mains</button>
+						<button data-title="vinegar" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Vinegar</button>
 						<button data-title="lime"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Lime</button>
-						<button data-title="chipotle" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Chipotle</button>
-						<button data-title="apple-cider-vinegar"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Apple Cider Vingar</button>
+						<button data-title="chipotle" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Chili</button>
+						<button data-title="mustard"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Mustard</button>
 					</div>
+
 					<div class="col-s-1-4">
-						<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Beans</button>
-						<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Rice</button>
-						<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Noodles</button>
-						<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Shirataki</button>
-						<button data-title="sweet-potato" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Quinoa</button>
-						<button data-title="Tofu"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Oatmeal</button>
+						<button data-title="rice" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Rice</button>
+						<button data-title="noodles"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Noodles</button>
+						<button data-title="legumes" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Legumes</button>
+						<button data-title="oat"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Oat</button>
+						<button data-title="quinoa" class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Quinoa</button>
+						<button data-title="buckwheat"  class="NavSub-item NavSubFilter-item NonBtn"><input type="checkbox" class="NavSub-checkbox"> Buckwheat</button>
 					</div>
 				</div>
 
