@@ -65,15 +65,21 @@
     border-radius: 100%;
   }
 
-  & > svg {
+  svg {
     position: absolute;
     top: 4px;
     left: 5px;
-    fill: #e4ab2a;
-    stroke: #e4ab2a;
     width: 40px;
+    fill: #FFFFFF;
+    stroke: #FFFFFF;
+    stroke-width:8;
+    stroke-miterlimit:10;
     animation: wink 1s ease-in-out infinite alternate;
     margin: 0 auto;
+
+    path:last-of-type {
+      fill: #e4ab2a;
+    }
   }
 }
 

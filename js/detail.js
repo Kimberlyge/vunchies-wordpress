@@ -8,7 +8,7 @@
 		console.log('on detail page in');
 
 		$(window).on('load', function() {
-			console.log('DETAIL LOADED')
+			console.log('detail loaded')
 			var tl = new TimelineMax();
 
 			tl.to('.js-animate-content', 1, {opacity: 1, ease:Power1.easeIn})
