@@ -26,7 +26,7 @@ get_header('detail'); ?>
 							</h2>
 						</div>
 					</div>
-					<div class="Detail-cover">
+					<div class="Detail-cover js-animate-cover">
 						<?php $image = get_field('cover');?>
 						<img src="<?php echo $image['url']; ?>" alt=""/>
 					</div>

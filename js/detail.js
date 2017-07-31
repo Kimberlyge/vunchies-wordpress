@@ -9,14 +9,24 @@
 
 		$(window).on('load', function() {
 			console.log('detail loaded')
+
+			var headerDetail = $('.HeaderDetail');
+					detailLight = $('.Detail--light');
+
+	    if (detailLight.length === 1) {
+	      headerDetail.addClass('HeaderDetail--light')
+	    } else {
+				headerDetail.removeClass('HeaderDetail--light')
+			}
+
 			var tl = new TimelineMax();
 
-			tl.to('.js-animate-content', 1, {opacity: 1, ease:Power1.easeIn})
-			tl.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn});
-			tl.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1);
-			tl.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06);
-			tl.to('.js-animate-header', 1, {opacity: 1, ease:Power1.easeIn}, 0.1)
-
+			tl.to('.js-animate-cover', 1, {opacity: 1, ease:Power1.easeIn}, 0)
+			tl.to('.js-animate-content', 1, {opacity: 1, ease:Power1.easeIn}, 1)
+			tl.staggerTo('.js-animate-alpha', 0.25, {opacity:1, ease:Power0.easeIn}, 1);
+			tl.staggerFromTo('.js-animate', 0.3, {y:5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.1, 1);
+			tl.staggerFromTo('.js-animate-reverse', 0.3, {y:-5}, {opacity:1, y:0, ease:Power0.easeIn}, 0.06, 1);
+			tl.to('.js-animate-header', 1, {opacity: 1, ease:Power1.easeIn}, 2)
 
 			// var scrollElems  = $('.js-animate'),
 			//     scrollTop2,
@@ -39,15 +49,6 @@
 			// 	lastScrollTop = scrollTop2;
 			//
 			// };
-
-	    var headerDetail = $('.HeaderDetail');
-					detailLight = $('.Detail--light');
-
-	    if (detailLight.length === 1) {
-	      headerDetail.addClass('HeaderDetail--light')
-	    } else {
-				headerDetail.removeClass('HeaderDetail--light')
-			}
 
 			var detailCover = $('.Detail-cover'),
 					buttonScroll = $('.js-button-footer-scrollUp'),

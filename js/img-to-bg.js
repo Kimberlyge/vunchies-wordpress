@@ -3,7 +3,6 @@
 	/**
 	 * Img to Bgi
 	 */
-
 	var html = document.querySelector('html');
 	var teaserMedia = document.querySelectorAll('.ImgToBg');
 
